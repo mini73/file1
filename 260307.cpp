@@ -371,3 +371,146 @@
 //
 //	return 0;
 //}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (apple == 15)//apple 15이면 실행
+//	{
+//		printf("apple은 15개 있습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (apple != 17)//apple이 17이 아니면 실행
+//	{
+//		printf("apple은 17개가 아닙니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (apple > 7)//apple이 7보다 크면 실행
+//	{
+//		printf("apple은 7개보다 많습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (apple < 20)
+//	{
+//		printf("apple은 20개보다 적습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (apple)
+//	{
+//		printf("apple은 0개가 아닙니다.\n");
+//	}
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int apple = 15;
+//	if (!apple)// apple이 0이면 실행
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int apple = 0;
+//	if (apple == 10)
+//	{
+//		printf("apple은 10개 있습니다.\n");
+//	}
+//	else if (apple == 0)
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int height = 170;
+//	if (height > 150)
+//	{
+//		printf("키가 150 이상입니다.\n");
+//	}
+//	else if (height > 160)
+//	{//else if는 if가 틀렸을때만 실행된다
+//		printf("키가 160 이상입니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int y_age;
+//	printf("나이를 입력하시오: ");
+//	scanf("%d", &y_age);
+//	if (y_age >= 0) {
+//		printf("전체 관람가 ");
+//	}
+//	if (y_age >= 12) {
+//		printf("12세 관람가 ");
+//	}
+//	if (y_age >= 15) {
+//		printf("15세 관람가 ");
+//	}
+//	printf("이용가능");
+
+
+	//if (y_age < 12)
+	//{
+	//	printf("전체 관람가 이용가능");
+	//}
+	//else if (y_age < 15) 
+	//{
+	//	printf("전체 관람가, 12세 관람가 이용가능");
+	//}
+	//else if (y_age > 15)
+	//{
+	//	printf("전체 관람가, 12세 관람가, 15세 관람가 이용가능");
+	//}
+//	return 0;
+//}
+#include<stdio.h>
+
+int main()
+{
+	int initial;
+	printf("영문자 하나를 입력하시오: ");
+	scanf("%x", &initial);
+
+	if (initial < 0x97)
+	{
+		
+	}
+
+}
