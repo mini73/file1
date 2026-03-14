@@ -500,17 +500,396 @@
 	//}
 //	return 0;
 //}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	char initial;
+//	printf("영문자 하나를 입력하시오: ");
+//	scanf("%c", &initial);
+//
+//	if ((initial >= 'A') && (initial <= 0x5a))
+//	{
+//		printf("대문자");
+//	}
+//	else if ((initial >= 0x61)&&(initial <= 0x7a))
+//	{
+//		printf("소문자");
+//	}
+//	else
+//	{
+//		printf("영문자가 아닙니다");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int number, answer;
+//	scanf("%d %d", &number, &answer);
+//	if (number > answer) 
+//	{
+//		printf("숫자1이 숫자 2보다 큽니다.\n");
+//	}
+//	else
+//	{
+		//if (number < answer) /* number <= answer인 경우 else 실행 */
+//		{
+//			printf("숫자2가 숫자 1보다 큽니다.\n");
+//		}
+//		else
+//		{
+//			printf("숫자1과 숫자2가 같습니다.\n");
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int apple = 15;
+//	if (!apple)//apple이 0이면 실행
+//	{
+//		printf("apple은 하나도 없습니다.\n");
+//	}
+//	else//if가 틀리면 (apple이 아니면)실행
+//	{
+//		printf("apple은 0개가 아닙니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int i;
+//	printf("숫자를 입력하시오: ");
+//	scanf("%d", &i);
+//
+//	if (!i)
+//	{
+//		printf("0입니다");
+//	}
+//	else if (i > 0)
+//	{
+//		printf("양수입니다");
+//	}
+//	else 
+//	{
+//		printf("음수입니다");
+//	}
+//	
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int num;
+//	scanf("%d", &num);
+//
+//	if (num >= 10 && num <= 99)
+//	{
+//		printf("input은 두자리 숫자입니다");
+//	}
+//	else
+//	{
+//		printf("input은 두자리 숫자가 아닙니다");
+//	}
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int height = 170;
+//	if (height > 150)
+//	{
+//		printf("키가 150 이상입니다.\n");
+//	}
+//	if (height > 160)
+//	{
+//		printf("키가 160 이상입니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int number, answer;
+//	scanf("%d %d", &number, &answer);
+//	if (number > answer) {
+//		printf("숫자1이 숫자2보다 큽니다.\n");
+//	}
+//	else if (number < answer)
+//	{
+//		printf("숫자2가 숫자1보다 큽니다.\n");
+//	}
+//	else
+//	{
+//		printf("숫자1과 숫자2가 같습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int score = 75;
+//	if (score > 90) {
+//		printf("성적은 A등급입니다.\n");
+//	}
+//	else if (score > 80) {
+//		printf("성적은 B등급입니다.\n");
+//	}
+//	else if (score > 70) {
+//		printf("성적은 c등급입니다.\n");
+//	}
+//	else if (score > 60) {
+//		printf("성적은 D등급입니다\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int number = -11;
+//	if (number > 0) {
+//		printf("number는 양수입니다.\n");
+//	}
+//	else if (number < 0) {
+//		printf("number는 음수입니다.\n");
+//	}
+//	else {
+//		printf("number는 0입니다\n");
+//	}
+//	if (number % 2 == 0)
+//	{   //2로 나눈 나며지가 0 이면 짝수
+//		printf("number는 짝수입니다\n");
+//	}
+//	else
+//	{   //2로 나눈 나머지가 1이면 홀수
+//		printf("number는 홀수입니다\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	char arrow;
+//
+//	scanf("%c", &arrow);
+//	
+//	if (arrow == 'w')
+//	{
+//		printf("위 방향키를 입력하셨습니다.");
+//	}
+//	else if (arrow == 'a')
+//	{
+//		printf("좌 방향키를 입력하셨습니다.");
+//	}
+//	else if (arrow == 'd')
+//	{
+//		printf("우 방향키를 입력하셨습니다.");
+//	}
+//	else if (arrow == 's')
+//	{
+//		printf("아래 방향키를 입력하셨습니다.");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int gauge;
+//	scanf("%d", &gauge);
+//	if (gauge >= 45 && gauge <= 55)
+//	{
+//		printf("Perfect");
+//	}
+//	else if (gauge >= 35 && gauge <= 65)
+//	{
+//		printf("Excellent");
+//	}
+//	else
+//	{
+//		printf("good");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int input;
+//	scanf("%d", &input);
+//
+//	if (input % 3 == 0)
+//	{
+//		printf("input은 3의 배수입니다. ");
+//		if (input % 6 == 0)
+//		{
+//			printf("input은 6의 배수입니다. ");
+//		}
+//		if (input % 9 == 0)
+//		{
+//			printf("input은 9의 배수입니다. ");
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char command = 'i';
+//
+//	switch (command)
+//	{
+//	case 'i':
+//		printf("아이템창 오픈\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char command = 'i';
+//	switch (command)
+//	{
+//	case 'i':
+//		printf("아이템창 오픈\n");
+//	case 'm':
+//		printf("지도창 오픈\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char command;
+//	printf("커멘드를 입력하세요:");
+//	scanf("%c", &command);
+//	switch (command)
+//	{
+//	case 'i': printf("아이템창 오픈\n");
+//	case 'm': printf("지도창 오픈\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char command;
+//
+//	printf("<, a 왼쪽 이동\n");
+//	printf(">, d 오른쪽 이동\n");
+//	scanf("%c", &command);
+//	switch (command)
+//	{
+//	case'<':
+//	case'a':
+//		//case를 여러개 써서 같은 코드 실행 가능
+//		printf("왼쪽으로 이동합니다.\n");
+//		break;
+//	case '>': case 'd':
+//		printf("오른쪽으로 이동합니다.\n");
+//		break;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int input;
+//	int option = 3;
+//	printf("메뉴를 선택하세요");
+//	printf("1.새 게임 2.이어하기 3.옵션\n");
+//	scanf("%d", &input);
+//
+//	switch (input)
+//	{
+//	case 1:
+//		printf("새 게임 시작.\n");
+//		break;
+//	case 2:
+//		printf("세이브 테스터 로드.\n");
+//		break;
+//	case option:
+//		printf("옵션 세팅.\n");
+//		break;
+//	default:
+//		printf("지정된 기능이 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int input;
+//	const int option = 3;
+//	printf("메뉴를 선택하세요");
+//	printf("1.새 게임 2.이어하기 3.옵션\n");
+//	scanf("%d", &input);
+//
+//	switch (input)
+//	{
+//	case 1:
+//		printf("새 게임 시작.\n");
+//		break;
+//	case 2:
+//		printf("세이브 테스터 로드.\n");
+//		break;
+//	case option:
+//		printf("옵션 세팅.\n");
+//		break;
+//	default:
+//		printf("지정된 기능이 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int num;
+//	printf("0~9사이의 숫자를 입력하시오: ");
+//	scanf("%d", &num);
+//
+//	switch (num)
+//	{
+//	case 3:
+//	case 6:
+//	case 9:
+//		printf("짝\n");
+//		break;
+//	default:
+//		printf("");
+//	}
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//int main()
+//{
+//	char command;
+//	printf("커멘드를 입력하세요:");
+//	scanf("%c", &command);
+//
+//	switch (command)
+//	{
+//	case 'i': printf("아이템창 오픈\n");
+//		break;
+//	case 'm': printf("지도창 오픈\n");
+//		break;
+//	default: printf("지정된 기능이 없습니다.\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char number = 1;
+//	switch (number)
+//	{
+//	case 1: printf("one\n");   break;
+//	case 2: printf("two\n");   break;
+//	case 3: printf("three\n"); break;
+//	}
+//	return 0;
+//}
 #include<stdio.h>
-
 int main()
 {
-	int initial;
-	printf("영문자 하나를 입력하시오: ");
-	scanf("%x", &initial);
-
-	if (initial < 0x97)
-	{
-		
-	}
 
 }
