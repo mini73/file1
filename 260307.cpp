@@ -888,8 +888,132 @@
 //	}
 //	return 0;
 //}
+//#include<stdio.h>
+//int main()
+//{
+//	int time, sec, hour, min;
+//
+//	printf("## 계산할 초는 ?");
+//	scanf("%d", &time);
+//
+//	min = time / 60;
+//	
+//    hour = min / 60;
+//
+//	min = min % 60;
+//	
+//	sec = time % 60;
+//
+//	
+//	
+//	printf("시간은 ==> %d시간\n", hour);
+//	printf("분은   ==> %d 분\n", min);
+//	printf("초는   ==> %d 초\n", sec);
+//	//sec = sec % 60;
+//	return 0;
+//
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int input1, input2;
+//	char oper;
+//
+//	printf("수식을 띄어쓰기로 입력: ");
+//	scanf("%d %c %d", &input1, &oper, &input2);
+//	//printf("%d %c %d = %d입니다\n", input1,oper, input2, input1 + input2);
+//	switch (oper) {
+//	case '+':
+//		printf("%d + %d = %d입니다\n", input1, input2, input1 + input2);
+//			break;
+//	case '-':
+//		printf("%d - %d = %d입니다\n", input1, input2, input1 - input2);
+//		break;
+//	case '*':
+//		printf("%d * %d = %d입니다\n", input1, input2, input1 * input2);
+//		break;
+//	case '/':
+//		printf("%d / %d = %d입니다\n", input1, input2, input1 / input2);
+//		break;
+//	case '%':
+//		printf("%d %% %d = %d입니다\n", input1, input2, input1 % input2);
+//		break;
+//	default:
+//		printf("잘못 입력\n");
+//	}
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int month;
+//	printf("달 입력:");
+//	scanf("%d", &month);
+//
+//	switch (month)
+//	{
+//	case 1: printf("1 > January\n");
+//		break;
+//	case 2: printf("2 > February\n");
+//		break;
+//	case 3: printf("3 > march\n");
+//		break;
+//	case 4: printf("4 > April\n");
+//		break;
+//	case 5: printf("5 > May\n");
+//		break;
+//	case 6: printf("6 > June\n");
+//		break;
+//	case 7: printf("7 > July\n");
+//		break;
+//	case 8: printf("8 > August\n");
+//		break;
+//	case 9: printf("9 > September\n");
+//		break;
+//	case 10: printf("10 > October\n");
+//		break;
+//	case 11: printf("11 > November\n");
+//		break;
+//	case 12: printf("12 > December\n");
+//		break;
+//	default: printf("잘못입력했습니다\n");
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	char command = 'x';
+//
+//	switch (command)
+//	{
+//	case 'x': printf("알파벳 x 입력.\n");
+//		break;
+//	case 'X': printf("엑스표 입력.\n");
+//		break;
+//	}
+//	return 0;
+//}
 #include<stdio.h>
 int main()
 {
-
+	int i_menu;
+	printf("1.더하기 2.빼기\n");
+	scanf("%d", &i_menu);
+	switch (i_menu)
+	{
+	case 1:
+		int number1, number2;
+		printf("숫자 두 개를 입력하세요 \n");
+		scanf("%d %d", &number1, &number2);
+		printf("%d + %d = %d\n",
+			number1, number2, number1 + number2);
+		break;
+	case 2:
+		int number3, number4;
+		printf("숫자 두 개를 입력하세요 \n");
+		scanf("%d %d", &number3, &number4);
+		printf("%d - %d = %d\n",
+			number3, number4, number3 - number4);
+		break;
+	}
+	return 0;
 }
