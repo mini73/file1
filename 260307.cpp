@@ -992,28 +992,136 @@
 //	}
 //	return 0;
 //}
+//#include<stdio.h>
+//int main()
+//{
+//	int i_menu;
+//	printf("1.더하기 2.빼기\n");
+//	scanf("%d", &i_menu);
+//	switch (i_menu)
+//	{
+//	case 1:
+//		int number1, number2;
+//		printf("숫자 두 개를 입력하세요 \n");
+//		scanf("%d %d", &number1, &number2);
+//		printf("%d + %d = %d\n",
+//			number1, number2, number1 + number2);
+//		break;
+//	case 2:
+//		int number3, number4;
+//		printf("숫자 두 개를 입력하세요 \n");
+//		scanf("%d %d", &number3, &number4);
+//		printf("%d - %d = %d\n",
+//			number3, number4, number3 - number4);
+//		break;
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int i_menu;
+//	printf("1.더하기 2.빼기\n");
+//	scanf("%d", &i_menu);
+//	switch (i_menu)
+//	{
+//	case 1://brace추가
+//	{
+//		int number1, number2;
+//		printf("숫자 두 개를 입력하세요 \n");
+//		scanf("%d %d", &number1, &number2);
+//		printf("%d + %d = %d\n", number1, number2, number1 + number2);
+//		break;
+//	}
+//	case 2:
+//	{
+//		int number3, number4;
+//		printf("숫자 두개를 입력하세요\n");
+//		scanf("%d %d", &number3, &number4);
+//		printf("%d - %d = %d\n", number3, number4, number3 - number4);
+//		break;
+//	}
+//	}
+// return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	char arrow;
+//	scanf("%c", &arrow);
+//	switch (arrow) 
+//	{
+//	case'w': {
+//		printf("위 방향키를 입력하셨습니다.");
+//		break;
+//	}
+//	case 'a': {
+//		printf("좌 방향키를 입력하셨습니다.");
+//		break;
+//	}
+//	case 'd': {
+//		printf("우 방향키를 입력하셨습니다.");
+//		break;
+//	}
+//	case 's': {
+//		printf("아래 방향키를 입력하셨습니다.");
+//		break;
+//	}
+//	}
+//	return 0;
+//
+//}
 #include<stdio.h>
-int main()
-{
-	int i_menu;
-	printf("1.더하기 2.빼기\n");
-	scanf("%d", &i_menu);
-	switch (i_menu)
-	{
-	case 1:
-		int number1, number2;
-		printf("숫자 두 개를 입력하세요 \n");
-		scanf("%d %d", &number1, &number2);
-		printf("%d + %d = %d\n",
-			number1, number2, number1 + number2);
+int main() {
+	int appetizer, mainDish, dessert;
+	printf("에피타이저 1.캐비어 2.샐러드 3.푸아그라\n");
+	scanf("%d", &appetizer);
+	printf("메인디쉬 1.스테이크 2.생선요리 3.양갈비\n");
+	scanf("%d", &mainDish);
+	printf("디저트 1.케익 2.아이스크림 3.초콜릿무스\n");
+	scanf("%d", &dessert);
+
+	switch (appetizer) {
+	case 1: {
+		printf("주문한 음식은 캐비어, ");
 		break;
-	case 2:
-		int number3, number4;
-		printf("숫자 두 개를 입력하세요 \n");
-		scanf("%d %d", &number3, &number4);
-		printf("%d - %d = %d\n",
-			number3, number4, number3 - number4);
+	}
+	case 2: {
+		printf("주문한 음식은 샐러드, ");
 		break;
+	}
+	case 3: {
+		printf("주문하 음식은 푸아그라, ");
+		break;
+	}
+	}
+	switch (mainDish) {
+	case 1: {
+		printf("스테이크, ");
+		break;
+	}
+	case 2: {
+		printf("생선요리, ");
+		break;
+		  }
+	case 3: {
+		printf("양갈비, ");
+		break;
+	}
+	}
+	switch (dessert) {
+	case 1: {
+		printf("케익입니다");
+		break;
+	}
+	case 2: {
+		printf("아이스크림입니다");
+		break;
+	}
+	case 3: {
+		printf("초콜릿무스입니다");
+		break;
+	}
 	}
 	return 0;
 }
