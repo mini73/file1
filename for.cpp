@@ -245,8 +245,163 @@
 //	printf("게임을 종료합니다.\n");
 //	return 0;
 //}
-#include<stdio.h>
-int main() {
-	int input;
 
+//#include<stdio.h>
+//int main() {
+//    int mon, count, a, b;
+//    int sum = 0;
+//
+//    scanf("%d %d", &mon, &count);
+//
+//    for (int i = 1; i <= count; i++) {
+//        scanf("%d %d", &a, &b);
+//        sum += a * b;
+//    }
+//    if (sum == mon) {
+//        printf("Yes");
+//    }
+//    else {
+//        printf("No");
+//    }
+//    return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//
+//	for (int i = 0; i < n / 4; i++) {
+//		printf("long ");
+//	}
+//	printf(" int");
+//
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//    int n;
+//
+//    scanf("%d", &n);
+//
+//    for (int i = 1; i <= n; i++) {
+//        for (int j = 0; j < n - i; j++) {
+//            printf(" ");
+//        }
+//        for (int y = 0; y < i; y++) {
+//            printf("*");
+//        }
+//        printf("\n");
+//    }
+//    return 0;
+//}
+//#include<stdio.h>
+//int main(){
+//	int select;
+//	enum {GAMEOVER, NEWGAME, LOADGAME, OPTION, maker };
+//	do {
+//		printf("\n메뉴를 선택하세요.\n");
+//		printf("1.새 게임 2. 이어하기 3. 옵션 4. 만든사람들\n");
+//		scanf("%d", &select);
+//
+//		switch (select) {
+//		case NEWGAME:
+//			printf("새 게임 시작\n");
+//			break;
+//		case LOADGAME:
+//			printf("세이브 데이터 로드\n");
+//			break;
+//		case OPTION:
+//			printf("옵션 세팅\n");
+//			break;
+//		case maker:
+//			printf("만든 사람들\n");
+//			break;
+//		}
+//		} while (select >= 1 && select <= 4);
+//		printf("게임을 종료합니다.\n");
+//		return 0;
+//}
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	srand((unsigned int)time(NULL));
+	int command;
+	int day = 0;
+	int Pro_study = 0;
+	int Pub_study = 0;
+	int Eng_study = 0;
+
+	do {
+		printf("\n%d번째 날!\n", ++day);
+		printf("오늘은 뭐 할까요?\n");
+		printf("1.코딩공부한다.\n");
+		printf("2.공무원공부를 한다.\n");
+		printf("3.영어공부를 한다.\n");
+		printf("4.논다.\n >>");
+		scanf("%d", &command);
+		if (command != 1) break;
+
+		int(randInt) = rand() % 5 + 1;
+		switch (randInt) {
+		case 1:
+			printf("기분이 좋네요.\n");
+		case 3:
+				printf("도서관에서 ");
+				break;
+		case 2:
+			printf("기분이 나빠요.\n");
+		case 4:
+			printf("카페에서 ");
+			break;
+		case 5: printf("학원에서 ");
+		}
+		switch (command) {
+		case 1:
+			printf("코딩 공부합니다\n");
+			Pro_study++;
+			break;
+		case 2:printf("코딩 공부합니다\n");
+			Pub_study++;
+			break;
+		case 3:printf("코딩 공부합니다\n");
+			Eng_study++;
+			break;
+		case 4:printf("게임을 한다\n");
+			break;
+		}
+	} while (1);
+	if (day <= 3) {
+		printf("그대로 입니다...\n");
+	}
+	else {
+		int level = study / 8;
+		switch (level)
+		{
+		case 0:
+			printf("코딩새싹이 되었습니다!\n");
+			break;
+		case 1:
+			printf("취업준비생이 되었습니다!\n");
+			break;
+		case 2:
+			printf("FrontEnd 개발자가 되었습니다!\n");
+			break;
+		case 3:
+			printf(" 개발자가 되었습니다\n");
+			break;
+		case 4:
+			printf("BackEnd 개발자가 되었습니다\n");
+			break;
+		default:
+			printf("풀스택 개발자가 되었습니다!\n");
+			break;
+
+		}
+	}
+	return 0;
 }
