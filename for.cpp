@@ -323,85 +323,130 @@
 //		printf("게임을 종료합니다.\n");
 //		return 0;
 //}
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-
-int main()
-{
-	srand((unsigned int)time(NULL));
-	int command;
-	int day = 0;
-	int Pro_study = 0;
-	int Pub_study = 0;
-	int Eng_study = 0;
-
-	do {
-		printf("\n%d번째 날!\n", ++day);
-		printf("오늘은 뭐 할까요?\n");
-		printf("1.코딩공부한다.\n");
-		printf("2.공무원공부를 한다.\n");
-		printf("3.영어공부를 한다.\n");
-		printf("4.논다.\n >>");
-		scanf("%d", &command);
-		if (command != 1) break;
-
-		int(randInt) = rand() % 5 + 1;
-		switch (randInt) {
-		case 1:
-			printf("기분이 좋네요.\n");
-		case 3:
-				printf("도서관에서 ");
-				break;
-		case 2:
-			printf("기분이 나빠요.\n");
-		case 4:
-			printf("카페에서 ");
-			break;
-		case 5: printf("학원에서 ");
-		}
-		switch (command) {
-		case 1:
-			printf("코딩 공부합니다\n");
-			Pro_study++;
-			break;
-		case 2:printf("코딩 공부합니다\n");
-			Pub_study++;
-			break;
-		case 3:printf("코딩 공부합니다\n");
-			Eng_study++;
-			break;
-		case 4:printf("게임을 한다\n");
-			break;
-		}
-	} while (1);
-	if (day <= 3) {
-		printf("그대로 입니다...\n");
-	}
-	else {
-		int level = study / 8;
-		switch (level)
-		{
-		case 0:
-			printf("코딩새싹이 되었습니다!\n");
-			break;
-		case 1:
-			printf("취업준비생이 되었습니다!\n");
-			break;
-		case 2:
-			printf("FrontEnd 개발자가 되었습니다!\n");
-			break;
-		case 3:
-			printf(" 개발자가 되었습니다\n");
-			break;
-		case 4:
-			printf("BackEnd 개발자가 되었습니다\n");
-			break;
-		default:
-			printf("풀스택 개발자가 되었습니다!\n");
-			break;
-
-		}
-	}
-	return 0;
-}
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	int command;
+//	int day = 0;
+//	int Pro_study = 0;
+//	int Pub_study = 0;
+//	int Eng_study = 0;
+//
+//	do {
+//		printf("\n%d번째 날!\n", ++day);
+//		printf("오늘은 뭐 할까요?\n");
+//		printf("1.코딩공부한다.\n");
+//		printf("2.공무원공부를 한다.\n");
+//		printf("3.영어공부를 한다.\n");
+//		printf("4.논다.\n >>");
+//		scanf("%d", &command);
+//		if (command != 1) break;
+//
+//		int(randInt) = rand() % 5 + 1;
+//		switch (randInt) {
+//		case 1:
+//			printf("기분이 좋네요.\n");
+//		case 3:
+//				printf("도서관에서 ");
+//				break;
+//		case 2:
+//			printf("기분이 나빠요.\n");
+//		case 4:
+//			printf("카페에서 ");
+//			break;
+//		case 5: printf("학원에서 ");
+//		}
+//		switch (command) {
+//		case 1:
+//			printf("코딩 공부합니다\n");
+//			Pro_study++;
+//			break;
+//		case 2:printf("코딩 공부합니다\n");
+//			Pub_study++;
+//			break;
+//		case 3:printf("코딩 공부합니다\n");
+//			Eng_study++;
+//			break;
+//		case 4:printf("게임을 한다\n");
+//			break;
+//		}
+//	} while (1);
+//	if (day <= 3) {
+//		printf("그대로 입니다...\n");
+//	}
+//	else if (day > 3&&command == 1){
+//		int level = Pro_study / 8;
+//		//int Publevel = Pub_study / 8;
+//		//int Englevel =
+//
+//		switch (level)
+//		{
+//		case 0:
+//			printf("코딩새싹이 되었습니다!\n");
+//			break;
+//		case 1:
+//			printf("취업준비생이 되었습니다!\n");
+//			break;
+//		case 2:
+//			printf("FrontEnd 개발자가 되었습니다!\n");
+//			break;
+//		case 3:
+//			printf(" 개발자가 되었습니다\n");
+//			break;
+//		case 4:
+//			printf("BackEnd 개발자가 되었습니다\n");
+//			break;
+//		default:
+//			printf("풀스택 개발자가 되었습니다!\n");
+//			break;
+//
+//		}
+//	}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int input1, input2;
+//	
+//	scanf("%d",&input1);
+//	scanf("%d",&input2);
+//	int start = 0;
+//	int end = 0;
+//
+//	if (input1 < input2) {
+//		start = input1;
+//		end = input2;
+//	}
+//	else {
+//		start = input2;
+//		end = input1;
+//	}
+//		while (start<=end) {
+//			if (start % 2 != 0) {
+//				printf("%d ", start);
+//			}
+//			start++;
+//		}
+//	return 0;
+//}
+//#include<stdio.h>
+//int main() {
+//	int num;
+//
+//	printf("입력>> ");
+//	scanf("%d", num);
+//
+//	int heart = num; 
+//	int place = 0;
+//	int plnum = num;
+//	while (heart != 0) {
+//		plnum %= 10;
+//		heart /= 10;
+//		place++;
+//	}
+//	
+//}
