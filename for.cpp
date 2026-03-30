@@ -933,17 +933,17 @@
 //	printf("%d", sum);
 //	return 0;
 //}
-#include<stdio.h>
-int main() {
-	int num;
-
-	for (num = 1; num < 51; num++) {
-		int sec = num % 10;
-		int first = num / 10;
-
-		 if ((first && first % 3 == 0) || sec && sec % 3 == 0) {
-			printf("%d ", num);
-		}
-	}
-	return 0;
-}
+//#include<stdio.h>
+//int main() {
+//	int num;
+//
+//	for (num = 1; num < 51; num++) {
+//		int sec = num % 10;
+//		int first = num / 10;
+//
+//		 if ((first && first % 3 == 0) || sec && sec % 3 == 0) {                                       //잘모르겠다
+//			printf("%d ", num);
+//		}
+//	
+//	return 0;
+//}
