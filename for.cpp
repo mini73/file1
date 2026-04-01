@@ -1128,13 +1128,13 @@
 //	}
 //	return 0;
 //}
-
+//
 //#include<stdio.h>
 //int main() {
 //	int sum1, sum2;
 //	for (sum1 = 2; sum1 <= 9;sum1++) {
 //		if (sum1 == 3) {
-//			++sum1;
+//			++sum1;         //continue도 가능함
 //		}
 //		for (sum2 = 1; sum2 <= 9; sum2++) {
 //			printf("%d * %d = %d\n", sum1, sum2, sum1 * sum2);
@@ -1142,14 +1142,15 @@
 //	}
 //	return 0;
 //}
+//
+//#include<stdio.h>
+//int main() {
+//	int Four_sides, Six_sides;
+//	for (Four_sides = 1; Four_sides <= 4; Four_sides++) {
+//		for (Six_sides = 1; Six_sides <= 6; Six_sides++) {
+//			printf("4면 - %d, 6면 - %d\n", Four_sides, Six_sides);
+//		}
+//	}
+//	return 0;
+//}
 
-#include<stdio.h>
-int main() {
-	int Four_sides, Six_sides;
-	for (Four_sides = 1; Four_sides <= 4; Four_sides++) {
-		for (Six_sides = 1; Six_sides <= 6; Six_sides++) {
-			printf("4면 - %d, 6면 - %d\n", Four_sides, Six_sides);
-		}
-	}
-	return 0;
-}
