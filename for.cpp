@@ -1293,65 +1293,159 @@
 //	return 0;
 //}
 
+//#include<stdio.h>
+//int main() {
+//	int next = 1;
+//	int ans;
+//	
+//	scanf("%d", &ans);
+//	int count = ans;
+//
+//	for(; count>=1; count--) {
+//		for (int inter = 0; inter < count; inter++) {
+//			printf(" ");
+//		}
+//		for (int inter = 0; inter < next; inter++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//		next += 2;
+//	}
+//	for (; count<=4;){
+//		count++;
+//		next -= 2;
+//		for (int inter = 0; inter < count; inter++) {
+//			printf(" ");
+//		}
+//		for (int inter = 0; inter < next; inter++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//		
+//	}
+//	
+//	//for (int inter = 0; inter < count; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < next; inter++) {
+//	//	printf("*");
+//	//}
+//	//
+//	//printf("\n");
+//	//count--;
+//	//next += 2;
+//
+//	//for (int inter = 0; inter < count; inter++) {
+//	//	printf(" ");    
+//	//}
+//	//for (int inter = 0; inter < next; inter++) {
+//	//	printf("*");
+//	//}
+//	//printf("\n");
+//
+//	//for (int inter = 0; inter < count; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < next; inter++) {
+//	//	printf("*");
+//	//}
+//	//printf("\n");
+//	//count++;
+//	//next -= 2;
+//
+//	//for (int inter = 0; inter < count; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < next; inter++) {
+//	//	printf("*");
+//	//}
+//	//printf("\n");
+//	//count++;
+//	//next -= 2;
+//
+//	//for (int inter = 0; inter < count; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < next; inter++) {
+//	//	printf("*");
+//	//}
+//
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	
+//	int line =1;
+//	int ans;
+//	scanf("%d", &ans);
+//	
+//	for (int num = ans;num>=1; num--) {
+//		for (int inter = 1; inter < num; inter++) {
+//			printf(" ");
+//		}
+//		for (int inter = 0; inter < line; inter++) {
+//			printf("%d", line);
+//		}
+//		printf("\n");
+//		line++;
+//	}
+//	//for (int inter = 1; inter < num; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < line; inter++) {
+//	//	printf("%d", line);
+//	//}
+//	//printf("\n");
+//	//num--;
+//	//line++;
+//
+//	//for (int inter = 1; inter < num; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < line; inter++) {
+//	//	printf("%d", line);
+//	//}
+//	//printf("\n");
+//	//num--;
+//	//line++;
+//
+//	//for (int inter = 1; inter < num; inter++) {
+//	//	printf(" ");
+//	//}
+//	//for (int inter = 0; inter < line; inter++) {
+//	//	printf("%d", line);
+//	//}
+//	//printf("\n");
+//	//num--;
+//	//line++;
+//
+//	return 0;
+//}
+
 #include<stdio.h>
 int main() {
-	int count = 3;
-	int next = 1;
 
+	int input;
+
+	int player = 0;
+	printf("베스킨 라빈스 31!\n");
+	printf("게임을 시작합니다! 31을 말하는 사람이 지게됩니다\n");
+	printf("뒤의 숫자를 입력해주세요\n");
 	
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");
-	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-	printf("\n");
-	count--;
-	next += 2;
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");
-	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-	count--;
-	next += 2;
-	printf("\n");
+	for (;;) {
+		for (int i = 0; i < 3; i++) {
 
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");    
-	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-	printf("\n");
+			printf("%c :", 'A' + player);
+			scanf("%d", &input);
+			if (input == 31) {
+				printf("유저%c의 승리입니다",'A' + !player);
+			}
+		}
+		printf("턴이 넘어갑니다\n");
+		player = !player;
 
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");
-	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-	printf("\n");
-	count++;
-	next -= 2;
 
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");
 	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-	printf("\n");
-	count++;
-	next -= 2;
-
-	for (int inter = 0; inter < count; inter++) {
-		printf(" ");
-	}
-	for (int inter = 0; inter < next; inter++) {
-		printf("*");
-	}
-
 	return 0;
 }
