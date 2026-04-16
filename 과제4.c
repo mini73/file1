@@ -102,13 +102,13 @@ void main()
 	AES_Cipher(p_text, c_text, key);
 
 	printf("\n* 암호문 : ");
-	for (i = 0; i < Nb * 4; i++) pritnf("%x", c_text[i]);
+	for (i = 0; i < Nb * 4; i++) printf("%x", c_text[i]);
 	printf("\n");
 
 	AES_Inverse_Cipher(c_text,inv_c_text, key);
 
 	printf("\n* 복호문 : ");
-	for (i = 0; i < Nb * 4; i++) pritnf("%c", inv_c_text[i]);
+	for (i = 0; i < Nb * 4; i++) printf("%c", inv_c_text[i]);
 	printf("\n");
 
 }
