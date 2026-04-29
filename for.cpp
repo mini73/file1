@@ -1547,7 +1547,7 @@
 //	//}
 //	return 0;
 //}
-
+//
 //#include<stdio.h>
 //int main() {
 //	for (double conversion = 90; conversion > 0.1; conversion /= 3) {
@@ -1564,10 +1564,12 @@ int main() {
 	double conversion = 90;
 	while (conversion > 0.1) {
 		if (conversion == 10.0) {
+			conversion /= 3;
 			continue;
 		}
 		printf("%.31f\n", conversion);
 		conversion /= 3;
+		
 	}
 	
 
@@ -1581,3 +1583,24 @@ int main() {
 	//}
 	return 0;
 }
+//26
+//
+//#include<stdio.h>
+//int main() {
+//	printf("%d", 5 + 7);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main() {
+//	int number;
+//	for (;;) {
+//		scanf("%d", &number);
+//		if (number == 0) {
+//			printf("프로그램종료\n");
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+
