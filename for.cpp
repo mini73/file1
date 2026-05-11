@@ -1877,31 +1877,151 @@
 //	printf("Charater :%c\n", X);
 //}
 
+//#include<stdio.h>
+//char rightType(char type) {
+//	if (type != 'A' && type != 'B') {
+//		printf("주문할 수 없는 햄버거입니다.\n");
+//		return 'C';
+//	}
+//	return type;
+//}
+//void makeHamburger(char type, int count) {
+//	if (type == 'A') {
+//		printf("A타입 햄버거");
+//	}
+//	else {
+//		printf("B타입 햄버거");
+//	}
+//	printf("%d개 나왔습니다.\n", count);
+//}
+//int main() {
+//	char ham_type;
+//	int ham_count;
+//	printf("어느타입 햄버거를");
+//	printf("주문하시겠습니까?(AorB)\n");
+//	scanf("%c",&ham_type);
+//	if (rightType(ham_type) == 'c') {
+//		return 0;
+//	}
+//	printf("햄버거 몇 개 주문하시겠습니까?.\n");
+//	scanf("%d", &ham_count);
+//	makeHamburger(ham_type, ham_count);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int add_number(int num1, int num2)
+//{
+//	int retVal = num1 + num2;
+//	return retVal;
+//}
+//
+//int main()
+//{
+//	int a = 1, b = 2;
+//	int data1 = add_number(a, b);
+//	printf("결과 : %d\n", data1);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//int add_number(int num1, int num2)
+//{
+//	int retVal = num1 + num2;
+//	return retVal;
+//}
+//int minus_number(int num1, int num2)
+//{
+//	int retVal = num1 - num2;
+//	return retVal;
+//}
+//double divide_number(int num1, int num2)
+//{
+//	double retVal = (double)num1 / num2;
+//	return retVal;
+//}
+//int multiply_number(int num1, int num2)
+//{
+//	int retVal = num1 * num2;
+//	return retVal;
+//}
+//
+//int main()
+//{
+//	int a = 1, b = 2;
+//	int data1 = add_number(a, b);
+//	int data2 = minus_number(a, b);
+//	double data3 = divide_number(a, b);
+//	int data4 = multiply_number(a, b);
+//
+//	printf("덧셈 결과 : %d\n", data1);
+//	printf("뺄셈 결과 : %d\n", data2);
+//	printf("나눗셈 결과 : %.1lf\n", data3);
+//	printf("곱셈 결과 : %d\n", data4);
+//	return 0;
+// }
+
+//#include<stdio.h>
+//int minus(int n)
+//{
+//	if (n <= 1) return -3;
+//	return minus(n - 1) - 2;
+//}
+//int main()
+//{
+//	int n; scanf("%d", &n);
+//	printf("%d", minus(n));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//
+//void printNumber(int n)
+//{
+//	if (n <= 0) return;
+//	printf("%d", n);
+//	printNumber(n - 1);
+//}
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	printNumber(n);
+//	return 0;
+//}
+
 #include<stdio.h>
-char rightType(char type) {
-	if (type != 'A' && type != 'B') {
-		printf("주문할 수 없는 햄버거입니다.\n");
-		return 'C';
-	}
-	return type;
+int fibonacci(int n)
+{
+	printf("%d", n);
+	if (n <= 2) return 1;
+	printf("%d\n", n);
+	return fibonacci(n - 1) + fibonacci(n - 2);
 }
-void makeHamburger(char type, int count) {
-	if (type == 'A') {
-		printf("A타입 햄버거");
-	}
-	else {
-		printf("B타입 햄버거");
-	}
-	printf("%d개 나왔습니다.\n", count);
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	printf("\n%d\n", fibonacci(n));
+	return 0;
 }
-int main() {
-	char ham_type;
-	int ham_count;
-	printf("어느타입 햄버거를");
-	printf("주문하시겠습니까?(AorB)\n");
-	scanf("%c", ham_type);
-	if (rightType(ham_type) == 'c') {
-		return 0;
-	}
-	print
-}
+
+//#include<stdio.h>
+//int add(int n)
+//{
+//	int ans = n;
+//	if (n <= 0) return ans;
+//	//printf("%d\n", n);
+//	return add(n - 1);
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	printf("\n%d\n", add(n));
+//	return 0;
+//}
