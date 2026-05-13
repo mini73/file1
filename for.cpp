@@ -1992,22 +1992,22 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-int fibonacci(int n)
-{
-	printf("%d", n);
-	if (n <= 2) return 1;
-	printf("%d\n", n);
-	return fibonacci(n - 1) + fibonacci(n - 2);
-}
-
-int main()
-{
-	int n;
-	scanf("%d", &n);
-	printf("\n%d\n", fibonacci(n));
-	return 0;
-}
+//#include<stdio.h>
+//int fibonacci(int n)
+//{
+//	printf("%d", n);
+//	if (n <= 2) return 1;
+//	printf("%d\n", n);
+//	return fibonacci(n - 1) + fibonacci(n - 2);
+//}
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	printf("\n%d\n", fibonacci(n));
+//	return 0;
+//}
 
 //#include<stdio.h>
 //int add(int n)
@@ -2025,3 +2025,75 @@ int main()
 //	printf("\n%d\n", add(n));
 //	return 0;
 //}
+
+//#include<stdio.h>
+//int add(int n)
+//{
+//	if (n <= 1) return 1;
+//	return add(n - 1) + n;
+//}
+//int main()
+//{
+//	int n; scanf("%d", &n);
+//	printf("%d", add(n));
+//	return 0;
+//}
+
+//#include<iostream>
+//void main()
+//{
+//	int number, count;
+//	std::cin >> number >> count;
+//
+//	std::cout << "new : " << number << "" << count << std::endl;
+//}
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int number, count;
+//	cin >> number >> count;
+//
+//	cout << "new : " << number << " " << count << endl;
+//}
+
+//#include<iostream>
+//#include<bitset>
+//using namespace std;
+//void main()
+//{
+//	char a = 77;
+//	char b = 8;
+//	cout << bitset<8>(a) << "->" << (int)a << endl;
+//	cout << bitset<8>(b) << "->" << (int)a << endl;
+//
+//	cout << "AND : " << bitset<8>(a & b) << endl;
+//	cout << "OR  : " << bitset<8>(a | b) << endl;
+//	cout << "XOR : " << bitset<8>(a ^ b) << endl;
+//	cout << "NOT : " << bitset<8>(~a) << endl;
+//
+//	cout << "& >^: " << bitset<8>(a ^ a & b) << endl;
+//}
+
+//#include<iostream>
+//#include<bitset>
+//using namespace std;
+//void main()
+//{
+//	char a = -1;
+//	char b = a >> 5;
+//	char c = 127 >> 1;
+//
+//	printf("%x(%d)\n", a, a);
+//	printf("%x (%d)\n", a, b);
+//	printf("%x %x\n\n", 127, c);
+//
+//	char d = 1 << 1;
+//	char e = 1 << 4;
+//	char f = 1 << 7;
+//	printf("%x (%d)\n", d, d);
+//	printf("%x (%d)\n", e, e);
+//	printf("%x (%d)\n", f, f);
+//}
+
