@@ -2294,13 +2294,65 @@ using namespace std;
 
 void main()
 {
-	int a[3] = { 1,3,2 };
+	int a[5] = { 1,3,6,4,2 };
 	int max = a[0];
+	int min = a[0];
+	int add = a[0];
 
-	for (int i = 1; i < 3; i++)
+	for (int i = 1; i < 5; i++)
 	{
 		if (max < a[i])
 			max = a[i];
+		if (min > a[i])
+			min = a[i];
+		add += a[i];
+
 	}
+	double avg = add / 5;
+
+	cout << "min = " << min << endl;
 	cout << "max = " << max << endl;
+	cout << "add = " << add << endl;
+	cout << "avg = " << avg << endl;
 }
+
+
+
+//#include<iostream>
+//using namespace std;
+//
+//void main() {
+//	int a[10] = { 1,1,4,5,6,2,3,3,4,1 };
+//	int dice[7] = { 0 };//0, 1-6
+//
+//
+//	//60
+//	//for (int i = 0; i < 10; i++)
+//	//{
+//	//	for (int dot = 1; dot <= 6; dot++) {
+//	//		if (a[i] == dot) {
+//	//			dice[  dot   ] += 1;
+//	//		}
+//	//	}
+//	//}
+//
+//	//10
+//	for (int i = 0; i < 10; i++)
+//	{
+//		dice[  a[i]   ] += 1;
+//	}
+//
+//	for (int num = 1; num <= 6; num++)
+//	{
+//		cout << num << "은 " << dice[num] << "회 나왔습니다" << endl;
+//	}
+//
+//}
+
+/*
+one은 1회 나왔습니다
+two은 1회 나왔습니다
+
+
+
+*/
