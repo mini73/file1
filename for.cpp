@@ -2289,32 +2289,32 @@
 //	cout << "max = " << max << endl;
 //}
 
-#include<iostream>
-using namespace std;
-
-void main()
-{
-	int a[5] = { 1,3,6,4,2 };
-	int max = a[0];
-	int min = a[0];
-	int add = a[0];
-
-	for (int i = 1; i < 5; i++)
-	{
-		if (max < a[i])
-			max = a[i];
-		if (min > a[i])
-			min = a[i];
-		add += a[i];
-
-	}
-	double avg = add / 5;
-
-	cout << "min = " << min << endl;
-	cout << "max = " << max << endl;
-	cout << "add = " << add << endl;
-	cout << "avg = " << avg << endl;
-}
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int a[5] = { 1,3,6,4,2 };
+//	int max = a[0];
+//	int min = a[0];
+//	int add = a[0];
+//
+//	for (int i = 1; i < 5; i++)
+//	{
+//		if (max < a[i])
+//			max = a[i];
+//		if (min > a[i])
+//			min = a[i];
+//		add += a[i];
+//
+//	}
+//	double avg = (double)add / 5;
+//
+//	cout << "min = " << min << endl;
+//	cout << "max = " << max << endl;
+//	cout << "add = " << add << endl;
+//	cout << "avg = " << avg << endl;
+//}
 
 
 
@@ -2356,3 +2356,192 @@ two은 1회 나왔습니다
 
 
 */
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int left = 3, right = 5;
+//	left = right;
+//	right = left;
+//	cout << "left = " << left << ", ";
+//	cout << "right= " << right << endl;
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int left = 3, right = 5;
+//	int temp;
+//	temp = left;
+//	left = right;
+//	right = temp;
+//	cout << "left = " << left << ", ";
+//	cout << "right= " << right << endl;
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int num[2] = { 10,3 };
+//	int temp;
+//	temp = num[0];
+//	num[0] = num[1];
+//	num[1] = temp;
+//	cout << "num[0] = " << num[0] << ", ";
+//	cout << "num[1] = " << num[1] << endl;
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main() 
+//{
+//	int num[4] = { 4,3,1,2 };
+//	int swap;
+//	
+//	swap = num[0];   
+//	num[0] = num[2];
+//	num[2] = swap;   //{ 1,3,4,2 }
+//	swap = num[1];
+//	num[1] = num[3];
+//	num[3] = swap;   //{ 1,2,4,3 }
+//	swap = num[2];
+//	num[2] = num[3];
+//	num[3] = swap;
+//
+//	for (int i = 0; i < 4; i++) {
+//		cout << "num["<<i<<"] = " << num[i] << endl;
+//	}
+//}
+
+//if (num[0] > num[1]) {
+//	if (num[0] > num[2]) {
+//		if (num[0] > num[3]) {
+//			swap = num[0];
+//			num[0] = num[3];
+//			num[3] = swap;
+//		}
+//		else {
+//			swap = num[0];
+//			num[0] = num[2];
+//			num[2] = swap;
+//		}
+//	}
+//	else if (num[0] > num[3]) {
+//		swap = num[0];
+//		num[0] = num[3];
+//		num[3] = swap;
+//	}
+//	else {
+//		swap = num[0];
+//		num[0] = num[1];
+//		num[1] = swap;
+//	}
+//
+//}
+//else if (num[0] > num[2])
+//{
+//	if (num[0] > num[3]) {
+//		swap = num[0];
+//		num[0] = num[3];
+//		num[3] = swap;
+//	}
+//	else {
+//		swap = num[0];
+//		num[0] = num[2];
+//		num[2] = swap;
+//	}
+//}
+//else if (num[0] > num[3]) {
+//	swap = num[0];
+//	num[0] = num[3];
+//	num[3] = swap;
+//}
+//else {
+//	swap = num[0];
+//	num[0] = num[1];
+//	num[1] = swap;
+//}
+//
+//		}
+
+#include<iostream>
+using namespace std;
+
+void main()
+{
+	int num[4];
+	int swap;
+	for (int i = 0; i < 4; i++) {
+		cin >> num[i];
+	}
+
+
+	for()
+	if (num[0] > num[1])
+	{
+		swap = num[0];
+		num[0] = num[1];
+		num[1] = swap;
+	}
+	if (num[1] > num[2])
+	{
+		swap = num[1];
+		num[1] = num[2];
+		num[2] = swap;
+	}
+	if (num[2] > num[3])
+	{
+		swap = num[2];
+		num[2] = num[3];
+		num[3] = swap;
+	}
+
+
+
+
+
+	
+	//for (int i = 1; i;) {
+	//	if (num[0] > num[1] && num[0] > num[2] && num[0] > num[3])
+	//	{
+	//		swap = num[0];
+	//		num[0] = num[3];
+	//		num[3] = swap;
+	//	}
+	//	else if (num[1] > num[0] && num[1] > num[2] && num[1] > num[3])
+	//	{
+	//		swap = num[1];
+	//		num[1] = num[2];
+	//		num[2] = swap;
+	//	}
+	//	else if (num[2] > num[0] && num[2] > num[1] && num[2] > num[3])
+	//	{
+	//		swap = num[1];
+	//		num[1] = num[3];
+	//		num[3] = swap;
+	//	}
+
+	}
+
+
+	swap = num[0];
+	num[0] = num[2];
+	num[2] = swap;   //{ 1,3,4,2 }
+	swap = num[1];
+	num[1] = num[3];
+	num[3] = swap;   //{ 1,2,4,3 }
+	swap = num[2];
+	num[2] = num[3];
+	num[3] = swap;
+
+	for (int i = 0; i < 4; i++) {
+		cout << "num[" << i << "] = " << num[i] << endl;
+	}
+}
