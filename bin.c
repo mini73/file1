@@ -186,72 +186,145 @@
 
 //     return 0;
 // }
-#include<stdio.h>
-int main(){
-    int a,b,c,d;
-    int hap;
+// #include<stdio.h>
+// int main(){
+//     int a,b,c,d;
+//     int hap;
 
-    printf("1번째 숫자를 입력하세요 : ");
-    scanf("%d", &a);
-    printf("2번째 숫자를 입력하세요 : ");
-    scanf("%d", &b);
-    printf("3번째 숫자를 입력하세요 : ");
-    scanf("%d", &c);
-    printf("4번째 숫자를 입력하세요 : ");
-    scanf("%d", &d);
+//     printf("1번째 숫자를 입력하세요 : ");
+//     scanf("%d", &a);
+//     printf("2번째 숫자를 입력하세요 : ");
+//     scanf("%d", &b);
+//     printf("3번째 숫자를 입력하세요 : ");
+//     scanf("%d", &c);
+//     printf("4번째 숫자를 입력하세요 : ");
+//     scanf("%d", &d);
     
-    hap = a+b+c+d;
+//     hap = a+b+c+d;
 
-    printf(" 합계 ==> %d \n", hap);
+//     printf(" 합계 ==> %d \n", hap);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int aa[4];
+//     int hap;
+
+//     printf("1번째 숫자를 입력하세요 : ");
+//     scanf("%d", &aa[0]);
+//     printf("2번째 숫자를 입력하세요 : ");
+//     scanf("%d", &aa[1]);
+//     printf("3번째 숫자를 입력하세요 : ");
+//     scanf("%d", &aa[2]);
+//     printf("4번째 숫자를 입력하세요 : ");
+//     scanf("%d", &aa[3]);
+    
+//     hap = aa[0]+aa[1]+aa[2]+aa[3];
+
+//     printf(" 합계 ==> %d \n", hap);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int aa[4];
+//     int hap=0;
+//     int i;
+
+//     for(i=0;i<=3;i++)
+//     {
+//         printf("%d번째 숫자를 입력하세요 : ",i+1);
+//         scanf("%d", &aa[i]);
+//     }
+    
+    
+//     hap = aa[0]+aa[1]+aa[2]+aa[3];
+
+//     printf(" 합계 ==> %d \n", hap);
+// }
+
+// #include<stdio.h>
+// int main(){
+//     int aa[4]={100,200,300,400};
+//     int bb[]={100,200,300,400};
+//     int cc[4]={100,200};
+//     int dd[4]={0};
+//     int i;
+
+//     for(i=0;i<=3;i++)
+//         printf("%d번째 숫자를 입력하세요 : ",i+1);
+//         scanf("%d", &aa[i]);
+    
+// }
+#include <stdio.h>
+
+int main()
+{
+    int aa[3][4];
+
+    aa[0][0] = 1;  aa[0][1] = 2;  aa[0][2] = 3;  aa[0][3] = 4;
+    aa[1][0] = 5;  aa[1][1] = 6;  aa[1][2] = 7;  aa[1][3] = 8;
+    aa[2][0] = 9;  aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
+
+    printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
+
+    printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
+    printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
+    printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
+
+    return 0;
 }
 
-#include<stdio.h>
-int main(){
-    int aa[4];
-    int hap;
+#include <stdio.h>
 
-    printf("1번째 숫자를 입력하세요 : ");
-    scanf("%d", &aa[0]);
-    printf("2번째 숫자를 입력하세요 : ");
-    scanf("%d", &aa[1]);
-    printf("3번째 숫자를 입력하세요 : ");
-    scanf("%d", &aa[2]);
-    printf("4번째 숫자를 입력하세요 : ");
-    scanf("%d", &aa[3]);
-    
-    hap = aa[0]+aa[1]+aa[2]+aa[3];
+int main()
+{
+    int aa[3][4];
+    int i, k;
 
-    printf(" 합계 ==> %d \n", hap);
-}
+    int val = 1;
 
-#include<stdio.h>
-int main(){
-    int aa[4];
-    int hap=0;
-    int i;
-
-    for(i=0;i<=3;i++)
+    for (i = 0; i < 3; i++)
     {
-        printf("%d번째 숫자를 입력하세요 : ",i+1);
-        scanf("%d", &aa[i]);
+        for (k = 0; k < 4; k++)
+        {
+            aa[i][k] = val;
+            val++;
+        }
     }
-    
-    
-    hap = aa[0]+aa[1]+aa[2]+aa[3];
 
-    printf(" 합계 ==> %d \n", hap);
+    printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
+
+    for (i = 0; i < 3; i++)
+    {
+        for (k = 0; k < 4; k++)
+        {
+            printf("%3d ", aa[i][k]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }
 
-#include<stdio.h>
-int main(){
-    int aa[4]={100,200,300,400};
-    int bb[]={100,200,300,400};
-    int cc[4]={100,200};
-    int dd[4]={0};
-    int i;
+#include <stdio.h>
 
-    for(i=0;i<=3;i++)
-        printf("%d번째 숫자를 입력하세요 : ",i+1);
-        scanf("%d", &aa[i]);
-    
+int main()
+{
+    int gugu[9][9];
+    int i, k;
+
+    for (i = 0; i < 9; i++)
+        for (k = 0; k < 9; k++)
+            gugu[i][k] = (i + 1) * (k + 1);
+
+    for (i = 0; i < 9; i++)
+    {
+        for (k = 0; k < 9; k++)
+        {
+            printf("%dX%d=%2d  ", k + 1, i + 1, gugu[i][k]);
+        }
+        printf("\n");
+    }
+
+    return 0;
 }
