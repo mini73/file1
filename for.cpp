@@ -2471,77 +2471,241 @@ two은 1회 나왔습니다
 //
 //		}
 
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int num[4];
+//	int swap;
+//	for (int i = 0; i < 4; i++) {
+//		cin >> num[i];
+//	}
+//	
+//	//int i = 0;
+//
+//	for (int j = 0; j < 4; j++) {
+//		int min = j;
+//		for (int i = j+1; i < 4; i++) {
+//			if (num[min] > num[i])
+//			{
+//				min = num[i];
+//			}
+//		}
+//		swap = num[j];
+//		num[j] = num[min];
+//		num[min] = swap;
+//		
+//	}
+//
+//	//if (min > num[i])
+//	//{
+//	//	min = num[i];
+//	//}
+//	//i++;
+//	//if (min > num[i])
+//	//{
+//	//	min = num[i];
+//	//}
+//	//i++;
+//	//if (min > num[i])
+//	//{
+//	//	min = num[i];
+//	//}
+//
+//	//	{
+//	//	swap = num[0];
+//	//	num[0] = min;
+//	//	min = swap;
+//	//}
+//
+//
+//
+//
+//
+//	
+//	//for (int j = 3; j > 0; j--) {
+//	//	for (int i = 0; i < j; i++) {
+//	//		if (num[i] > num[i + 1])
+//	//		{
+//	//			swap = num[i];
+//	//			num[i] = num[i + 1];
+//	//			num[i + 1] = swap;
+//	//		}
+//	//	}
+//	//}
+//
+//	//for (int i = 0; i < 2; i++) {
+//	//	if (num[i] > num[i + 1])
+//	//	{
+//	//		swap = num[i];
+//	//		num[i] = num[i + 1];
+//	//		num[i + 1] = swap;
+//	//	}
+//	//}
+//
+//	//for (int i = 0; i < 1; i++) {
+//	//	if (num[i] > num[i + 1])
+//	//	{
+//	//		swap = num[i];
+//	//		num[i] = num[i + 1];
+//	//		num[i + 1] = swap;
+//	//	}
+//	//}
+//
+//
+//	for (int i = 0; i < 4; i++) {
+//	cout << "num[" << i << "] = " << num[i] << endl;
+//}
+//
+//	//if (num[i] > num[i + 1])
+//	//{
+//	//	swap = num[i];
+//	//	num[i] = num[i + 1];
+//	//	num[i + 1] = swap;
+//	//}
+//	//i++;
+//	//if (num[i] > num[i + 1])
+//	//{
+//	//	swap = num[i];
+//	//	num[i] = num[i + 1];
+//	//	num[i + 1] = swap;
+//	//}
+//
+//
+//
+//
+//
+//	
+//	//for (int i = 1; i;) {
+//	//	if (num[0] > num[1] && num[0] > num[2] && num[0] > num[3])
+//	//	{
+//	//		swap = num[0];
+//	//		num[0] = num[3];
+//	//		num[3] = swap;
+//	//	}
+//	//	else if (num[1] > num[0] && num[1] > num[2] && num[1] > num[3])
+//	//	{
+//	//		swap = num[1];
+//	//		num[1] = num[2];
+//	//		num[2] = swap;
+//	//	}
+//	//	else if (num[2] > num[0] && num[2] > num[1] && num[2] > num[3])
+//	//	{
+//	//		swap = num[1];
+//	//		num[1] = num[3];
+//	//		num[3] = swap;
+//	//	}
+//
+//	//}
+//
+//
+//	//swap = num[0];
+//	//num[0] = num[2];
+//	//num[2] = swap;   //{ 1,3,4,2 }
+//	//swap = num[1];
+//	//num[1] = num[3];
+//	//num[3] = swap;   //{ 1,2,4,3 }
+//	//swap = num[2];
+//	//num[2] = num[3];
+//	//num[3] = swap;
+//
+//	//for (int i = 0; i < 4; i++) {
+//	//	cout << "num[" << i << "] = " << num[i] << endl;
+//	//}
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int* buff;
+//	buff = new int[2];
+//	cin >> buff[0] >> buff[1];
+//	cout << "new : " << buff[0] << " " << buff[1] << endl;
+//	delete buff;
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int n;
+//	cin >> n;
+//	int* buff = new int[n];
+//	for (int i = 0; i < n; i++)
+//		cin >> buff[i];
+//	for (int i = 0; i < n; i++)
+//		cout << buff[i]<<" ";
+//	delete buff;
+//}
+
+//#include<iostream>
+//#include<cstdlib>
+//#include<ctime>
+//using namespace std;
+//
+//void main()
+//{
+//	srand((unsigned int)time(NULL));
+//
+//	int n;
+//	cin >> n;
+//
+//	int* buff = new int[n];
+//	for (int i = 0; i < n; i++) {
+//		buff[i] = rand() % 5 + 5;
+//	}
+//
+//	cout << "new : ";
+//	for (int i = 0; i < n; i++) {
+//		cout << buff[i] << " ";
+//	}
+//	cout << endl;
+//
+//	delete buff;
+//}
+
 #include<iostream>
+#include<cstdlib>
+#include<ctime>
 using namespace std;
 
 void main()
 {
-	int num[4];
-	int swap;
-	for (int i = 0; i < 4; i++) {
-		cin >> num[i];
+	srand((unsigned int)time(NULL));
+
+	int n;
+	cin >> n;
+
+	int* buff = new int[n];
+	for (int i = 0; i < n; i++) {
+		buff[i] = rand() % 101;
 	}
-
-
-	for()
-	if (num[0] > num[1])
-	{
-		swap = num[0];
-		num[0] = num[1];
-		num[1] = swap;
-	}
-	if (num[1] > num[2])
-	{
-		swap = num[1];
-		num[1] = num[2];
-		num[2] = swap;
-	}
-	if (num[2] > num[3])
-	{
-		swap = num[2];
-		num[2] = num[3];
-		num[3] = swap;
-	}
-
-
-
 
 
 	
-	//for (int i = 1; i;) {
-	//	if (num[0] > num[1] && num[0] > num[2] && num[0] > num[3])
-	//	{
-	//		swap = num[0];
-	//		num[0] = num[3];
-	//		num[3] = swap;
-	//	}
-	//	else if (num[1] > num[0] && num[1] > num[2] && num[1] > num[3])
-	//	{
-	//		swap = num[1];
-	//		num[1] = num[2];
-	//		num[2] = swap;
-	//	}
-	//	else if (num[2] > num[0] && num[2] > num[1] && num[2] > num[3])
-	//	{
-	//		swap = num[1];
-	//		num[1] = num[3];
-	//		num[3] = swap;
-	//	}
-
+	for (int i = 0; i < n; i++) {
+		cout << i+1 << "번째 학생 - ";
+		if (buff[i] < 20) {
+			cout << "F" << " ";
+		}
+		else if (buff[i] < 40) {
+			cout << "D" << " ";
+		}
+		else if (buff[i] < 60) {
+			cout << "C" << " ";
+		}
+		else if (buff[i] < 80) {
+			cout << "B" << " ";
+		}
+		else if (buff[i] < 101) {
+			cout << "A" << " ";
+		}
 	}
+	cout << endl;
 
-
-	swap = num[0];
-	num[0] = num[2];
-	num[2] = swap;   //{ 1,3,4,2 }
-	swap = num[1];
-	num[1] = num[3];
-	num[3] = swap;   //{ 1,2,4,3 }
-	swap = num[2];
-	num[2] = num[3];
-	num[3] = swap;
-
-	for (int i = 0; i < 4; i++) {
-		cout << "num[" << i << "] = " << num[i] << endl;
-	}
+	delete buff;
 }
