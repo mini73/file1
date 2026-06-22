@@ -106,31 +106,79 @@
 //	cout << sam << endl;
 //}
 
+//#include<iostream>
+//#include<string>
+//#include<math.h>
+//using namespace std;
+//
+//
+//void main() {
+//	//int testnum;
+//	//scanf("%x", &testnum);
+//	//printf(">>%d\n", testnum);
+//
+//	string word;
+//	int ans = 0;
+//	cin >> word;
+//
+//	int len = word.length() -1 ;
+//    int hex;
+//	int square = len;
+//	for (int i = 0; i <= len; i++) {
+//		int num = 0;
+//		int result = (int)pow(16, square); //= pow(16, 0);   //x^y
+//
+//		if (word[i] >= 'A' && word[i] <= 'F') {
+//			num = word[i] - 'A' + 10;
+//		}
+//		else if (word[i] >= 'a' && word[i] <= 'f') {
+//			num = word[i] - 'a' + 10;
+//		}
+//		else if (word[i] >= '0' && word[i] <= '9') {
+//			num = word[i] - '0';
+//		}
+//		else {
+//			cout << "잘못 입력" << endl;
+//			break;
+//		}
+//		ans += num * result;
+//		square--;
+//	}
+//	//hex = stoi(word);
+//	cout << ans << endl;
+//	//cout <<	word << endl;
+//
+//
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void main()
+//{
+//	int num = 100;
+//	int* pNum = &num;
+//
+//	cout << "num = " << num << endl;
+//	cout << "&num = " << &num << endl;
+//    cout << "*pNum = " << *pNum << endl;              
+//	cout << "pNum = " << pNum << endl;
+//
+//
+//}
+
 #include<iostream>
-#include<string>
 using namespace std;
 
+void main()
+{
+	int value = 50;
+	int* ptr = &value;
 
-void main() {
-	string word;
-	cin >> word;
-	int len = word.length();
-	int hex;
-	//for (int i = 0; i <= len; i++) {
-	//	if (word[i] >= 'A' && word[i] <= 'F') {
-	//		if (word[i] < 91) {
-	//			word[i]= word[i]-
-	//		}
+	cout << "변경 전 value: " << value << endl;
 
-	//	}
-	//	else {
-	//		continue;
-	//	}
-	//}
-	hex = stoi(word[]);
-	int hex = stoi(word);
-	cout << hex << endl;
-	cout<<	word << endl;
-
-
+	*ptr = 100;
+	cout << "변경 후 value: " << value << endl;
 }
+
+#include <iostream>
