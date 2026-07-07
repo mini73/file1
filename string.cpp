@@ -591,25 +591,154 @@
 //	delete data;
 //}
 
-#include<stdio.h>
+//#include<stdio.h>
+//
+//void main() {
+//	int rows = 5, cols = 5;
+//	int** data = new int* [rows];
+//	for (int i = 0; i < rows; i++) {
+//		data[i] = new int[cols];
+//		for (int j = 0; j < cols; j++) {
+//			data[i][j] =  5*i + j + 1;
+//		}
+//	}
+//	for (int i = 0; i < rows; i++)
+//	{
+//		for (int j = 0; j < cols; j++)
+//		{
+//			printf("%3d", data[i][j]);
+//		}
+//		printf("\n");
+//		delete data[i];
+//	}
+//	delete data;
+//}
 
-void main() {
-	int rows = 5, cols = 5;
-	int** data = new int* [rows];
-	for (int i = 0; i < rows; i++) {
-		data[i] = new int[cols];
-		for (int j = 0; j <= cols; j++) {
-			data[i][j] =  j;
+//#include<stdio.h>
+//
+//void main() {
+//	int rows = 5, cols = 5;
+//	int** data = new int* [rows];
+//
+//	int num = 1;
+//	for (int i = 0; i < rows; i++) {
+//		data[i] = new int[cols];
+//		for (int j = 0; j < cols; j++) {
+//			data[i][j] = num++;
+//		}
+//	}
+//	for (int i = 4; i >= 0; i--)
+//	{
+//		for (int j = 4; j >= 0; j--)
+//		{
+//			printf("%3d", data[i][j]);
+//		}
+//		printf("\n");
+//		delete data[i];
+//	}
+//	delete data;
+//}
+
+//#include<stdio.h>
+//
+//void main() {
+//	int rows = 5, cols = 5;
+//	int** data = new int* [rows];
+//
+//	int num = 1;
+//	for (int i = 0; i < rows; i++) {
+//		data[i] = new int[cols];
+//		for (int j = 0; j < cols; j++) {
+//			data[i][j] =  num++;
+//		}
+//	}
+//
+//	int dimen[25] = {};
+//	int sum = 0;
+//	for (int i = 0; i < rows; i++)
+//	{
+//		for (int j = 0; j < cols; j++)
+//		{
+//
+//			dimen[sum] = data[i][j];
+//			sum++;
+//			//printf("%3d", data[i][j]);
+//		}
+//		delete data[i];
+//	}
+//	delete data;
+//	for (int i = 0; i < num-1; i++)
+//	{
+//		printf("%3d", dimen[i]);
+//	}
+//	
+//}
+
+//#include<stdio.h>
+//
+//
+//void main()
+//{
+//
+//	int count;
+//	int input = 1;
+//	printf("개수를 정하시오: ");
+//	scanf("%d", &count);
+//
+//	int* data = new int [count];
+//	printf("개수만큼 숫자를 적으시오\n");
+//	for (int i = 0; i < count; i++) {
+//		printf(">>");
+//		scanf("%d", &data[i]);
+//		//data[i] = new int[input];
+//		//for (int j = 0; j < input; j++) {
+//		//	data[i][j] =  ;
+//		//}
+//	}
+//	for (int j = 0; j < count; j++) {
+//		for (int i = 0; i < data[j]; i++) {
+//			printf("*");
+//		}
+//		printf("\n");
+//	}
+//
+//}
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+
+void main()
+ {
+
+	srand((unsigned int)time(NULL));
+	int count;
+	int input = 1;
+	
+	printf("숫자를 입력하시오: ");
+	scanf("%d", &count);
+	int randNum = (rand()% 999)+100;//1-999
+	int repli = count;
+	int** data = new int*[count];
+	//printf("개수만큼 숫자를 적으시오\n");
+	for (int i = 0; i < count; i++) {
+		//printf(">>");
+		//scanf("%d", &data[i]);
+		data[i] = new int[repli];
+		for (int j = 0; j < count; j++) {
+			data[i][j] = randNum;
 		}
 	}
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			printf("%3d", data[i][j]);
+	for (int i = 0; i < count; i++) {
+		for (int j = 0; j < count; j++) {
+			if (data[i][j]%2==0) {
+				printf("*");
+			}
+			else
+			printf(".");
 		}
 		printf("\n");
-		delete data[i];
 	}
-	delete data;
+
 }
