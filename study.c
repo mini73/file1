@@ -93,45 +93,87 @@
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
+// int main()
+// {
+//     char ss[5] = "abcd";
+//     char tt[5];
+//     int i;
+
+//     for(i=0; i<4; i++)
+//     {
+//         tt[i] = ss[3-i];
+//     }
+
+//     tt[4] = '\0';
+
+//     printf("거꾸로 출력한 결과==> %s \n", tt);
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char ss[] = "XYZ";
+//     int len;
+
+//     len = strlen(ss);
+
+//     printf("문자열 \"%s\"의 길이 ==> %d \n", ss, len);
+// }
+
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     char ss[4];
+
+//     strcpy(ss, "XYZ");
+
+//     printf("문자열 ss의 내용 ==> %s \n", ss);
+// }
+#include <stdio.h>
 int main()
 {
-    char ss[5] = "abcd";
-    char tt[5];
-    int i;
+    int aa[3][4];
 
-    for(i=0; i<4; i++)
+    aa[0][0] = 1; aa[0][1] = 2; aa[0][2] = 3; aa[0][3] = 4;
+    aa[1][0] = 5; aa[1][1] = 6; aa[1][2] = 7; aa[1][3] = 8;
+    aa[2][0] = 9; aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
+
+    printf("aa[0][0]부터 aa[2][3]까지 출력\n");
+    
+    printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
+    printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
+    printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
+}
+
+#include <stdio.h>
+int main()
+{
+    int aa[3][4];
+    int i,k;
+
+    int val=1;
+
+    for(i=0; i<3; i++)
     {
-        tt[i] = ss[3-i];
+        for(k=0; k<4; k++)
+        {
+            aa[i][k] = val;
+            val++;
+        }
     }
-
-    tt[4] = '\0';
-
-    printf("거꾸로 출력한 결과==> %s \n", tt);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    char ss[] = "XYZ";
-    int len;
-
-    len = strlen(ss);
-
-    printf("문자열 \"%s\"의 길이 ==> %d \n", ss, len);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    char ss[4];
-
-    strcpy(ss, "XYZ");
-
-    printf("문자열 ss의 내용 ==> %s \n", ss);
-}
+    printf("aa[0][0]부터 aa[2][3]까지 출력\n");
+    for(i=0; i<3; i++)
+    {
+        for(k=0; k<4; k++)
+        {
+            printf("%3d", aa[i][k]);
+        }
+        printf("\n");
+    }
+}   
