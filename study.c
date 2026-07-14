@@ -135,45 +135,155 @@
 
 //     printf("문자열 ss의 내용 ==> %s \n", ss);
 // }
-#include <stdio.h>
-int main()
-{
-    int aa[3][4];
+// #include <stdio.h>
+// int main()
+// {
+//     int aa[3][4];
 
-    aa[0][0] = 1; aa[0][1] = 2; aa[0][2] = 3; aa[0][3] = 4;
-    aa[1][0] = 5; aa[1][1] = 6; aa[1][2] = 7; aa[1][3] = 8;
-    aa[2][0] = 9; aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
+//     aa[0][0] = 1; aa[0][1] = 2; aa[0][2] = 3; aa[0][3] = 4;
+//     aa[1][0] = 5; aa[1][1] = 6; aa[1][2] = 7; aa[1][3] = 8;
+//     aa[2][0] = 9; aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
 
-    printf("aa[0][0]부터 aa[2][3]까지 출력\n");
+//     printf("aa[0][0]부터 aa[2][3]까지 출력\n");
     
-    printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
-    printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
-    printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
-}
+//     printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
+//     printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
+//     printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
+// }
 
-#include <stdio.h>
+// #include <stdio.h>
+// int main()
+// {
+//     int aa[3][4];
+//     int i,k;
+
+//     int val=1;
+
+//     for(i=0; i<3; i++)
+//     {
+//         for(k=0; k<4; k++)
+//         {
+//             aa[i][k] = val;
+//             val++;
+//         }
+//     }
+//     printf("aa[0][0]부터 aa[2][3]까지 출력\n");
+//     for(i=0; i<3; i++)
+//     {
+//         for(k=0; k<4; k++)
+//         {
+//             printf("%3d", aa[i][k]);
+//         }
+//         printf("\n");
+//     }
+// }   
+#include<stdio.h>
 int main()
 {
-    int aa[3][4];
-    int i,k;
+	int snail[5][5] = {};
 
-    int val=1;
+	//snail[0][0] = 1; 
+	//snail[0][1] = 2; 
+	//snail[0][2] = 3;
+	//snail[0][3] = 4; 
+	//snail[0][4] = 5;
 
-    for(i=0; i<3; i++)
+
+	//snail[1][4] = 6;
+	//snail[2][4] = 7;
+	//snail[3][4] = 8;
+	//snail[4][4] = 9;
+	int y = 0;
+	int x = -1;
+	int num = 1;
+	int i;
+	//int count = 5;
+	
+	//x++; snail[y][x] = num; num++;
+	//x++; snail[y][x] = num; num++;
+	//x++; snail[y][x] = num; num++;
+	//x++; snail[y][x] = num; num++;
+	//x++; snail[y][x] = num; num++;
+	//
+
+	//y++; snail[y][x] = num; num++;
+	//y++; snail[y][x] = num; num++;
+	//y++; snail[y][x] = num; num++;
+	//y++; snail[y][x] = num; num++;
+int count = 5;
+for (int j = 0; j < 2; j++)
+{
+    for (i=0; i < count; i++)
+	{
+		x++; snail[y][x] = num; num++;
+	}
+    count--;
+	for (i=0; i < count; i++)
+	{
+		y++; snail[y][x] = num; num++;
+	}
+    for (i=0; i < count; i++)
     {
-        for(k=0; k<4; k++)
-        {
-            aa[i][k] = val;
-            val++;
-        }
+        x--; snail[y][x] = num; num++;
     }
-    printf("aa[0][0]부터 aa[2][3]까지 출력\n");
-    for(i=0; i<3; i++)
+    count--;
+    for (i=0; i < count; i++)
     {
-        for(k=0; k<4; k++)
-        {
-            printf("%3d", aa[i][k]);
-        }
-        printf("\n");
+        y--; snail[y][x] = num; num++;
     }
-}   
+}
+    for (i=0; i < count; i++)
+    {
+        x++; snail[y][x] = num; num++;
+    }
+	// for (i=0; i < 5; i++)
+	// {
+	// 	x++; snail[y][x] = num; num++;
+	// }
+	// for (i=0; i < 4; i++)
+	// {
+	// 	y++; snail[y][x] = num; num++;
+	// }
+    // for (i=0; i < 4; i++)
+    // {
+    //     x--; snail[y][x] = num; num++;
+    // }
+    // for (i=0; i < 3; i++)
+    // {
+    //     y--; snail[y][x] = num; num++;
+    // }
+
+    // for (i=0; i < 3; i++)
+    // {
+    //     x++; snail[y][x] = num; num++;
+    // }   
+    // for (i=0; i < 2; i++)
+    // {
+    //     y++; snail[y][x] = num; num++;
+    // }
+    // for (i=0; i < 2; i++)
+    // {
+    //     x--; snail[y][x] = num; num++;
+    // }
+    // for (i=0; i < 1; i++)
+    // {
+    //     y--; snail[y][x] = num; num++;
+    // } 
+
+    // for (i=0; i < 1; i++)
+    // {
+    //     x++; snail[y][x] = num; num++;
+    // }
+
+
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++) {
+			printf("%3d",snail[i][j]);
+		}
+		printf("\n");
+	}
+
+	
+}
