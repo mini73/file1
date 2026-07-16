@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+//#define _CRT_SECURE_NO_WARNINGS
 
 //#include<stdio.h>
 //#include<stdlib.h>
@@ -305,37 +305,100 @@
 //	return 0;
 //}
 
+//#include<iostream>
+//using namespace std;
+//
+//int add_number(int num1, int num2);
+//int minus_number(int num1, int num2);
+//int multiply_number(int num1, int num2);
+//double divide_number(int num1, int num2);
+//
+//void main() {
+//	int a = 1, b = 2;
+//	int data1 = add_number(a, b);
+//	int data2 = minus_number(a, b);
+//	int data3 = multiply_number(a, b);
+//	double data4 = divide_number(a, b);
+//
+//	cout << "µ¡¼À °á°ú:" << data1 << endl;
+//	cout << "»¬¼À °á°ú:" << data2 << endl;
+//	cout << "°ö¼À °á°ú:" << data3 << endl;
+//	cout << "³ª´°¼À °á°ú:" << data4 << endl;
+//
+//}
+//
+//int add_number(int num1, int num2) {
+//	int add = num1 + num2;
+//	return add;
+//}
+//int minus_number(int num1, int num2) {
+//	int minus = num1 - num2;
+//	return minus;
+//}
+//int multiply_number(int num1, int num2) {
+//	int multiply = num1 * num2;
+//	return multiply;
+//}
+//double divide_number(int num1, int num2) {
+//	double divide = (double)num1 / num2;
+//	return divide;
+//}
+//
+//#include<iostream>
+//#include<string>
+//using namespace std;
+//
+//string searching(string name);
+//
+//void main() {
+//	string book;
+//	cin >> book;
+//	string bookName = searching(book);
+//	cout << bookName << endl;
+//}
+//
+//string searching(string name) {
+//	
+//	return "[°Ë»ö Áß]" + name;
+//}
+
 #include<iostream>
+
 using namespace std;
 
-int add_number(int num1, int num2);
-int minus_number(int num1, int num2);
-int multiply_number(int num1, int num2);
-int divide_number(int num1, int num2);
+int calcPrice(char name);
+int calcPrice(char name, int count);
 
 void main() {
-	int a = 2, b = 4;
-	int data1 = add_number(a, b);
-	int data2 = minus_number(a, b);
-	int data3 = multiply_number(a, b);
-	int data4 = divide_number(a, b);
+	char name;
+	int count;
+	cout << "¾î¶² À½·á¸¦ ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î?" << endl;
+	cout << "A.¾Æ¸Ş¸®Ä«³ë(1000¿ø)\nB.¶ó¶¼(2000¿ø)\nC.¿¡ÀÌµå(1500¿ø)\n" << endl;
+	cin >> name;
+	cout << "¸î °³ °í¸£½Ã°Ú½À´Ï±î?";
+	cin >> count;
 
-	cout << "µ¡¼À °á°ú:" << data1 << endl;
-	cout << "»¬¼À °á°ú:" << dat2 << endl;
-	cout << "°ö¼À °á°ú:" << data3 << endl;
-	cout << "³ª´°¼À °á°ú:" << data4 << endl;
+	cout << calcPrice << "¿ø ÀÔ´Ï´Ù" << endl;
+	
 
-}
 
-int add_number(int num1, int num2) {
-
-}
-int minus_number(int num1, int num2); {
+	
 
 }
-int multiply_number(int num1, int num2) {
 
+int calcPrice(char name)
+{
+	switch (name)
+	{
+	case'A': return 1000;
+	case'B': return 2000;
+	case'C': return 1500;
+	}
+	return 0;
 }
-int divide_number(int num1, int num2) {
 
+int calcPrice(char name, int count) {
+
+	int price = calcPrice(name);
+	return price * count;
 }
