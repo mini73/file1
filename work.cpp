@@ -362,43 +362,142 @@
 //	return "[검색 중]" + name;
 //}
 
+//#include<iostream>
+//
+//using namespace std;
+//
+//int calcPrice(char name);
+//int calcPrice(char name, int count);
+//
+//void main() {
+//	int name;
+//	int count;
+//	int result;
+//	cout << "어떤 음료를 선택하시겠습니까?" << endl;
+//	cout << "1.아메리카노(1000원)\n2.라떼(2000원)\n3.에이드(1500원)\n" << endl;
+//	cin >> name;
+//	cout << "몇 개 고르시겠습니까?";
+//	cin >> count;
+//	result = calcPrice (name,count);
+//	cout << result << "원 입니다" << endl;
+//
+//}
+//
+//int calcPrice(char name)
+//{
+//	switch (name)
+//	{
+//	case 1: return 1000; break;
+//	case 2: return 2000; break;
+//	case 3: return 1500; break;
+//	}
+//	return 0;
+//}
+//
+//int calcPrice(char name, int count) {
+//
+//	int price = calcPrice(name);
+//	return price * count;
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//void swap(int *change)
+//{
+//		int box = change[0];
+//		change[0] = change[1];
+//		change[1] = box;
+//	
+//}
+//
+//void main() {
+//	int num[] = { 1,2 };
+//	swap(num);
+//	for (int i = 0; i < 2; i++) {
+//		cout << num[i] << endl;
+//	}
+//	
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//int addAll(int sum[][3]) {
+//	int ans = 0;
+//	for (int i = 0; i < 3; i++) {
+//		for (int j = 0; j < 3; j++) {
+//			ans += sum[i][j];
+//		}
+//	}
+//	return ans;
+//}
+//
+//void main() {
+//
+//	int sum[3][3] = { };
+//	for (int i=0; i < 3; i++) {
+//		for (int j = 0; j < 3; j++) {
+//			cin >> sum[i][j];
+//		}
+//	}
+//	int allSum = addAll(sum);
+//	cout << allSum << endl;
+//}
+
 #include<iostream>
 
-using namespace std;
+int Row(int sum[][3]) {
+	int row1 = 0;
+	int row2 = 0;
+	int row3 = 0;
+	for (int i = 0;;) {
+		for (int j = 0; j < 3; j++) {
+			row1 += sum[i][j];
+		}
+	}
+	for (int i = 1;;) {
+		for (int j = 0; j < 3; j++) {
+			row2 += sum[i][j];
+		}
+	}
+	for (int i = 2;;) {
+		for (int j = 0; j < 3; j++) {
+			row3 += sum[i][j];
+		}
+	}
 
-int calcPrice(char name);
-int calcPrice(char name, int count);
+	return row1, row2, row3;
+}
+int column(int sum[][3]) {
+	int col1 = 0;
+	int col2 = 0;
+	int col3 = 0;
+	for (int j = 0;;) {
+		for (int i = 0; j < 3; j++) {
+			col1 += sum[i][j];
+		}
+	}
+	for (int j = 1;;) {
+		for (int i = 0; j < 3; j++) {
+			col2 += sum[i][j];
+		}
+	}
+	for (int j = 2;;) {
+		for (int i = 0; j < 3; j++) {
+			col3 += sum[i][j];
+		}
+	}
+
+	return col1, col2, col3;
+}
 
 void main() {
-	char name;
-	int count;
-	cout << "어떤 음료를 선택하시겠습니까?" << endl;
-	cout << "A.아메리카노(1000원)\nB.라떼(2000원)\nC.에이드(1500원)\n" << endl;
-	cin >> name;
-	cout << "몇 개 고르시겠습니까?";
-	cin >> count;
 
-	cout << calcPrice << "원 입니다" << endl;
-	
-
-
-	
-
-}
-
-int calcPrice(char name)
-{
-	switch (name)
-	{
-	case'A': return 1000;
-	case'B': return 2000;
-	case'C': return 1500;
+	int sum[3][3] = { };
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			cin >> sum[i][j];
+		}
 	}
-	return 0;
-}
-
-int calcPrice(char name, int count) {
-
-	int price = calcPrice(name);
-	return price * count;
 }
