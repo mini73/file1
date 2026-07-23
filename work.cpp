@@ -445,59 +445,195 @@
 //	cout << allSum << endl;
 //}
 
+//#include<iostream>
+//using namespace std; 
+//void Row(int sum[][3], int r) {
+//	int rows[3] = {};
+//	for (int i = 0; i < 3; i++) {
+//			for (int j = 0; j < 3; j++) {
+//				rows[i] += sum[i][j];
+//			}
+//	}
+//	
+//	//for (int i = 1;;) {
+//	//	for (int j = 0; j < 3; j++) {
+//	//		row2 += sum[i][j];
+//	//	}
+//	//}
+//	//for (int i = 2;;) {
+//	//	for (int j = 0; j < 3; j++) {
+//	//		row3 += sum[i][j];
+//	//	}
+//	//}
+//	cout << "행의 합계: ";
+//	for (int i = 0; i < 3; i++) {
+//		cout << rows[i] << " ";
+//	}
+//	cout << endl;
+//}
+//void column(int sum[][3], int r) {
+//	int cols[3] = {};
+//
+//	for (int j = 0;j<3;j++) {
+//		for (int i = 0; i < 3; i++) {
+//			cols[j] += sum[i][j];
+//		}
+//	}
+//	//for (int j = 1;;) {
+//	//	for (int i = 0; j < 3; j++) {
+//	//		col2 += sum[i][j];
+//	//	}
+//	//}
+//	//for (int j = 2;;) {
+//	//	for (int i = 0; j < 3; j++) {
+//	//		col3 += sum[i][j];
+//	//	}
+//	//}
+//	cout << "행의 합계: ";
+//	for (int i = 0; i < 3; i++) {
+//		cout << cols[i] ;
+//	}
+//	cout << endl;
+//}
+//
+//void main() {
+//	//int rowSum;
+//	//int columnSum;
+//
+//	int sum[3][3] = { };
+//	for (int i = 0; i < 3; i++) {
+//		for (int j = 0; j < 3; j++) {
+//			cin >> sum[i][j];
+//		}
+//	}
+//	Row(sum,3);
+//	column(sum,3);
+//
+//	//cout << rowSum << endl;
+//	//cout << columnSum << endl;
+//}
+
+//#include<stdio.h>
+//
+//void func1()
+//{
+//	printf("void 형 함수는 돌려줄수 없음.\n");
+//}
+//
+//int func2()
+//{
+//	return 100;
+//}
+//
+//int main()
+//{
+//	int a;
+//
+//	func1();
+//
+//	a = func2();
+//	printf("int 형 함수에서 돌려준 값 ==> %d\n", a);
+//}
+//
+//#include<stdio.h>
+//void func1(int a)
+//{
+//	a = a + 1;
+//	printf("전달받은 a==>%d\n", a);
+//
+//}
+//void main()
+//{
+//	int a = 10;
+//
+//	func1(a);
+//	printf("func1() 실행 후의 a==>%d\n", a);
+//}
+//
+//#include<stdio.h>
+//void func1(int* a)
+//{
+//	*a = *a + 1;
+//	printf("전달받은 a==>%d\n", *a);
+//}
+//
+//void main()
+//{
+//	int a = 10;
+//
+//	func1(&a);
+//	printf("func1() 실행 후의 a==>%d\n", a);
+//}
+//
+//#include<stdio.h>
+//
+//void func1(char a, char b)
+//{
+//	int imsi;
+//
+//	imsi = a;
+//	a = b;
+//	b = imsi;
+//}
+//
+//void func2(char* a, char* b)
+//{
+//	int imsi;
+//
+//	imsi = *a;
+//	*a = *b;
+//	*b = imsi;
+//}
+//
+//void main()
+//{
+//	char x = 'A', y = 'Z';
+//
+//	printf("원래 값  :x=%c,y=%c\n", x, y);
+//
+//	func1(x, y);
+//	printf("값을 전달한 후 :x=%c,y=%c\n", x, y);
+//
+//	func2(&x, &y);
+//	printf("주소를 전달한 후:x=%c,y=%c\n", x, y);
+//}
+
+//#include<iostream>
+//using namespace std;
+//
+//int minus1(int n)
+//{
+//	if (n <= 1) return -1;
+//	return minus1(n - 1) - 1;
+//
+//}
+//
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	cout << minus1(n);
+//	return 0;
+//}
+
 #include<iostream>
 
-int Row(int sum[][3]) {
-	int row1 = 0;
-	int row2 = 0;
-	int row3 = 0;
-	for (int i = 0;;) {
-		for (int j = 0; j < 3; j++) {
-			row1 += sum[i][j];
-		}
-	}
-	for (int i = 1;;) {
-		for (int j = 0; j < 3; j++) {
-			row2 += sum[i][j];
-		}
-	}
-	for (int i = 2;;) {
-		for (int j = 0; j < 3; j++) {
-			row3 += sum[i][j];
-		}
-	}
+using namespace std;
 
-	return row1, row2, row3;
-}
-int column(int sum[][3]) {
-	int col1 = 0;
-	int col2 = 0;
-	int col3 = 0;
-	for (int j = 0;;) {
-		for (int i = 0; j < 3; j++) {
-			col1 += sum[i][j];
-		}
-	}
-	for (int j = 1;;) {
-		for (int i = 0; j < 3; j++) {
-			col2 += sum[i][j];
-		}
-	}
-	for (int j = 2;;) {
-		for (int i = 0; j < 3; j++) {
-			col3 += sum[i][j];
-		}
-	}
-
-	return col1, col2, col3;
+int sum(int n) {
+	//int result = 0;
+	//for (int i = 1; i <= n; i++) {
+	//	result += i;
+	// 
+	//}
+	
+	if (n <= 1) return 1;
+	return sum(n - 1) + n;
+	//return result;
 }
 
-void main() {
-
-	int sum[3][3] = { };
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 3; j++) {
-			cin >> sum[i][j];
-		}
-	}
+int main() {
+	int n;
+	cin >> n;
+	cout << sum(n) << endl;
 }
