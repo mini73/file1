@@ -616,24 +616,68 @@
 //	return 0;
 //}
 
-#include<iostream>
+//
 
+//#include<stdio.h>
+//
+//int main() {
+//	struct HUMAN
+//	{
+//		char name[10];
+//		int height;
+//		int weight;
+//
+//	};
+//
+//	struct HUMAN a;
+//	printf("이름: ");
+//	scanf("%s", a.name, 9);
+//	printf("키: ");
+//	scanf("%d", &a.height);
+//	printf("몸무게: ");
+//	scanf("%d", &a.weight);
+//
+//	printf("이름은 %s, 키는 %d, 몸무게는 %d 입니다. ", a.name, a.height, a.weight);
+//}
+
+#include<iostream>
+#include<string.h>
 using namespace std;
 
-int sum(int n) {
-	//int result = 0;
-	//for (int i = 1; i <= n; i++) {
-	//	result += i;
-	// 
-	//}
+int search(int n);
+
+struct BOOK
+{
+	string name;
+};
+struct LIB
+{
+	BOOK books[100];
+
+};
+
+void main()
+{
+	LIB lib;
+	int n;
+	for (int i = 0; i < 100; i++) {
+		cout << i+1 << "번째 책 이름을 적으시오: (0을 눌러 끝내기)" << endl;
+		cin >> lib.books;
+		if (lib.books == "0") {
+			break;
+		}
+	};
+	cout << "원하는 순서의 책를 적으시오" << endl;
+	cin >> n;
 	
-	if (n <= 1) return 1;
-	return sum(n - 1) + n;
-	//return result;
+	cout << << endl;
+	
 }
 
-int main() {
-	int n;
-	cin >> n;
-	cout << sum(n) << endl;
+int search(int n)
+{
+	return n - 1;
+
 }
+
+
