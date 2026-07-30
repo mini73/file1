@@ -640,44 +640,119 @@
 //	printf("이름은 %s, 키는 %d, 몸무게는 %d 입니다. ", a.name, a.height, a.weight);
 //}
 
-#include<iostream>
-#include<string.h>
+//#include<iostream>
+//#include<string.h>
+//using namespace std;
+//
+//
+//
+//struct BOOK
+//{
+//	string name;
+//};
+//struct LIB
+//{
+//	BOOK books[100];
+//
+//};
+//
+//void search(LIB lib, int n);
+//
+//void main()
+//{
+//	LIB lib;
+//	int n;
+//	for (int i = 0; i < 100; i++) {
+//		string name;
+//		cout << i+1 << "번째 책 이름을 적으시오: (0을 눌러 끝내기)" << endl;
+//		cin >> name;
+//		if (name == "0") {
+//			break;
+//		}
+//		lib.books[i].name = name;
+//	};
+//	cout << "원하는 순서의 책를 적으시오" << endl;
+//	cin >> n;
+//	
+//	search(lib, n);
+//	
+//}
+//
+//void search(LIB lib, int n)
+//{
+//	cout << "선택하신 책은 " << lib.books[n - 1].name << "입니다" << endl;
+//
+//}
+
+//#include <iostream>
+//using namespace std;
+//
+//short getDefaultData();
+//void printData(short pt2);
+//short add(short pt);
+//
+//void main() {
+//	short pt;
+//	pt = getDefaultData();
+//	printData(pt);
+//	pt = add(pt);
+//	//pt += 5;
+//	printData(pt);
+//}
+//
+//short getDefaultData()
+//{
+//	short pt1;
+//	cout << "입력>>";
+//	cin >> pt1;
+//	return pt1;
+//}
+//
+//void printData(short pt2)
+//{
+//	cout << "값 : " << pt2 << endl;
+//}
+// short add(short pt)
+//{
+//	pt += 5;
+//	return pt;
+//}
+
+#include <iostream>
 using namespace std;
 
-int search(int n);
 
-struct BOOK
-{
-	string name;
-};
-struct LIB
-{
-	BOOK books[100];
+struct POINT { short x, y; };
 
-};
+POINT getDefaultData();
+void printData(POINT pt2.x, POINT pt2.y);
+POINT add(POINT pt.x, POINT pt2.y);
 
-void main()
-{
-	LIB lib;
-	int n;
-	for (int i = 0; i < 100; i++) {
-		cout << i+1 << "번째 책 이름을 적으시오: (0을 눌러 끝내기)" << endl;
-		cin >> lib.books;
-		if (lib.books == "0") {
-			break;
-		}
-	};
-	cout << "원하는 순서의 책를 적으시오" << endl;
-	cin >> n;
-	
-	cout << << endl;
-	
+void main() {
+	POINT pt;
+	pt = getDefaultData(pt.x, pt.y);
+	printData(pt.x, pt.y);
+	pt = add(pt.x, pt.y);
+	//pt += 5;
+	printData(pt.x, pt.y);
 }
 
-int search(int n)
+POINT getDefaultData()
 {
-	return n - 1;
-
+	POINT pt1;
+	cout << "2개 입력>>";
+	cin >> pt1.x;
+	cin >> pt1.y;
+	return pt1;
 }
 
-
+void printData(POINT pt2.x, POINT pt2.y)
+{
+	cout << "값 : " << pt2.x <<"," << pt2.y << endl;
+}
+POINT add(POINT pt.x, POINT pt2.y)
+{
+	pt.x += 5;
+	pt.y += 5;
+	return pt;
+}
