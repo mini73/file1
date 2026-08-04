@@ -725,16 +725,16 @@ using namespace std;
 struct POINT { short x, y; };
 
 POINT getDefaultData();
-void printData(POINT pt2.x, POINT pt2.y);
-POINT add(POINT pt.x, POINT pt2.y);
+void printData(POINT pt2);
+POINT add(POINT pt);
 
 void main() {
 	POINT pt;
-	pt = getDefaultData(pt.x, pt.y);
-	printData(pt.x, pt.y);
-	pt = add(pt.x, pt.y);
+	pt = getDefaultData();
+	printData(pt);
+	pt = add(pt);
 	//pt += 5;
-	printData(pt.x, pt.y);
+	printData(pt);
 }
 
 POINT getDefaultData()
@@ -746,13 +746,84 @@ POINT getDefaultData()
 	return pt1;
 }
 
-void printData(POINT pt2.x, POINT pt2.y)
+void printData(POINT pt2)
 {
-	cout << "값 : " << pt2.x <<"," << pt2.y << endl;
+	cout << "값 : " << pt2.x <<","<<pt2.y << endl;
 }
-POINT add(POINT pt.x, POINT pt2.y)
+
+POINT add(POINT pt)
 {
 	pt.x += 5;
 	pt.y += 5;
 	return pt;
+}
+
+//#include<stdio.h>
+//#include<string.h>
+//struct MYDATA { int a; char b[25]; };
+//void main()
+//{
+//	char buf[5];
+//	memset(buf, '1', 5);
+//	printf("%s\n", buf);
+//
+//	buf[4] = 0x00;
+//	printf("%s\n", buf);
+//
+//	struct MYDATA data;
+//	memset((void*)&data, 0x00, sizeof(data));
+//	data.b[0] = 'A';
+//	printf("%d - %s\n", data.a, data.b);
+//}
+
+#include<iostream>
+using namespace std;
+
+struct GM {
+	int no;
+	string name;
+	string part;
+	int salary;
+};
+struct COMPANY {
+	GM gms[5];
+	int gmCount;
+};
+COMPANY HireGM_once(COMPANY company)
+//int no, string name, string part, int salary
+{
+	company.gms[company.gmCount].no = company.gmCount + 1;
+
+
+
+
+	
+	//cout << "사원번호: ";
+	//cin >> person.no;
+	//cout << "이름: ";
+	//cin >> person.name;
+	//cout <<"부서: ";
+	//cin >> person.part;
+	//cout << "급여: ";
+	//cin >> person.salary;
+
+	return person, g;
+}
+
+
+void main()
+{
+	cout << "게임을 출시해보자!" << endl;
+	COMPANY gameCo;
+
+	cout << "먼저 GM부터 고용할까?" << endl;
+	while (1) 
+	{
+		gameCo = HireGM_once(gameCo);
+		cout << "더 고용할까?(y/n) : ";
+		string chice;
+		cin >> chice;
+		if (chice == "n") break;
+	}
+	cout << "GM %d명을 뽑았다!" << gameCo.gmCount;
 }
