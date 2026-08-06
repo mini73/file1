@@ -1,4 +1,4 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 //#include<stdio.h>
 //#include<stdlib.h>
@@ -718,45 +718,45 @@
 //	return pt;
 //}
 
-#include <iostream>
-using namespace std;
-
-
-struct POINT { short x, y; };
-
-POINT getDefaultData();
-void printData(POINT pt2);
-POINT add(POINT pt);
-
-void main() {
-	POINT pt;
-	pt = getDefaultData();
-	printData(pt);
-	pt = add(pt);
-	//pt += 5;
-	printData(pt);
-}
-
-POINT getDefaultData()
-{
-	POINT pt1;
-	cout << "2개 입력>>";
-	cin >> pt1.x;
-	cin >> pt1.y;
-	return pt1;
-}
-
-void printData(POINT pt2)
-{
-	cout << "값 : " << pt2.x <<","<<pt2.y << endl;
-}
-
-POINT add(POINT pt)
-{
-	pt.x += 5;
-	pt.y += 5;
-	return pt;
-}
+//#include <iostream>
+//using namespace std;
+//
+//
+//struct POINT { short x, y; };
+//
+//POINT getDefaultData();
+//void printData(POINT pt2);
+//POINT add(POINT pt);
+//
+//void main() {
+//	POINT pt;
+//	pt = getDefaultData();
+//	printData(pt);
+//	pt = add(pt);
+//	//pt += 5;
+//	printData(pt);
+//}
+//
+//POINT getDefaultData()
+//{
+//	POINT pt1;
+//	cout << "2개 입력>>";
+//	cin >> pt1.x;
+//	cin >> pt1.y;
+//	return pt1;
+//}
+//
+//void printData(POINT pt2)
+//{
+//	cout << "값 : " << pt2.x <<","<<pt2.y << endl;
+//}
+//
+//POINT add(POINT pt)
+//{
+//	pt.x += 5;
+//	pt.y += 5;
+//	return pt;
+//}
 
 //#include<stdio.h>
 //#include<string.h>
@@ -774,56 +774,123 @@ POINT add(POINT pt)
 //	memset((void*)&data, 0x00, sizeof(data));
 //	data.b[0] = 'A';
 //	printf("%d - %s\n", data.a, data.b);
+//	printf("구조체의 크기: %d\n", sizeof(data));
 //}
 
-#include<iostream>
-using namespace std;
+//#include<iostream>
+//using namespace std;
+//
+//struct GM {
+//	int no;
+//	string name;
+//	string part;
+//	int salary;
+//};
+//
+//struct COMPANY {
+//	GM gms[5];
+//	int gmCount;
+//};
+//
+//COMPANY HireGM_once(COMPANY company)
+////int no, string name, string part, int salary
+//{
+//	
+//	company.gms[company.gmCount].no = company.gmCount + 1;
+//	cout << "이름: ";
+//	cin >> company.gms[company.gmCount].name;
+//	cout << "부서: ";
+//	cin >> company.gms[company.gmCount].part;
+//	cout << "급여: ";
+//	cin >> company.gms[company.gmCount].salary;
+//	
+//
+//	//company.gms[company.gmCount].name
+//	//company.gms[company.gmCount].part
+//	//company.gms[company.gmCount].salary
+//	
+//	//cout << "사원번호: ";
+//	//cin >> person.no;
+//	//cout << "이름: ";
+//	//cin >> person.name;
+//	//cout <<"부서: ";
+//	//cin >> person.part;
+//	//cout << "급여: ";
+//	//cin >> person.salary;
+//	company.gmCount++;
+//	return company;
+//}
+//
+//
+//void main()
+//{
+//	cout << "게임을 출시해보자!" << endl;
+//	COMPANY gameCo;
+//	gameCo.gmCount = 0;
+//	cout << "먼저 GM부터 고용할까?" << endl;
+//	while (1) 
+//	{
+//		gameCo = HireGM_once(gameCo);
+//		cout << "더 고용할까?(y/n) : ";
+//		string chice;
+//		cin >> chice;
+//		if (chice == "n") break;
+//	}
+//	cout << "GM %d명을 뽑았다!" << gameCo.gmCount << endl;
+//	cout << "구조체의 크기" << endl;
+//	cout << " GM:" << sizeof(GM) << endl;
+//	cout << " COMPANY:" << sizeof(COMPANY) << endl;
+//
+//	
+//}
 
-struct GM {
-	int no;
-	string name;
-	string part;
-	int salary;
+//#include<iostream>
+//
+//using namespace std;
+//
+//struct POINT {
+//	short x, y;
+//};
+//POINT makePoint(short x, short y) {
+//	POINT p = { x,y };
+//	return p;
+//}
+//void main()
+//{
+//	POINT p = makePoint(4, 9);
+//	cout << p.x << " " << p.y << " " << sizeof(POINT) << endl;
+//}
+
+#include <stdio.h>
+
+struct SNACK {
+	int price;
+	int stock;
+	char name[20];
 };
-struct COMPANY {
-	GM gms[5];
-	int gmCount;
-};
-COMPANY HireGM_once(COMPANY company)
-//int no, string name, string part, int salary
-{
-	company.gms[company.gmCount].no = company.gmCount + 1;
-
-
-
-
-	
-	//cout << "사원번호: ";
-	//cin >> person.no;
-	//cout << "이름: ";
-	//cin >> person.name;
-	//cout <<"부서: ";
-	//cin >> person.part;
-	//cout << "급여: ";
-	//cin >> person.salary;
-
-	return person, g;
-}
-
-
 void main()
 {
-	cout << "게임을 출시해보자!" << endl;
-	COMPANY gameCo;
-
-	cout << "먼저 GM부터 고용할까?" << endl;
-	while (1) 
+	const int N = 2;
+	SNACK snacks[N] = {
+		{1500,3,"레몬칩"}, {1000,2,"달고나"}
+	};
+	printf("<<과자자판기!>>\n");
+	for (int i = 0; i < N; i++)
 	{
-		gameCo = HireGM_once(gameCo);
-		cout << "더 고용할까?(y/n) : ";
-		string chice;
-		cin >> chice;
-		if (chice == "n") break;
+		printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
 	}
-	cout << "GM %d명을 뽑았다!" << gameCo.gmCount;
+
+	int choice;
+	scanf("%d", &choice);
+	printf("%s가 나왔습니다.\n", snacks[choice - 1].name);
 }
+
+자판기
+.여러종류의 자판기 선택지 제시
+.선택한 자판기에서 구입가능한 제품의 이름, 남은 개수, 가격 제시
+.사용자가 제품 선택
+.사용자가 돈 투입
+.투입 받은 돈에서 구입한 제품의 가격의 합만큼 빼고 남은 금액 계산
+. - 일 경우 사용자에게 + 로 전환한 값을 제시하며 다시 투입 요구
+.남은 금액은 거스름돈으로 인지,
+.
