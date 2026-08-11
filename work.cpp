@@ -12,12 +12,12 @@
 //	int count;
 //	int input = 1;
 //
-//	printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
+//	printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
 //	scanf("%d", &count);
 //	//100-999
 //	int repli = count;
 //	int** data = new int* [count];
-//	int randNum;//printf("ê°œìˆ˜ë§Œí¼ ìˆ«ìë¥¼ ì ìœ¼ì‹œì˜¤\n");
+//	int randNum;//printf("°³¼ö¸¸Å­ ¼ıÀÚ¸¦ ÀûÀ¸½Ã¿À\n");
 //	for (int i = 0; i < count; i++) {
 //		//printf(">>");
 //		//scanf("%d", &data[i]);
@@ -222,11 +222,11 @@
 //using namespace std;
 //
 //void phoneTime() {
-//	string hour = "íœ´ëŒ€í°ì„ ";
+//	string hour = "ÈŞ´ëÆùÀ» ";
 //	cout << hour;
 //}
 //void studyTime() {
-//	string hour = "ê³µë¶€ë¥¼ ";
+//	string hour = "°øºÎ¸¦ ";
 //	cout << hour;
 //}
 //
@@ -234,17 +234,17 @@
 //{
 //	srand((unsigned int)time(NULL));
 //	int time;
-//	cout << "ëª‡ ì‹œê°„ì„ ì‚¬ìš©í•œì§€ ì…ë ¥í•˜ì‹œì˜¤: ";
+//	cout << "¸î ½Ã°£À» »ç¿ëÇÑÁö ÀÔ·ÂÇÏ½Ã¿À: ";
 //	cin >> time;
 //	for (int i = 1; i <= time; i++) {
-//		cout << i << "ì‹œê°„ ì°¨ì—ëŠ” ";
+//		cout << i << "½Ã°£ Â÷¿¡´Â ";
 //		if (rand() % 2 == 0) {
 //			phoneTime();
 //		}
 //		else {
 //			studyTime();
 //		}
-//		cout << "í–ˆë‹¤" << endl;
+//		cout << "Çß´Ù" << endl;
 //	}
 //
 //}
@@ -255,12 +255,12 @@
 //
 //void menu(string coffee)
 //{
-//	cout << "ì£¼ë¬¸í•˜ì‹  ì»¤í”¼ëŠ” " << coffee << "ì…ë‹ˆë‹¤" << endl;
+//	cout << "ÁÖ¹®ÇÏ½Å Ä¿ÇÇ´Â " << coffee << "ÀÔ´Ï´Ù" << endl;
 //}
 //void main()
 //{
 //	string typeCoffee;
-//	cout << "ì›í•˜ì‹œëŠ” ì»¤í”¼ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
+//	cout << "¿øÇÏ½Ã´Â Ä¿ÇÇ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
 //	cin >> typeCoffee;
 //
 //	menu(typeCoffee);
@@ -282,7 +282,7 @@
 //	return 'E';
 //}
 //int main() {
-//	cout << "ì‚¬ê³¼ë¥¼ ì˜ì–´ë¡œ? " << endl;
+//	cout << "»ç°ú¸¦ ¿µ¾î·Î? " << endl;
 //	cout << getA() << getP() << getP() << getL() << getE() << endl;
 //	return 0;
 //}
@@ -301,7 +301,7 @@
 //
 //int main() {
 //	int ans = multi();
-//	cout << "1~8ê¹Œì§€ ê³±ì˜ ë‹µì€ " << ans << "ì…ë‹ˆë‹¤" << endl;
+//	cout << "1~8±îÁö °öÀÇ ´äÀº " << ans << "ÀÔ´Ï´Ù" << endl;
 //	return 0;
 //}
 
@@ -320,10 +320,10 @@
 //	int data3 = multiply_number(a, b);
 //	double data4 = divide_number(a, b);
 //
-//	cout << "ë§ì…ˆ ê²°ê³¼:" << data1 << endl;
-//	cout << "ëº„ì…ˆ ê²°ê³¼:" << data2 << endl;
-//	cout << "ê³±ì…ˆ ê²°ê³¼:" << data3 << endl;
-//	cout << "ë‚˜ëˆ—ì…ˆ ê²°ê³¼:" << data4 << endl;
+//	cout << "µ¡¼À °á°ú:" << data1 << endl;
+//	cout << "»¬¼À °á°ú:" << data2 << endl;
+//	cout << "°ö¼À °á°ú:" << data3 << endl;
+//	cout << "³ª´°¼À °á°ú:" << data4 << endl;
 //
 //}
 //
@@ -359,7 +359,7 @@
 //
 //string searching(string name) {
 //	
-//	return "[ê²€ìƒ‰ ì¤‘]" + name;
+//	return "[°Ë»ö Áß]" + name;
 //}
 
 //#include<iostream>
@@ -373,13 +373,13 @@
 //	int name;
 //	int count;
 //	int result;
-//	cout << "ì–´ë–¤ ìŒë£Œë¥¼ ì„ íƒí•˜ì‹œê² ìŠµë‹ˆê¹Œ?" << endl;
-//	cout << "1.ì•„ë©”ë¦¬ì¹´ë…¸(1000ì›)\n2.ë¼ë–¼(2000ì›)\n3.ì—ì´ë“œ(1500ì›)\n" << endl;
+//	cout << "¾î¶² À½·á¸¦ ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î?" << endl;
+//	cout << "1.¾Æ¸Ş¸®Ä«³ë(1000¿ø)\n2.¶ó¶¼(2000¿ø)\n3.¿¡ÀÌµå(1500¿ø)\n" << endl;
 //	cin >> name;
-//	cout << "ëª‡ ê°œ ê³ ë¥´ì‹œê² ìŠµë‹ˆê¹Œ?";
+//	cout << "¸î °³ °í¸£½Ã°Ú½À´Ï±î?";
 //	cin >> count;
 //	result = calcPrice (name,count);
-//	cout << result << "ì› ì…ë‹ˆë‹¤" << endl;
+//	cout << result << "¿ø ÀÔ´Ï´Ù" << endl;
 //
 //}
 //
@@ -465,7 +465,7 @@
 //	//		row3 += sum[i][j];
 //	//	}
 //	//}
-//	cout << "í–‰ì˜ í•©ê³„: ";
+//	cout << "ÇàÀÇ ÇÕ°è: ";
 //	for (int i = 0; i < 3; i++) {
 //		cout << rows[i] << " ";
 //	}
@@ -489,7 +489,7 @@
 //	//		col3 += sum[i][j];
 //	//	}
 //	//}
-//	cout << "í–‰ì˜ í•©ê³„: ";
+//	cout << "ÇàÀÇ ÇÕ°è: ";
 //	for (int i = 0; i < 3; i++) {
 //		cout << cols[i] ;
 //	}
@@ -517,7 +517,7 @@
 //
 //void func1()
 //{
-//	printf("void í˜• í•¨ìˆ˜ëŠ” ëŒë ¤ì¤„ìˆ˜ ì—†ìŒ.\n");
+//	printf("void Çü ÇÔ¼ö´Â µ¹·ÁÁÙ¼ö ¾øÀ½.\n");
 //}
 //
 //int func2()
@@ -532,14 +532,14 @@
 //	func1();
 //
 //	a = func2();
-//	printf("int í˜• í•¨ìˆ˜ì—ì„œ ëŒë ¤ì¤€ ê°’ ==> %d\n", a);
+//	printf("int Çü ÇÔ¼ö¿¡¼­ µ¹·ÁÁØ °ª ==> %d\n", a);
 //}
 //
 //#include<stdio.h>
 //void func1(int a)
 //{
 //	a = a + 1;
-//	printf("ì „ë‹¬ë°›ì€ a==>%d\n", a);
+//	printf("Àü´Ş¹ŞÀº a==>%d\n", a);
 //
 //}
 //void main()
@@ -547,14 +547,14 @@
 //	int a = 10;
 //
 //	func1(a);
-//	printf("func1() ì‹¤í–‰ í›„ì˜ a==>%d\n", a);
+//	printf("func1() ½ÇÇà ÈÄÀÇ a==>%d\n", a);
 //}
 //
 //#include<stdio.h>
 //void func1(int* a)
 //{
 //	*a = *a + 1;
-//	printf("ì „ë‹¬ë°›ì€ a==>%d\n", *a);
+//	printf("Àü´Ş¹ŞÀº a==>%d\n", *a);
 //}
 //
 //void main()
@@ -562,7 +562,7 @@
 //	int a = 10;
 //
 //	func1(&a);
-//	printf("func1() ì‹¤í–‰ í›„ì˜ a==>%d\n", a);
+//	printf("func1() ½ÇÇà ÈÄÀÇ a==>%d\n", a);
 //}
 //
 //#include<stdio.h>
@@ -589,13 +589,13 @@
 //{
 //	char x = 'A', y = 'Z';
 //
-//	printf("ì›ë˜ ê°’  :x=%c,y=%c\n", x, y);
+//	printf("¿ø·¡ °ª  :x=%c,y=%c\n", x, y);
 //
 //	func1(x, y);
-//	printf("ê°’ì„ ì „ë‹¬í•œ í›„ :x=%c,y=%c\n", x, y);
+//	printf("°ªÀ» Àü´ŞÇÑ ÈÄ :x=%c,y=%c\n", x, y);
 //
 //	func2(&x, &y);
-//	printf("ì£¼ì†Œë¥¼ ì „ë‹¬í•œ í›„:x=%c,y=%c\n", x, y);
+//	printf("ÁÖ¼Ò¸¦ Àü´ŞÇÑ ÈÄ:x=%c,y=%c\n", x, y);
 //}
 
 //#include<iostream>
@@ -630,14 +630,14 @@
 //	};
 //
 //	struct HUMAN a;
-//	printf("ì´ë¦„: ");
+//	printf("ÀÌ¸§: ");
 //	scanf("%s", a.name, 9);
-//	printf("í‚¤: ");
+//	printf("Å°: ");
 //	scanf("%d", &a.height);
-//	printf("ëª¸ë¬´ê²Œ: ");
+//	printf("¸ö¹«°Ô: ");
 //	scanf("%d", &a.weight);
 //
-//	printf("ì´ë¦„ì€ %s, í‚¤ëŠ” %d, ëª¸ë¬´ê²ŒëŠ” %d ì…ë‹ˆë‹¤. ", a.name, a.height, a.weight);
+//	printf("ÀÌ¸§Àº %s, Å°´Â %d, ¸ö¹«°Ô´Â %d ÀÔ´Ï´Ù. ", a.name, a.height, a.weight);
 //}
 
 //#include<iostream>
@@ -664,14 +664,14 @@
 //	int n;
 //	for (int i = 0; i < 100; i++) {
 //		string name;
-//		cout << i+1 << "ë²ˆì§¸ ì±… ì´ë¦„ì„ ì ìœ¼ì‹œì˜¤: (0ì„ ëˆŒëŸ¬ ëë‚´ê¸°)" << endl;
+//		cout << i+1 << "¹øÂ° Ã¥ ÀÌ¸§À» ÀûÀ¸½Ã¿À: (0À» ´­·¯ ³¡³»±â)" << endl;
 //		cin >> name;
 //		if (name == "0") {
 //			break;
 //		}
 //		lib.books[i].name = name;
 //	};
-//	cout << "ì›í•˜ëŠ” ìˆœì„œì˜ ì±…ë¥¼ ì ìœ¼ì‹œì˜¤" << endl;
+//	cout << "¿øÇÏ´Â ¼ø¼­ÀÇ Ã¥¸¦ ÀûÀ¸½Ã¿À" << endl;
 //	cin >> n;
 //	
 //	search(lib, n);
@@ -680,7 +680,7 @@
 //
 //void search(LIB lib, int n)
 //{
-//	cout << "ì„ íƒí•˜ì‹  ì±…ì€ " << lib.books[n - 1].name << "ì…ë‹ˆë‹¤" << endl;
+//	cout << "¼±ÅÃÇÏ½Å Ã¥Àº " << lib.books[n - 1].name << "ÀÔ´Ï´Ù" << endl;
 //
 //}
 
@@ -703,14 +703,14 @@
 //short getDefaultData()
 //{
 //	short pt1;
-//	cout << "ì…ë ¥>>";
+//	cout << "ÀÔ·Â>>";
 //	cin >> pt1;
 //	return pt1;
 //}
 //
 //void printData(short pt2)
 //{
-//	cout << "ê°’ : " << pt2 << endl;
+//	cout << "°ª : " << pt2 << endl;
 //}
 // short add(short pt)
 //{
@@ -740,7 +740,7 @@
 //POINT getDefaultData()
 //{
 //	POINT pt1;
-//	cout << "2ê°œ ì…ë ¥>>";
+//	cout << "2°³ ÀÔ·Â>>";
 //	cin >> pt1.x;
 //	cin >> pt1.y;
 //	return pt1;
@@ -748,7 +748,7 @@
 //
 //void printData(POINT pt2)
 //{
-//	cout << "ê°’ : " << pt2.x <<","<<pt2.y << endl;
+//	cout << "°ª : " << pt2.x <<","<<pt2.y << endl;
 //}
 //
 //POINT add(POINT pt)
@@ -774,75 +774,75 @@
 //	memset((void*)&data, 0x00, sizeof(data));
 //	data.b[0] = 'A';
 //	printf("%d - %s\n", data.a, data.b);
-//	printf("êµ¬ì¡°ì²´ì˜ í¬ê¸°: %d\n", sizeof(data));
+//	printf("±¸Á¶Ã¼ÀÇ Å©±â: %d\n", sizeof(data));
 //}
 
-//#include<iostream>
-//using namespace std;
-//
-//struct GM {
-//	int no;
-//	string name;
-//	string part;
-//	int salary;
-//};
-//
-//struct COMPANY {
-//	GM gms[5];
-//	int gmCount;
-//};
-//
-//COMPANY HireGM_once(COMPANY company)
-////int no, string name, string part, int salary
-//{
-//	
-//	company.gms[company.gmCount].no = company.gmCount + 1;
-//	cout << "ì´ë¦„: ";
-//	cin >> company.gms[company.gmCount].name;
-//	cout << "ë¶€ì„œ: ";
-//	cin >> company.gms[company.gmCount].part;
-//	cout << "ê¸‰ì—¬: ";
-//	cin >> company.gms[company.gmCount].salary;
-//	
-//
-//	//company.gms[company.gmCount].name
-//	//company.gms[company.gmCount].part
-//	//company.gms[company.gmCount].salary
-//	
-//	//cout << "ì‚¬ì›ë²ˆí˜¸: ";
-//	//cin >> person.no;
-//	//cout << "ì´ë¦„: ";
-//	//cin >> person.name;
-//	//cout <<"ë¶€ì„œ: ";
-//	//cin >> person.part;
-//	//cout << "ê¸‰ì—¬: ";
-//	//cin >> person.salary;
-//	company.gmCount++;
-//	return company;
-//}
-//
-//
-//void main()
-//{
-//	cout << "ê²Œì„ì„ ì¶œì‹œí•´ë³´ì!" << endl;
-//	COMPANY gameCo;
-//	gameCo.gmCount = 0;
-//	cout << "ë¨¼ì € GMë¶€í„° ê³ ìš©í• ê¹Œ?" << endl;
-//	while (1) 
-//	{
-//		gameCo = HireGM_once(gameCo);
-//		cout << "ë” ê³ ìš©í• ê¹Œ?(y/n) : ";
-//		string chice;
-//		cin >> chice;
-//		if (chice == "n") break;
-//	}
-//	cout << "GM %dëª…ì„ ë½‘ì•˜ë‹¤!" << gameCo.gmCount << endl;
-//	cout << "êµ¬ì¡°ì²´ì˜ í¬ê¸°" << endl;
-//	cout << " GM:" << sizeof(GM) << endl;
-//	cout << " COMPANY:" << sizeof(COMPANY) << endl;
-//
-//	
-//}
+#include<iostream>
+using namespace std;
+
+struct GM {
+	int no;
+	string name;
+	string part;
+	int salary;
+};
+
+struct COMPANY {
+	GM gms[5];
+	int gmCount;
+};
+
+COMPANY HireGM_once(COMPANY company)
+//int no, string name, string part, int salary
+{
+	
+	company.gms[company.gmCount].no = company.gmCount + 1;
+	cout << "ÀÌ¸§: ";
+	cin >> company.gms[company.gmCount].name;
+	cout << "ºÎ¼­: ";
+	cin >> company.gms[company.gmCount].part;
+	cout << "±Ş¿©: ";
+	cin >> company.gms[company.gmCount].salary;
+	
+
+	//company.gms[company.gmCount].name
+	//company.gms[company.gmCount].part
+	//company.gms[company.gmCount].salary
+	
+	//cout << "»ç¿ø¹øÈ£: ";
+	//cin >> person.no;
+	//cout << "ÀÌ¸§: ";
+	//cin >> person.name;
+	//cout <<"ºÎ¼­: ";
+	//cin >> person.part;
+	//cout << "±Ş¿©: ";
+	//cin >> person.salary;
+	company.gmCount++;
+	return company;
+}
+
+
+void main()
+{
+	cout << "°ÔÀÓÀ» Ãâ½ÃÇØº¸ÀÚ!" << endl;
+	COMPANY gameCo;
+	gameCo.gmCount = 0;
+	cout << "¸ÕÀú GMºÎÅÍ °í¿ëÇÒ±î?" << endl;
+	while (1) 
+	{
+		gameCo = HireGM_once(gameCo);
+		cout << "´õ °í¿ëÇÒ±î?(y/n) : ";
+		string chice;
+		cin >> chice;
+		if (chice == "n") break;
+	}
+	cout << "GM %d¸íÀ» »Ì¾Ò´Ù!" << gameCo.gmCount << endl;
+	cout << "±¸Á¶Ã¼ÀÇ Å©±â" << endl;
+	cout << " GM:" << sizeof(GM) << endl;
+	cout << " COMPANY:" << sizeof(COMPANY) << endl;
+
+	
+}
 
 //#include<iostream>
 //
@@ -861,40 +861,103 @@
 //	cout << p.x << " " << p.y << " " << sizeof(POINT) << endl;
 //}
 
+//#include <stdio.h>
+//
+//struct SNACK {
+//	int price;
+//	int stock;
+//	char name[20];
+//};
+//void main()
+//{
+//	const int N = 2;
+//	SNACK snacks[N] = {
+//		{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+//	};
+//	printf("<<°úÀÚÀÚÆÇ±â!>>\n");
+//	for (int i = 0; i < N; i++)
+//	{
+//		printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+//	}
+//
+//	int choice;
+//	scanf("%d", &choice);
+//	printf("%s°¡ ³ª¿Ô½À´Ï´Ù.\n", snacks[choice - 1].name);
+//}
+/*
+ÀÚÆÇ±â
+. ÀÚÆÇ±âÀÇ Á¾·ù¸¦ ¸í½Ã
+.ÀÚÆÇ±â¿¡¼­ ±¸ÀÔ°¡´ÉÇÑ Á¦Ç°¹øÈ£, Á¦Ç°ÀÇ ÀÌ¸§, ³²Àº °³¼ö, °¡°İ Á¦½Ã
+.»ç¿ëÀÚ´Â Á¦Ç°¹øÈ£¸¦ ¼±ÅÃ
+.»ç¿ëÀÚ°¡ ÅõÀÔÇÒ ±İ¾× Á¦½Ã
+.»ç¿ëÀÚ´Â ±İ¾× ÅõÀÔ
+.ÅõÀÔ ¹ŞÀº µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°µéÀÇ °¡°İÀÇ ÇÕ¸¸Å­ »©°í ³²Àº ±İ¾× °è»ê
+. ³²Àº ±İ¾×Àº »ç¿ëÀÚ°¡ ±¸ÀÔÇÑ Á¦Ç°°ú ÇÔ²² º¸¿©ÁØ´Ù
+. "Ãß°¡ ÁÖ¹® ÇÏ°Ú½À´Ï±î?[y/n]"¶ó°í Á¦½ÃÇÑ´Ù 
+. y´Â Ã³À½ ±¸ÀÔ°¡´Éº¹·ÏÃ¢À» º¸¿©ÁØ´Ù
+. nÀ» ¼±ÅÃ½Ã °Å½º¸§µ· ÁöºÒ ÈÄ ÀÛ¾÷À» Á¾·áÇÑ´Ù
+.
+*/
+
 #include <stdio.h>
 
-struct SNACK {
+struct PRODUCT {
 	int price;
 	int stock;
 	char name[20];
 };
+
+struct SNACKS {
+	PRODUCT Snacks[2] = {
+		{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+	};
+}
+struct DRINKS {
+	PRODUCT Drinks[2] = {
+		{1000,4,"»çÀÌ´Ù"}, {1000,5,"Äİ¶ó"}
+	};
+}
+struct TYPE {
+	char name[20];
+};
+
 void main()
 {
 	const int N = 2;
-	SNACK snacks[N] = {
-		{1500,3,"ë ˆëª¬ì¹©"}, {1000,2,"ë‹¬ê³ ë‚˜"}
+	//PRODUCT snacks[N] = {
+	//	{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+	//};
+	SNACKS snack;
+	DRINKS drink;
+	int whatype;
+	TYPE type[N] = {
+		{"°úÀÚÀÚÆÇ±â"},{"À½·áÀÚÆÇ±â"}
 	};
-	printf("<<ê³¼ììíŒê¸°!>>\n");
-	for (int i = 0; i < N; i++)
-	{
-		printf("%d.[%6s] %4dì›(%dê°œ ë‚¨ìŒ)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+	printf("¾î¶² Á¾·ù¸¦ ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î?\n");
+	for (int i = 0; i < N; i++) {
+		printf("%d.%6s\n", (i + 1), type[i].name);
 	}
+	scanf("%d", &whatype);
+	printf("%s¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù\n", type[whatype-1].name);
+	if (whatype == 1) {
+		for (int i = 0; i < N; i++)
+		{
+			printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snack.Snacks[i].name, snack.Snacks[i].price, snack.Snacks[i].stock);
+		}
+
+	}
+	else {
+		for (int i = 0; i < N; i++)
+		{
+			printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), drink.Drinks[i].name, drink.Drinks[i].price, drink.Drinks[i].stock);
+		}
+	}
+	//for (int i = 0; i < N; i++)
+	//{
+	//	printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+	//}
 
 	int choice;
 	scanf("%d", &choice);
-	printf("%sê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", snacks[choice - 1].name);
+	printf("%s°¡ ³ª¿Ô½À´Ï´Ù.\n", snacks[choice - 1].name);
 }
-
-ìíŒê¸°
-.ì—¬ëŸ¬ì¢…ë¥˜ì˜ ìíŒê¸° ì„ íƒì§€ ì œì‹œ
-.ì„ íƒí•œ ìíŒê¸°ì—ì„œ êµ¬ì…ê°€ëŠ¥í•œ ì œí’ˆì˜ ì´ë¦„, ë‚¨ì€ ê°œìˆ˜, ê°€ê²© ì œì‹œ
-.ì‚¬ìš©ìê°€ ì œí’ˆ ì„ íƒ
-.ì‚¬ìš©ìê°€ ë„£ì„ íˆ¬ì…í•  ê¸ˆì•¡ ì…ë ¥
-.ë‚¨ì€ ê°œìˆ˜ ì„ íƒí•œ ê°œìˆ˜ë§Œí¼ ì¤„ì´ê³  ë‹¤ì‹œ ì„ íƒì§€ ì œì‹œ.
-.0ì„ íƒì‹œ ì„ íƒì§€ ì œì‹œ ì¢…ë£Œ
-.íˆ¬ì… ë°›ì€ ëˆì—ì„œ êµ¬ì…í•œ ì œí’ˆë“¤ì˜ ê°€ê²©ì˜ í•©ë§Œí¼ ë¹¼ê³  ë‚¨ì€ ê¸ˆì•¡ ê³„ì‚°
-. - ì¼ ê²½ìš° ì‚¬ìš©ìì—ê²Œ + ë¡œ ì „í™˜í•œ ê°’ì„ ì œì‹œí•˜ë©° ë‹¤ì‹œ íˆ¬ì… ìš”êµ¬
-.ë‚¨ì€ ê¸ˆì•¡ì€ ê±°ìŠ¤ë¦„ëˆìœ¼ë¡œ ì–¼ë§ˆë‚˜ ë‚¨ì•˜ëŠ”ì§€ ì‚¬ìš©ìì—ê²Œ ì•Œë ¤ì¤€ë‹¤
-.ì¶”ê°€ êµ¬ë§¤ ì—¬ë¶€ë¥¼ ë­ëŠ”ë‹¤.
-. yë©´ì€ ìíŒê¸° ì„ íƒì§€ë¡œ ëŒì•„ê°„ë‹¤.
-. xë©´ ì‘ì—…ì„ ì¢…ë£Œí•œë‹¤.
