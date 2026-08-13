@@ -777,72 +777,72 @@
 //	printf("구조체의 크기: %d\n", sizeof(data));
 //}
 
-#include<iostream>
-using namespace std;
-
-struct GM {
-	int no;
-	string name;
-	string part;
-	int salary;
-};
-
-struct COMPANY {
-	GM gms[5];
-	int gmCount;
-};
-
-COMPANY HireGM_once(COMPANY company)
-//int no, string name, string part, int salary
-{
-	
-	company.gms[company.gmCount].no = company.gmCount + 1;
-	cout << "이름: ";
-	cin >> company.gms[company.gmCount].name;
-	cout << "부서: ";
-	cin >> company.gms[company.gmCount].part;
-	cout << "급여: ";
-	cin >> company.gms[company.gmCount].salary;
-	
-
-	//company.gms[company.gmCount].name
-	//company.gms[company.gmCount].part
-	//company.gms[company.gmCount].salary
-	
-	//cout << "사원번호: ";
-	//cin >> person.no;
-	//cout << "이름: ";
-	//cin >> person.name;
-	//cout <<"부서: ";
-	//cin >> person.part;
-	//cout << "급여: ";
-	//cin >> person.salary;
-	company.gmCount++;
-	return company;
-}
-
-
-void main()
-{
-	cout << "게임을 출시해보자!" << endl;
-	COMPANY gameCo;
-	gameCo.gmCount = 0;
-	cout << "먼저 GM부터 고용할까?" << endl;
-	while (1) 
-	{
-		gameCo = HireGM_once(gameCo);
-		cout << "더 고용할까?(y/n) : ";
-		string chice;
-		cin >> chice;
-		if (chice == "n") break;
-	}
-	cout << "GM %d명을 뽑았다!" << gameCo.gmCount << endl;
-	cout << "구조체의 크기" << endl;
-	cout << " GM:" << sizeof(GM) << endl;
-	cout << " COMPANY:" << sizeof(COMPANY) << endl;
-
-	
-}
+//#include<iostream>
+//using namespace std;
+//
+//struct GM {
+//	int no;
+//	string name;
+//	string part;
+//	int salary;
+//};
+//
+//struct COMPANY {
+//	GM gms[5];
+//	int gmCount;
+//};
+//
+//COMPANY HireGM_once(COMPANY company)
+////int no, string name, string part, int salary
+//{
+//	
+//	company.gms[company.gmCount].no = company.gmCount + 1;
+//	cout << "이름: ";
+//	cin >> company.gms[company.gmCount].name;
+//	cout << "부서: ";
+//	cin >> company.gms[company.gmCount].part;
+//	cout << "급여: ";
+//	cin >> company.gms[company.gmCount].salary;
+//	
+//
+//	//company.gms[company.gmCount].name
+//	//company.gms[company.gmCount].part
+//	//company.gms[company.gmCount].salary
+//	
+//	//cout << "사원번호: ";
+//	//cin >> person.no;
+//	//cout << "이름: ";
+//	//cin >> person.name;
+//	//cout <<"부서: ";
+//	//cin >> person.part;
+//	//cout << "급여: ";
+//	//cin >> person.salary;
+//	company.gmCount++;
+//	return company;
+//}
+//
+//
+//void main()
+//{
+//	cout << "게임을 출시해보자!" << endl;
+//	COMPANY gameCo;
+//	gameCo.gmCount = 0;
+//	cout << "먼저 GM부터 고용할까?" << endl;
+//	while (1) 
+//	{
+//		gameCo = HireGM_once(gameCo);
+//		cout << "더 고용할까?(y/n) : ";
+//		string chice;
+//		cin >> chice;
+//		if (chice == "n") break;
+//	}
+//	cout << "GM %d명을 뽑았다!" << gameCo.gmCount << endl;
+//	cout << "구조체의 크기" << endl;
+//	cout << " GM:" << sizeof(GM) << endl;
+//	cout << " COMPANY:" << sizeof(COMPANY) << endl;
+//
+//	
+//}
 
 //#include<iostream>
 //
@@ -906,58 +906,77 @@ struct PRODUCT {
 	int stock;
 	char name[20];
 };
-
-struct SNACKS {
-	PRODUCT Snacks[2] = {
-		{1500,3,"레몬칩"}, {1000,2,"달고나"}
-	};
-}
-struct DRINKS {
-	PRODUCT Drinks[2] = {
-		{1000,4,"사이다"}, {1000,5,"콜라"}
-	};
-}
-struct TYPE {
-	char name[20];
+int Change(int price, int money) {
+	int change = money - price;
+	return change;
 };
+//struct SNACKS {
+//	PRODUCT Snacks[2] = {
+//		{1500,3,"레몬칩"}, {1000,2,"달고나"}
+//	};
+//}
+//struct DRINKS {
+//	PRODUCT Drinks[2] = {
+//		{1000,4,"사이다"}, {1000,5,"콜라"}
+//	};
+//}
 
 void main()
 {
-	const int N = 2;
-	//PRODUCT snacks[N] = {
-	//	{1500,3,"레몬칩"}, {1000,2,"달고나"}
-	//};
-	SNACKS snack;
-	DRINKS drink;
-	int whatype;
-	TYPE type[N] = {
-		{"과자자판기"},{"음료자판기"}
-	};
-	printf("어떤 종류를 선택하시겠습니까?\n");
-	for (int i = 0; i < N; i++) {
-		printf("%d.%6s\n", (i + 1), type[i].name);
-	}
-	scanf("%d", &whatype);
-	printf("%s를 선택하셨습니다\n", type[whatype-1].name);
-	if (whatype == 1) {
-		for (int i = 0; i < N; i++)
-		{
-			printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snack.Snacks[i].name, snack.Snacks[i].price, snack.Snacks[i].stock);
+	
+
+		const int N = 2;
+		
+		PRODUCT snacks[N] = {
+			{1500,3,"레몬칩"}, {1000,2,"달고나"}
+		};
+		PRODUCT drinks[N] = {
+			{1000,4,"사이다"}, {1000,5,"콜라"}
+		};
+
+		int whatype;
+		printf("어떤 종류를 선택하시겠습니까?\n");
+		printf("1.과자 2.음료\n");
+		scanf("%d", &whatype);
+		int choice;
+		char end;
+		int money;
+		for (;end=='n'&&end=='N';) {
+			if (whatype == 1) {
+
+				printf("**과자 자판기**\n");
+				for (int i = 0; i < N; i++)
+				{
+					printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+				}
+				scanf("%d", &choice);
+				printf("%4d원입니다");
+				scanf("%d", &money);
+				printf("%s가 나왔습니다. %4d원 남았습니다\n", snacks[choice - 1].name, Change(snacks[choice - 1].price, money));
+			}
+			else {
+				printf("**음료 자판기**\n");
+				for (int i = 0; i < N; i++)
+				{
+
+					printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), drinks[i].name, drinks[i].price, drinks[i].stock);
+				}
+				scanf("%d", &choice);
+				printf("%4d원입니다");
+				scanf("%d", &money);
+				printf("%s가 나왔습니다.%4d원 남았습니다\n", drinks[choice - 1].name, Change(drinks[choice - 1].price, money));
+			}
+
+			printf("추가 구매를 원하시요? y/n");
+			scanf("%s", &end);
 		}
 
-	}
-	else {
-		for (int i = 0; i < N; i++)
-		{
-			printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), drink.Drinks[i].name, drink.Drinks[i].price, drink.Drinks[i].stock);
-		}
-	}
+		printf("이용해주셔서 감사합니다.");
 	//for (int i = 0; i < N; i++)
 	//{
 	//	printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
 	//}
-
-	int choice;
-	scanf("%d", &choice);
-	printf("%s가 나왔습니다.\n", snacks[choice - 1].name);
+	//int choice;
+	//scanf("%d", &choice);
+	//printf("%s가 나왔습니다.\n", snacks[choice - 1].name);
 }
