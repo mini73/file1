@@ -893,7 +893,7 @@
 .사용자는 금액 투입
 .투입 받은 돈에서 구입한 제품들의 가격의 합만큼 빼고 남은 금액 계산
 . 남은 금액은 사용자가 구입한 제품과 함께 보여준다
-. "추가 주문 하겠습니까?[y/n]"라고 제시한다 
+. "추가 주문 하겠습니까?[y/n]"라고 제시한다
 . y는 처음 구입가능복록창을 보여준다
 . n을 선택시 거스름돈 지불 후 작업을 종료한다
 .
@@ -901,13 +901,15 @@
 
 #include <stdio.h>
 
+#define CONTINUE 1
+
 struct PRODUCT {
 	int price;
 	int stock;
 	char name[20];
 };
-int Change(int price, int money) {
-	int change = money - price;
+int Change(int price, int sum) {
+	int change = sum - price;
 	return change;
 };
 //struct SNACKS {
@@ -923,55 +925,121 @@ int Change(int price, int money) {
 
 void main()
 {
-	
 
-		const int N = 2;
-		
-		PRODUCT snacks[N] = {
-			{1500,3,"레몬칩"}, {1000,2,"달고나"}
-		};
-		PRODUCT drinks[N] = {
-			{1000,4,"사이다"}, {1000,5,"콜라"}
-		};
 
+	const int N = 2;
+
+	PRODUCT snacks[N] = {
+		{1500,3,"레몬칩"}, {1000,2,"달고나"}
+	};
+	PRODUCT drinks[N] = {
+		{1000,4,"사이다"}, {1000,5,"콜라"}
+	};
+	int end;
+	int stay;
+	int sumSnacks = 0;
+	int sumDrinks = 0;
+	do {
 		int whatype;
 		printf("어떤 종류를 선택하시겠습니까?\n");
 		printf("1.과자 2.음료\n");
 		scanf("%d", &whatype);
 		int choice;
-		char end;
 		int money;
-		for (;end=='n'&&end=='N';) {
-			if (whatype == 1) {
+		do {
 
-				printf("**과자 자판기**\n");
-				for (int i = 0; i < N; i++)
-				{
-					printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+			if (whatype == 1)
+			{
+				for (;;) {
+					printf("**과자 자판기**\n");
+					for (int i = 0; i < N; i++)
+					{
+						printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+					}
+					scanf("%d", &choice);
+					if (choice > N || choice < 1) {
+						printf("잘못 입력하셨습니다.\n");
+						continue;
+					}
+					else if (snacks[choice - 1].stock == 0) {
+						printf("상품의 재고가 없어 구매하실수 없습니다.\n");
+						continue;
+					}
+					else {
+						break;
+					}
 				}
-				scanf("%d", &choice);
-				printf("%4d원입니다");
-				scanf("%d", &money);
-				printf("%s가 나왔습니다. %4d원 남았습니다\n", snacks[choice - 1].name, Change(snacks[choice - 1].price, money));
+				do {
+					if (snacks[choice - 1].price < sumSnacks) {
+						break;
+					}
+					printf("돈을 넣어주세요\n");
+					printf("=> ");
+					scanf("%d", &money);
+					sumSnacks += money;
+					if (snacks[choice - 1].price > sumSnacks) {
+						printf("%4d원이 부족합니다.\n", snacks[choice - 1].price - sumSnacks);
+					}
+				} while (snacks[choice - 1].price > sumSnacks);
+				printf("%s이/가 나왔습니다. %4d원 남았습니다\n", snacks[choice - 1].name, Change(snacks[choice - 1].price, sumSnacks));
+				sumSnacks = Change(snacks[choice - 1].price, sumSnacks);
+				snacks[choice - 1].stock--;
 			}
-			else {
-				printf("**음료 자판기**\n");
-				for (int i = 0; i < N; i++)
-				{
 
-					printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), drinks[i].name, drinks[i].price, drinks[i].stock);
+			if (whatype == 2)
+			{
+				for (;;) {
+					printf("**음료 자판기**\n");
+					for (int i = 0; i < N; i++)
+					{
+
+						printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), drinks[i].name, drinks[i].price, drinks[i].stock);
+					}
+					scanf("%d", &choice);
+					if (choice > N || choice < 1) {
+						printf("잘못 입력하셨습니다.\n");
+						continue;
+					}
+					else if (drinks[choice - 1].stock == 0) {
+						printf("상품의 재고가 없어 구매하실수 없습니다.\n");
+						continue;
+					}
+					else {
+						break;
+					}
 				}
-				scanf("%d", &choice);
-				printf("%4d원입니다");
-				scanf("%d", &money);
-				printf("%s가 나왔습니다.%4d원 남았습니다\n", drinks[choice - 1].name, Change(drinks[choice - 1].price, money));
+				do {
+					if (drinks[choice - 1].price < sumDrinks) {
+						break;
+					}
+					printf("돈을 넣어주세요\n");
+					printf("=> ");
+					scanf("%d", &money);
+					sumDrinks += money;
+					if (drinks[choice - 1].price > sumDrinks) {
+						printf("%4d원이 부족합니다.\n", drinks[choice - 1].price - sumDrinks);
+					}
+				} while (drinks[choice - 1].price > sumDrinks);
+
+				printf("%s이/가 나왔습니다.%4d원 남았습니다\n", drinks[choice - 1].name, Change(drinks[choice - 1].price, sumDrinks));
+				sumDrinks = Change(drinks[choice - 1].price, sumDrinks);
+				drinks[choice - 1].stock--;
 			}
 
-			printf("추가 구매를 원하시요? y/n");
-			scanf("%s", &end);
-		}
+			if (whatype != 1 && whatype != 2) {
+				printf("없는 자판기입니다\n");
+				continue;
+			}
 
-		printf("이용해주셔서 감사합니다.");
+			printf("추가 구매를 원하시요? 1.추가구매 0.멈춘다\n");
+			scanf("%d", &end);
+		} while (end == CONTINUE);
+		printf("거스름돈으로 %4d원 나왔습니다.\n", sumDrinks + sumSnacks);
+		printf("계속 이용하시겠습니까? 1.예 0.아니요\n");
+		scanf("%d", &stay);
+	} while (stay == CONTINUE);
+	
+	printf("이용해주셔서 감사합니다.");
 	//for (int i = 0; i < N; i++)
 	//{
 	//	printf("%d.[%6s] %4d원(%d개 남음)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
