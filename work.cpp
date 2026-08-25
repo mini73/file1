@@ -1051,48 +1051,208 @@
 //	//printf("%s가 나왔습니다.\n", snacks[choice - 1].name);
 //}
 
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<time.h>
+//
+//struct DATA {
+//
+//	int N, * pNum;
+//};
+//
+//void func_swap(int &pNum1, int &pNum2)
+//{
+//	int Swap = pNum1;
+//	pNum1 = pNum2;
+//	pNum2 = Swap;
+//}
+//
+//void func_sort(DATA *pData)
+//{
+//	for (int i = 0; i < pData->N; ++i) {
+//		for (int j = i; j < pData->N; ++j) {
+//			if (pData->pNum[i] > pData->pNum[j])
+//				func_swap(pData->pNum[i], pData->pNum[j]);
+//		}
+//	}
+//}
+//
+//void main()
+//{
+//	DATA data;
+//	scanf("%d", &data.N);
+//	data.pNum = (int*)malloc(sizeof(int) * data.N);
+//	srand((unsigned int)time(NULL));
+//	printf("<랜덤으로 입력박은 수 출력>\n");
+//	for (int i = 0; i < data.N; i++) {
+//		*(data.pNum + i) = (rand() % data.N) + i;
+//		printf("%2d", data.pNum[i]);
+//	}
+//	func_sort(&data);
+//	printf("\n오름차순 정렬된 수 출력>\n");
+//	for (int i = 0; i < data.N; i++) {
+//		printf("%2d", data.pNum[i]);
+//		if (i % 10 == 9)printf("\n");
+//	}
+//	free(data.pNum);
+//}
+
+//#include<stdio.h>
+//void main()
+//{
+//	FILE* pFile;
+//	pFile = fopen("myfile.txt", "w");
+//	printf("안녕하세요");
+//	fclose(pFile);
+//
+//}
+
+//#include<stdio.h>
+//void main()
+//{
+//	FILE* pFile;
+//	pFile = fopen("myfile.txt", "w");
+//	fprintf( pFile,"안녕하세요");
+//	fclose(pFile);
+//
+//}
+
+//#include<stdio.h>
+//
+//void main()
+//{
+//	FILE* pFile;
+//	char name[100];
+//
+//	pFile = fopen("myfile.txt", "r");
+//	fscanf(pFile, "%s", name);
+//	printf("%s", name);
+//	fclose(pFile);
+//}
+
+//#include<stdio.h>
+//
+//void main()
+//{
+//	FILE* pFile;
+//	char name[100];
+//	pFile = fopen("myfile.txt", "w");
+//	for (int n = 0; n < 5; ++n) {
+//		printf("파일에 쓰고싶은 말을 입력하세요: ");
+//		scanf("%s", name);
+//		fprintf(pFile, "%d번째 내용)%-10s]\n", n, name);
+//
+//	}
+//	fclose(pFile);
+//}
+
+//#include<iostream>
+//#include<fstream>
+//using namespace std;
+//void main()
+//{
+//	ofstream fout("file.txt");
+//	fout << "apple 10" << endl;
+//	fout << "banana 20" << endl;
+//	fout << "cherry 30" << endl;
+//	fout.close();
+//
+//	cout << "저장완료" << endl;
+//}
+
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//using namespace std;
+//
+//void main()
+//{
+//	ifstream fin("file.txt");
+//	string name;
+//	int count;
+//
+//	while (fin >> name >> count)
+//		cout << name << " : " << count << endl;
+//	fin.close();
+//}
+
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//using namespace std;
+//
+//void main()
+//{
+//	ofstream fout("file.txt");
+//	int n;
+//	cin >> n;
+//	for (int i = 1; i <= n; i++) {
+//		fout << i << endl;
+//	}
+//	fout.close();
+//
+//	cout << "저장완료" << endl;
+//}
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//using namespace std;
+//
+//void main()
+//{
+//	ifstream fin("file.txt");
+//	string num;
+//
+//
+//	while (fin >> num)
+//		cout << num << endl;
+//	fin.close();
+//
+//}
+
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//#include<ctime>
+//using namespace std;
+//
+//string getToday() {
+//	time_t t = time(0);
+//	tm* now = localtime(&t);
+//	return to_string(now->tm_hour) + ":" +
+//		to_string(now->tm_min ) + ":" +
+//		to_string(now->tm_sec);
+//}
+//
+//void main()
+//{
+//	string content;
+//	cout << "일기 내용; ";
+//	getline(cin, content);
+//	ofstream out("diary.txt", ios::app);
+//	out << getToday() << " " << content << endl;
+//	out.close();
+//
+//	ifstream in("diary.txt");
+//	string line;
+//	cout << "\n===내 일기 ===" << endl;
+//	while (getline(in, line))
+//		cout << line << endl;
+//	in.close();
+//}
+
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 
-struct DATA {
+#define BUFF_SIZE 30
 
-	int N, * pNum;
-};
+int main() {
+	char buff[BUFF_SIZE];
+	int readLen = 0;
+	FILE* src, * dst;
+	char name1[100], name[100], enter;
+	printf("입력받을 파일의 이름을 입력하세요:");
+	scanf("%s%c", name1, &enter);
 
-void func_swap(int &pNum1, int &pNum2)
-{
-	int Swap = pNum1;
-	pNum1 = pNum2;
-	pNum2 = Swap;
-}
-
-void func_sort(DATA *pData)
-{
-	for (int i = 0; i < pData.N; ++i) {
-		for (int j = i; j < pData.N; ++j) {
-			if (pData.pNum[i] > pData.pNum[j])
-				func_swap(pData.pNum[i], pData.pNum[j]);
-		}
-	}
-}
-
-void main()
-{
-	DATA data;
-	scanf("%d", &data.N);
-	pNum = (int*)malloc(sizeof(int) * data.N);
-	srand((unsigned int)time(NULL));
-	printf("<랜덤으로 입력박은 수 출력>\n");
-	for (int i = 0; i < data.N; i++) {
-		*(data.pNum + i) = (rand() % data.N) + i;
-		printf("%2d", pNum[i]);
-	}
-	func_sort(data.pNum, data.N);
-	printf("\n오름차순 정렬된 수 출력>\n");
-	for (int i = 0; i < data.N; i++) {
-		printf("%2d", data.pNum[i]);
-		if (i % 10 == 9)printf("\n");
-	}
-	free(data.pNum);
+	printf("")
 }
