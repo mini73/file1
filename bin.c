@@ -255,76 +255,128 @@
 //         scanf("%d", &aa[i]);
     
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main()
+// int main()
+// {
+//     int aa[3][4];
+
+//     aa[0][0] = 1;  aa[0][1] = 2;  aa[0][2] = 3;  aa[0][3] = 4;
+//     aa[1][0] = 5;  aa[1][1] = 6;  aa[1][2] = 7;  aa[1][3] = 8;
+//     aa[2][0] = 9;  aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
+
+//     printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
+
+//     printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
+//     printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
+//     printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int aa[3][4];
+//     int i, k;
+
+//     int val = 1;
+
+//     for (i = 0; i < 3; i++)
+//     {
+//         for (k = 0; k < 4; k++)
+//         {
+//             aa[i][k] = val;
+//             val++;
+//         }
+//     }
+
+//     printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
+
+//     for (i = 0; i < 3; i++)
+//     {
+//         for (k = 0; k < 4; k++)
+//         {
+//             printf("%3d ", aa[i][k]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int gugu[9][9];
+//     int i, k;
+
+//     for (i = 0; i < 9; i++)
+//         for (k = 0; k < 9; k++)
+//             gugu[i][k] = (i + 1) * (k + 1);
+
+//     for (i = 0; i < 9; i++)
+//     {
+//         for (k = 0; k < 9; k++)
+//         {
+//             printf("%dX%d=%2d  ", k + 1, i + 1, gugu[i][k]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
+
+#include<stdio.h>
+
+void main()
 {
-    int aa[3][4];
+    char s[20];
+    FILE *rfp;
 
-    aa[0][0] = 1;  aa[0][1] = 2;  aa[0][2] = 3;  aa[0][3] = 4;
-    aa[1][0] = 5;  aa[1][1] = 6;  aa[1][2] = 7;  aa[1][3] = 8;
-    aa[2][0] = 9;  aa[2][1] = 10; aa[2][2] = 11; aa[2][3] = 12;
+    rfp = fopen("c:\\tempdata1.txt", "r");
 
-    printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
+    fgets(s, 20, rfp);
 
-    printf("%3d %3d %3d %3d\n", aa[0][0], aa[0][1], aa[0][2], aa[0][3]);
-    printf("%3d %3d %3d %3d\n", aa[1][0], aa[1][1], aa[1][2], aa[1][3]);
-    printf("%3d %3d %3d %3d\n", aa[2][0], aa[2][1], aa[2][2], aa[2][3]);
+    printf("파일에서 읽은 문자열 : ");
+    puts(s);
 
-    return 0;
+    fclose(rfp);
+
 }
 
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
+void main()
 {
-    int aa[3][4];
-    int i, k;
+    FILE *rfp;
+    int hap = 0;
+    int in i;
 
-    int val = 1;
+    rfp = fopen("c:\\temp\\data2.txt", "r");
 
-    for (i = 0; i < 3; i++)
+    for(i=0;i<5;i++)
     {
-        for (k = 0; k < 4; k++)
-        {
-            aa[i][k] = val;
-            val++;
-        }
+        fscanf(rfp, "%d", &in);
+        hap = hap + in;
     }
-
-    printf("aa[0][0]부터 aa[2][3]까지 출력 \n");
-
-    for (i = 0; i < 3; i++)
-    {
-        for (k = 0; k < 4; k++)
-        {
-            printf("%3d ", aa[i][k]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+    printf("합계 ==> %d \n", hap);
+    fclose(rfp);
 }
 
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
+void main()
 {
-    int gugu[9][9];
-    int i, k;
+    char s[20];
+    FILE *wfp;  
+    
+    wfp = fopen("c:\\temp\\data3.txt", "w");
 
-    for (i = 0; i < 9; i++)
-        for (k = 0; k < 9; k++)
-            gugu[i][k] = (i + 1) * (k + 1);
-
-    for (i = 0; i < 9; i++)
-    {
-        for (k = 0; k < 9; k++)
-        {
-            printf("%dX%d=%2d  ", k + 1, i + 1, gugu[i][k]);
-        }
-        printf("\n");
-    }
-
-    return 0;
+    printf("문자열을 입력(최대 19자) : ");
+    gets(s);
+    fputs(s, wfp);
+    fclose(wfp);
 }
