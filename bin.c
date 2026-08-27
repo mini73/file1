@@ -336,7 +336,7 @@ void main()
     char s[20];
     FILE *rfp;
 
-    rfp = fopen("c:\\tempdata1.txt", "r");
+    rfp = fopen("c:\\temp\\data1.txt", "r");
 
     fgets(s, 20, rfp);
 
