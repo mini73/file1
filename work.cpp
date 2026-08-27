@@ -1240,19 +1240,117 @@
 //		cout << line << endl;
 //	in.close();
 //}
+//
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//#define BUFF_SIZE 30
+//
+//int main() {
+//	char buff[BUFF_SIZE];
+//	int readLen = 0;
+//	FILE* src, * dst;
+//	char name1[100], name2[100], enter;
+//	printf("입력받을 파일의 이름을 입력하세요:");
+//	scanf("%s%c", name1, &enter);
+//
+//	printf("출력받을 파일의 이름을 입력하세요 :");
+//	gets_s(name2);
+//
+//	src = fopen(name1, "rb");
+//	dst = fopen(name2, "wb");
+//
+//	if (src == NULL || dst == NULL) {
+//		puts("파일을 못 찾음");
+//		return -1;
+//	}
+//	while (true) {
+//		readLen = fread(buff, 1, BUFF_SIZE, src);
+//		if (readLen < BUFF_SIZE) {
+//			if (feof(src) != 0) {
+//				fwrite(buff, 1, readLen, dst);
+//				puts("파일 복사 완료");
+//				break;
+//			}
+//			else {
+//				printf("파일 복사 실패");
+//				return -1;
+//			}
+//		}
+//		fwrite(buff, 1, BUFF_SIZE, dst);
+//	}
+//	if (fclose(src) != 0 || fclose(dst) != 0) {
+//		puts("파일을 닫지 못했습니다.");
+//		return -1;
+//	}
+//	return 0;
+//
+//}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	FILE* fp = fopen("Coding.txt", "w");
+//	int i = 123;
+//	int j = -123;
+//	double f = 3.141592;
+//	
+//	fprintf(fp, "폭맞추기\n");
+//	fprintf(fp, "i: %6d \n", i);
+//	fprintf(fp, "i: %7d \n", i);
+//	fprintf(fp, "i: %2d\n", i);
+//
+//	fprintf(fp, "오른쪽정렬\n");
+//	fprintf(fp, "i: %5d \n", i);
+//	fprintf(fp, "왼쪽정렬\n");
+//	fprintf(fp, "i: %-5끝\n\n", i);
+//
+//	fprintf(fp, "#문자의 사용\n");
+//	fprintf(fp, "i: %#x \n", i);
+//	fprintf(fp, "j: %#x\n\n", j);
+//	fprintf(fp, "부호붙이기\n");
+//	fprintf(fp, "i: %+d, j: %+d \n", i, j);
+//
+//	fclose(fp);
+//	return 0;
+//
+//}
+
+//#include<stdio.h>
+//
+// int main()
+//{
+//	FILE* info = fopen("students.txt","w");
+//	int count;
+//	char name[100];
+//	int  grade=0;
+//	printf("인원을 정하세요:");
+//	scanf("%d", &count);
+//	fprintf(info, "%d명\n", count);
+//	int num = count;
+//	for (int i = 0; i < num; i++)
+//	{
+//		printf("이름: ");
+//		scanf("%s", name);
+//		printf("점수: ");
+//		scanf("%d", &grade);
+//		fprintf(info, "이름:%10s, 점수:%3d\n", name, grade);
+//	}
+//
+//	fclose(info);
+//
+//}
 
 #include<stdio.h>
-#include<stdlib.h>
 
-#define BUFF_SIZE 30
+int main()
+{
+	FILE* info, * average;
+	int sum, ans;
+	info = fopen("students.txt", "r");
+	average = fopen("above_average.txt", "w");
+	
 
-int main() {
-	char buff[BUFF_SIZE];
-	int readLen = 0;
-	FILE* src, * dst;
-	char name1[100], name[100], enter;
-	printf("입력받을 파일의 이름을 입력하세요:");
-	scanf("%s%c", name1, &enter);
+	fclose(info);
 
-	printf("")
 }
