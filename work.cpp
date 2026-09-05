@@ -1326,7 +1326,7 @@
 //	int  grade=0;
 //	printf("인원을 정하세요:");
 //	scanf("%d", &count);
-//	fprintf(info, "%d명\n", count);
+//	fprintf(info, "%d\n", count);
 //	int num = count;
 //	for (int i = 0; i < num; i++)
 //	{
@@ -1334,23 +1334,159 @@
 //		scanf("%s", name);
 //		printf("점수: ");
 //		scanf("%d", &grade);
-//		fprintf(info, "이름:%10s, 점수:%3d\n", name, grade);
+//		fprintf(info, "%10s %3d\n", name, grade);
 //	}
 //
 //	fclose(info);
 //
 //}
 
-#include<stdio.h>
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//using namespace std;
+//
+//void main()
+//{
+//
+//	ifstream fin("students.txt");
+//	ofstream fout("above_average.txt");
+//	string name;
+//	int count=0;
+//	int avg = 0;
+//	int num = 0;
+//	fin >> num;
+//	while (fin >> name >> count) {
+//
+//		cout << name << ", " << count << endl;
+//		avg += count;
+//	}
+//	avg /= num;
+//
+//	fin.close();
+//	fin.open("students.txt");
+//	fin >> num;
+//	//ofstream fout("above_average.txt");
+//	while (fin >> name >> count) {
+//		if (count < avg) {
+//			continue;
+//		}
+//		fout << name << " " << count << endl;
+//
+//	}
+//	fin.close();
+//	fout.close();
+//		
+//	
+// 	//FILE* info, * average;
+//	//char name[100];
+//	//int sum, ans,grade;
+//	//info = fopen("students.txt", "r");
+//	//average = fopen("above_average.txt", "w");
+//	//while (!feof(info)) {
+//	//	fgets()
+//	//}
+//
+//}
 
-int main()
-{
-	FILE* info, * average;
-	int sum, ans;
-	info = fopen("students.txt", "r");
-	average = fopen("above_average.txt", "w");
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+void main() {
+	string spc = " ";
+	ofstream fout("users.txt");
+	fout << "no" << spc << "stop" << endl;
+	fout.close();
+	string user;
+	//string userId;
+	//string userPass;
+	string pass;
+	string id;
 	
+	cout << "아이디 입력: ";
+	cin >> id;
+	cout << "비밀번호 입력: ";
+	cin >> pass;
 
-	fclose(info);
-
+	ifstream fin("users.txt");
+	while (getline(fin, user)) {
+		if (user == id + spc + pass) {
+			cout << "성공" << endl;
+		}
+		else {
+			cout << "실패" << endl;
+		}
+	}
+	//ofstream fout("users.txt");
+	//fout << "no" << " " << "stop" << endl;
+	//fout.close();
 }
+
+
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	FILE* rfp, * wfp;
+//	char str1[200], str2[200];
+//	int size, i;
+//
+//	rfp = fopen("c:\\student\\임경민\\Project1\\in.txt", "r");
+//	wfp = fopen("c:\\student\\임경민\\Project1\\out.txt", "w");
+//
+//	while (1)
+//	{
+//		fgets(str1, 200, rfp);
+//
+//		if (feof(rfp))
+//			break;
+//
+//		size = strlen(str1);
+//		for (i = size - 1; i >= 0; i--)
+//			str2[size - 1-i] = str1[i-1];
+//
+//		str2[size - 1] = '\0';
+//		fputs(str2, wfp);
+//		fputs("\n", wfp);
+//	}
+//	fclose(rfp);
+//	fclose(wfp);
+//}
+//
+//#include<stdio.h>
+//
+//int main()
+//{
+//	struct student {
+//		char name[10];
+//		int kor;
+//		int eng;
+//		float avg;
+//	};
+//
+//	struct student s;
+//	struct student* p;
+//
+//	p = &s;
+//
+//	printf("이름 입력: ");
+//	scanf("%s", &p->name);
+//
+//	printf("국어 점수: ");
+//	scanf("%d", &p->kor);
+//
+//	printf("영어 점수: ");
+//	scanf("%d", &p->eng);
+//
+//	p->avg = (p->kor + p->eng) / 2.0f;
+//
+//	printf("\n-- 구조체 포인터 활용 --\n");
+//	printf("학생 이름 ==> %s\n", p->name);
+//	printf("국어 점수 ==> %d\n", p->kor);
+//	printf("영어 점수 ==> %d\n", p->eng);
+//	printf("평균 점수 ==> %5.1f\n", p->avg);
+//}
+
