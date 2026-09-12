@@ -1389,40 +1389,162 @@
 //
 //}
 
+
+
+//#include<iostream>                                          //문제 6
+//#include<fstream>
+//#include<string>
+//using namespace std;
+//
+//void main() {
+//	string spc = " ";
+//	ofstream fout("users.txt");
+//	fout << "no" << spc << "stop" << endl;
+//	fout.close();
+//	string user;
+//	//string userId;
+//	//string userPass;
+//	string pass;
+//	string id;
+//	
+//	cout << "아이디 입력: ";
+//	cin >> id;
+//	cout << "비밀번호 입력: ";
+//	cin >> pass;
+//
+//	ifstream fin("users.txt");
+//	while (getline(fin, user)) {
+//		if (user == id + spc + pass) {
+//			cout << "성공" << endl;
+//		}
+//		else {
+//			cout << "실패" << endl;
+//		}
+//	}
+//	//ofstream fout("users.txt");
+//	//fout << "no" << " " << "stop" << endl;
+//	//fout.close();
+//}
+
+//#include<iostream>                                       //문제 7
+//#include<fstream>
+//#include<string>
+//#include<stdlib.h>
+//#include<time.h>
+//using namespace std;
+//
+//int main()
+//{
+//	int range, count;
+//	cout << "범위를 지정하세요\n=>";
+//	cin >> range;
+//	cout << "갯수를 입력하시오\n=>";
+//	cin >> count;
+//	int xRange = range;
+//	int* randNum = new int[xRange];
+//
+//	srand((unsigned int)time(NULL));
+//
+//	for (int i = 0; i < count; i++) {
+//		randNum[i] = rand() % xRange;
+//	}
+//
+//	ofstream fout("data.txt");
+//	for (int i = 0; i < xRange; i++) {
+//		fout << randNum[i] << endl;
+//	}
+//	fout.close();
+//	delete randNum;
+//}
+
+//#include<iostream>
+//#include<fstream>
+//
+//using namespace std;
+//
+//int main() {
+//	ifstream fin("data.txt");
+//	ofstream evenFout("even.txt");
+//	ofstream oddFout("odd.txt");
+//	int num;
+//	while (fin >> num)
+//	{
+//		if (num % 2 == 0) {
+//			evenFout << num << endl;
+//		}
+//		else {
+//			oddFout << num << endl;
+//		}
+//	}
+//	fin.close();
+//	evenFout.close();
+//	oddFout.close();
+//}
+
 #include<iostream>
 #include<fstream>
 #include<string>
+
 using namespace std;
+int main(){
+	string word;
+	string count;
+	string senten;
+	int i = 1;
+	int sum = 0;
+	ifstream fin("sentences.txt");
+	cout << "검색하고 싶은 단어를 적으시오" << endl;
+	cout << "ex) is, in, never, all " << endl;
+	cout << ">>";
+	//getline(cin, word);
+	cin >> word;
+	while (getline(fin, count)) {
+		int num = 0;
+		size_t pos = count.find(word, num);
+		cout << count << endl;
+		if (num == 0) {
+			cout << "없음" << endl;
 
-void main() {
-	string spc = " ";
-	ofstream fout("users.txt");
-	fout << "no" << spc << "stop" << endl;
-	fout.close();
-	string user;
-	//string userId;
-	//string userPass;
-	string pass;
-	string id;
-	
-	cout << "아이디 입력: ";
-	cin >> id;
-	cout << "비밀번호 입력: ";
-	cin >> pass;
-
-	ifstream fin("users.txt");
-	while (getline(fin, user)) {
-		if (user == id + spc + pass) {
-			cout << "성공" << endl;
 		}
 		else {
-			cout << "실패" << endl;
+			
+			//cout << i << ". " << word << " " << num << "" << endl; i++;
 		}
+		sum += num;
 	}
-	//ofstream fout("users.txt");
-	//fout << "no" << " " << "stop" << endl;
-	//fout.close();
+	cout << word << "의 개수는 총" << sum << "개 입니다." << endl;
+	fin.close();
+	return 0;
 }
+
+
+
+
+//Age is no guarantee of maturity
+//Youth isn't always all it's touted to be
+//You will face many defeats in life, but never let yourself be defeated
+//The greatest glory in living lies not in never falling, but in rising every time we fall
+//Life is either a daring adventure or nothing at all
+//This too shall pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //#include<stdio.h>
