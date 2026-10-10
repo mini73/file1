@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 
 //#include<stdio.h>
 //#include<stdlib.h>
@@ -12,12 +12,12 @@
 //	int count;
 //	int input = 1;
 //
-//	printf("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+//	printf("ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 //	scanf("%d", &count);
 //	//100-999
 //	int repli = count;
 //	int** data = new int* [count];
-//	int randNum;//printf("°³¼ö¸¸Å­ ¼ıÀÚ¸¦ ÀûÀ¸½Ã¿À\n");
+//	int randNum;//printf("ê°œìˆ˜ë§Œí¼ ìˆ«ìë¥¼ ì ìœ¼ì‹œì˜¤\n");
 //	for (int i = 0; i < count; i++) {
 //		//printf(">>");
 //		//scanf("%d", &data[i]);
@@ -222,11 +222,11 @@
 //using namespace std;
 //
 //void phoneTime() {
-//	string hour = "ÈŞ´ëÆùÀ» ";
+//	string hour = "íœ´ëŒ€í°ì„ ";
 //	cout << hour;
 //}
 //void studyTime() {
-//	string hour = "°øºÎ¸¦ ";
+//	string hour = "ê³µë¶€ë¥¼ ";
 //	cout << hour;
 //}
 //
@@ -234,17 +234,17 @@
 //{
 //	srand((unsigned int)time(NULL));
 //	int time;
-//	cout << "¸î ½Ã°£À» »ç¿ëÇÑÁö ÀÔ·ÂÇÏ½Ã¿À: ";
+//	cout << "ëª‡ ì‹œê°„ì„ ì‚¬ìš©í•œì§€ ì…ë ¥í•˜ì‹œì˜¤: ";
 //	cin >> time;
 //	for (int i = 1; i <= time; i++) {
-//		cout << i << "½Ã°£ Â÷¿¡´Â ";
+//		cout << i << "ì‹œê°„ ì°¨ì—ëŠ” ";
 //		if (rand() % 2 == 0) {
 //			phoneTime();
 //		}
 //		else {
 //			studyTime();
 //		}
-//		cout << "Çß´Ù" << endl;
+//		cout << "í–ˆë‹¤" << endl;
 //	}
 //
 //}
@@ -255,12 +255,12 @@
 //
 //void menu(string coffee)
 //{
-//	cout << "ÁÖ¹®ÇÏ½Å Ä¿ÇÇ´Â " << coffee << "ÀÔ´Ï´Ù" << endl;
+//	cout << "ì£¼ë¬¸í•˜ì‹  ì»¤í”¼ëŠ” " << coffee << "ì…ë‹ˆë‹¤" << endl;
 //}
 //void main()
 //{
 //	string typeCoffee;
-//	cout << "¿øÇÏ½Ã´Â Ä¿ÇÇ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
+//	cout << "ì›í•˜ì‹œëŠ” ì»¤í”¼ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
 //	cin >> typeCoffee;
 //
 //	menu(typeCoffee);
@@ -282,7 +282,7 @@
 //	return 'E';
 //}
 //int main() {
-//	cout << "»ç°ú¸¦ ¿µ¾î·Î? " << endl;
+//	cout << "ì‚¬ê³¼ë¥¼ ì˜ì–´ë¡œ? " << endl;
 //	cout << getA() << getP() << getP() << getL() << getE() << endl;
 //	return 0;
 //}
@@ -301,7 +301,7 @@
 //
 //int main() {
 //	int ans = multi();
-//	cout << "1~8±îÁö °öÀÇ ´äÀº " << ans << "ÀÔ´Ï´Ù" << endl;
+//	cout << "1~8ê¹Œì§€ ê³±ì˜ ë‹µì€ " << ans << "ì…ë‹ˆë‹¤" << endl;
 //	return 0;
 //}
 
@@ -320,10 +320,10 @@
 //	int data3 = multiply_number(a, b);
 //	double data4 = divide_number(a, b);
 //
-//	cout << "µ¡¼À °á°ú:" << data1 << endl;
-//	cout << "»¬¼À °á°ú:" << data2 << endl;
-//	cout << "°ö¼À °á°ú:" << data3 << endl;
-//	cout << "³ª´°¼À °á°ú:" << data4 << endl;
+//	cout << "ë§ì…ˆ ê²°ê³¼:" << data1 << endl;
+//	cout << "ëº„ì…ˆ ê²°ê³¼:" << data2 << endl;
+//	cout << "ê³±ì…ˆ ê²°ê³¼:" << data3 << endl;
+//	cout << "ë‚˜ëˆ—ì…ˆ ê²°ê³¼:" << data4 << endl;
 //
 //}
 //
@@ -359,7 +359,7 @@
 //
 //string searching(string name) {
 //	
-//	return "[°Ë»ö Áß]" + name;
+//	return "[ê²€ìƒ‰ ì¤‘]" + name;
 //}
 
 //#include<iostream>
@@ -373,13 +373,13 @@
 //	int name;
 //	int count;
 //	int result;
-//	cout << "¾î¶² À½·á¸¦ ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î?" << endl;
-//	cout << "1.¾Æ¸Ş¸®Ä«³ë(1000¿ø)\n2.¶ó¶¼(2000¿ø)\n3.¿¡ÀÌµå(1500¿ø)\n" << endl;
+//	cout << "ì–´ë–¤ ìŒë£Œë¥¼ ì„ íƒí•˜ì‹œê² ìŠµë‹ˆê¹Œ?" << endl;
+//	cout << "1.ì•„ë©”ë¦¬ì¹´ë…¸(1000ì›)\n2.ë¼ë–¼(2000ì›)\n3.ì—ì´ë“œ(1500ì›)\n" << endl;
 //	cin >> name;
-//	cout << "¸î °³ °í¸£½Ã°Ú½À´Ï±î?";
+//	cout << "ëª‡ ê°œ ê³ ë¥´ì‹œê² ìŠµë‹ˆê¹Œ?";
 //	cin >> count;
 //	result = calcPrice (name,count);
-//	cout << result << "¿ø ÀÔ´Ï´Ù" << endl;
+//	cout << result << "ì› ì…ë‹ˆë‹¤" << endl;
 //
 //}
 //
@@ -465,7 +465,7 @@
 //	//		row3 += sum[i][j];
 //	//	}
 //	//}
-//	cout << "ÇàÀÇ ÇÕ°è: ";
+//	cout << "í–‰ì˜ í•©ê³„: ";
 //	for (int i = 0; i < 3; i++) {
 //		cout << rows[i] << " ";
 //	}
@@ -489,7 +489,7 @@
 //	//		col3 += sum[i][j];
 //	//	}
 //	//}
-//	cout << "ÇàÀÇ ÇÕ°è: ";
+//	cout << "í–‰ì˜ í•©ê³„: ";
 //	for (int i = 0; i < 3; i++) {
 //		cout << cols[i] ;
 //	}
@@ -517,7 +517,7 @@
 //
 //void func1()
 //{
-//	printf("void Çü ÇÔ¼ö´Â µ¹·ÁÁÙ¼ö ¾øÀ½.\n");
+//	printf("void í˜• í•¨ìˆ˜ëŠ” ëŒë ¤ì¤„ìˆ˜ ì—†ìŒ.\n");
 //}
 //
 //int func2()
@@ -532,14 +532,14 @@
 //	func1();
 //
 //	a = func2();
-//	printf("int Çü ÇÔ¼ö¿¡¼­ µ¹·ÁÁØ °ª ==> %d\n", a);
+//	printf("int í˜• í•¨ìˆ˜ì—ì„œ ëŒë ¤ì¤€ ê°’ ==> %d\n", a);
 //}
 //
 //#include<stdio.h>
 //void func1(int a)
 //{
 //	a = a + 1;
-//	printf("Àü´Ş¹ŞÀº a==>%d\n", a);
+//	printf("ì „ë‹¬ë°›ì€ a==>%d\n", a);
 //
 //}
 //void main()
@@ -547,14 +547,14 @@
 //	int a = 10;
 //
 //	func1(a);
-//	printf("func1() ½ÇÇà ÈÄÀÇ a==>%d\n", a);
+//	printf("func1() ì‹¤í–‰ í›„ì˜ a==>%d\n", a);
 //}
 //
 //#include<stdio.h>
 //void func1(int* a)
 //{
 //	*a = *a + 1;
-//	printf("Àü´Ş¹ŞÀº a==>%d\n", *a);
+//	printf("ì „ë‹¬ë°›ì€ a==>%d\n", *a);
 //}
 //
 //void main()
@@ -562,7 +562,7 @@
 //	int a = 10;
 //
 //	func1(&a);
-//	printf("func1() ½ÇÇà ÈÄÀÇ a==>%d\n", a);
+//	printf("func1() ì‹¤í–‰ í›„ì˜ a==>%d\n", a);
 //}
 //
 //#include<stdio.h>
@@ -589,13 +589,13 @@
 //{
 //	char x = 'A', y = 'Z';
 //
-//	printf("¿ø·¡ °ª  :x=%c,y=%c\n", x, y);
+//	printf("ì›ë˜ ê°’  :x=%c,y=%c\n", x, y);
 //
 //	func1(x, y);
-//	printf("°ªÀ» Àü´ŞÇÑ ÈÄ :x=%c,y=%c\n", x, y);
+//	printf("ê°’ì„ ì „ë‹¬í•œ í›„ :x=%c,y=%c\n", x, y);
 //
 //	func2(&x, &y);
-//	printf("ÁÖ¼Ò¸¦ Àü´ŞÇÑ ÈÄ:x=%c,y=%c\n", x, y);
+//	printf("ì£¼ì†Œë¥¼ ì „ë‹¬í•œ í›„:x=%c,y=%c\n", x, y);
 //}
 
 //#include<iostream>
@@ -630,14 +630,14 @@
 //	};
 //
 //	struct HUMAN a;
-//	printf("ÀÌ¸§: ");
+//	printf("ì´ë¦„: ");
 //	scanf("%s", a.name, 9);
-//	printf("Å°: ");
+//	printf("í‚¤: ");
 //	scanf("%d", &a.height);
-//	printf("¸ö¹«°Ô: ");
+//	printf("ëª¸ë¬´ê²Œ: ");
 //	scanf("%d", &a.weight);
 //
-//	printf("ÀÌ¸§Àº %s, Å°´Â %d, ¸ö¹«°Ô´Â %d ÀÔ´Ï´Ù. ", a.name, a.height, a.weight);
+//	printf("ì´ë¦„ì€ %s, í‚¤ëŠ” %d, ëª¸ë¬´ê²ŒëŠ” %d ì…ë‹ˆë‹¤. ", a.name, a.height, a.weight);
 //}
 
 //#include<iostream>
@@ -664,14 +664,14 @@
 //	int n;
 //	for (int i = 0; i < 100; i++) {
 //		string name;
-//		cout << i+1 << "¹øÂ° Ã¥ ÀÌ¸§À» ÀûÀ¸½Ã¿À: (0À» ´­·¯ ³¡³»±â)" << endl;
+//		cout << i+1 << "ë²ˆì§¸ ì±… ì´ë¦„ì„ ì ìœ¼ì‹œì˜¤: (0ì„ ëˆŒëŸ¬ ëë‚´ê¸°)" << endl;
 //		cin >> name;
 //		if (name == "0") {
 //			break;
 //		}
 //		lib.books[i].name = name;
 //	};
-//	cout << "¿øÇÏ´Â ¼ø¼­ÀÇ Ã¥¸¦ ÀûÀ¸½Ã¿À" << endl;
+//	cout << "ì›í•˜ëŠ” ìˆœì„œì˜ ì±…ë¥¼ ì ìœ¼ì‹œì˜¤" << endl;
 //	cin >> n;
 //	
 //	search(lib, n);
@@ -680,7 +680,7 @@
 //
 //void search(LIB lib, int n)
 //{
-//	cout << "¼±ÅÃÇÏ½Å Ã¥Àº " << lib.books[n - 1].name << "ÀÔ´Ï´Ù" << endl;
+//	cout << "ì„ íƒí•˜ì‹  ì±…ì€ " << lib.books[n - 1].name << "ì…ë‹ˆë‹¤" << endl;
 //
 //}
 
@@ -703,14 +703,14 @@
 //short getDefaultData()
 //{
 //	short pt1;
-//	cout << "ÀÔ·Â>>";
+//	cout << "ì…ë ¥>>";
 //	cin >> pt1;
 //	return pt1;
 //}
 //
 //void printData(short pt2)
 //{
-//	cout << "°ª : " << pt2 << endl;
+//	cout << "ê°’ : " << pt2 << endl;
 //}
 // short add(short pt)
 //{
@@ -740,7 +740,7 @@
 //POINT getDefaultData()
 //{
 //	POINT pt1;
-//	cout << "2°³ ÀÔ·Â>>";
+//	cout << "2ê°œ ì…ë ¥>>";
 //	cin >> pt1.x;
 //	cin >> pt1.y;
 //	return pt1;
@@ -748,7 +748,7 @@
 //
 //void printData(POINT pt2)
 //{
-//	cout << "°ª : " << pt2.x <<","<<pt2.y << endl;
+//	cout << "ê°’ : " << pt2.x <<","<<pt2.y << endl;
 //}
 //
 //POINT add(POINT pt)
@@ -774,7 +774,7 @@
 //	memset((void*)&data, 0x00, sizeof(data));
 //	data.b[0] = 'A';
 //	printf("%d - %s\n", data.a, data.b);
-//	printf("±¸Á¶Ã¼ÀÇ Å©±â: %d\n", sizeof(data));
+//	printf("êµ¬ì¡°ì²´ì˜ í¬ê¸°: %d\n", sizeof(data));
 //}
 
 //#include<iostream>
@@ -797,11 +797,11 @@
 //{
 //	
 //	company.gms[company.gmCount].no = company.gmCount + 1;
-//	cout << "ÀÌ¸§: ";
+//	cout << "ì´ë¦„: ";
 //	cin >> company.gms[company.gmCount].name;
-//	cout << "ºÎ¼­: ";
+//	cout << "ë¶€ì„œ: ";
 //	cin >> company.gms[company.gmCount].part;
-//	cout << "±Ş¿©: ";
+//	cout << "ê¸‰ì—¬: ";
 //	cin >> company.gms[company.gmCount].salary;
 //	
 //
@@ -809,13 +809,13 @@
 //	//company.gms[company.gmCount].part
 //	//company.gms[company.gmCount].salary
 //	
-//	//cout << "»ç¿ø¹øÈ£: ";
+//	//cout << "ì‚¬ì›ë²ˆí˜¸: ";
 //	//cin >> person.no;
-//	//cout << "ÀÌ¸§: ";
+//	//cout << "ì´ë¦„: ";
 //	//cin >> person.name;
-//	//cout <<"ºÎ¼­: ";
+//	//cout <<"ë¶€ì„œ: ";
 //	//cin >> person.part;
-//	//cout << "±Ş¿©: ";
+//	//cout << "ê¸‰ì—¬: ";
 //	//cin >> person.salary;
 //	company.gmCount++;
 //	return company;
@@ -824,20 +824,20 @@
 //
 //void main()
 //{
-//	cout << "°ÔÀÓÀ» Ãâ½ÃÇØº¸ÀÚ!" << endl;
+//	cout << "ê²Œì„ì„ ì¶œì‹œí•´ë³´ì!" << endl;
 //	COMPANY gameCo;
 //	gameCo.gmCount = 0;
-//	cout << "¸ÕÀú GMºÎÅÍ °í¿ëÇÒ±î?" << endl;
+//	cout << "ë¨¼ì € GMë¶€í„° ê³ ìš©í• ê¹Œ?" << endl;
 //	while (1) 
 //	{
 //		gameCo = HireGM_once(gameCo);
-//		cout << "´õ °í¿ëÇÒ±î?(y/n) : ";
+//		cout << "ë” ê³ ìš©í• ê¹Œ?(y/n) : ";
 //		string chice;
 //		cin >> chice;
 //		if (chice == "n") break;
 //	}
-//	cout << "GM %d¸íÀ» »Ì¾Ò´Ù!" << gameCo.gmCount << endl;
-//	cout << "±¸Á¶Ã¼ÀÇ Å©±â" << endl;
+//	cout << "GM %dëª…ì„ ë½‘ì•˜ë‹¤!" << gameCo.gmCount << endl;
+//	cout << "êµ¬ì¡°ì²´ì˜ í¬ê¸°" << endl;
 //	cout << " GM:" << sizeof(GM) << endl;
 //	cout << " COMPANY:" << sizeof(COMPANY) << endl;
 //
@@ -872,30 +872,30 @@
 //{
 //	const int N = 2;
 //	SNACK snacks[N] = {
-//		{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+//		{1500,3,"ë ˆëª¬ì¹©"}, {1000,2,"ë‹¬ê³ ë‚˜"}
 //	};
-//	printf("<<°úÀÚÀÚÆÇ±â!>>\n");
+//	printf("<<ê³¼ììíŒê¸°!>>\n");
 //	for (int i = 0; i < N; i++)
 //	{
-//		printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+//		printf("%d.[%6s] %4dì›(%dê°œ ë‚¨ìŒ)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
 //	}
 //
 //	int choice;
 //	scanf("%d", &choice);
-//	printf("%s°¡ ³ª¿Ô½À´Ï´Ù.\n", snacks[choice - 1].name);
+//	printf("%sê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", snacks[choice - 1].name);
 //}
 /*
-ÀÚÆÇ±â
-. ÀÚÆÇ±âÀÇ Á¾·ù¸¦ ¸í½Ã
-.ÀÚÆÇ±â¿¡¼­ ±¸ÀÔ°¡´ÉÇÑ Á¦Ç°¹øÈ£, Á¦Ç°ÀÇ ÀÌ¸§, ³²Àº °³¼ö, °¡°İ Á¦½Ã
-.»ç¿ëÀÚ´Â Á¦Ç°¹øÈ£¸¦ ¼±ÅÃ
-.»ç¿ëÀÚ°¡ ÅõÀÔÇÒ ±İ¾× Á¦½Ã
-.»ç¿ëÀÚ´Â ±İ¾× ÅõÀÔ
-.ÅõÀÔ ¹ŞÀº µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°µéÀÇ °¡°İÀÇ ÇÕ¸¸Å­ »©°í ³²Àº ±İ¾× °è»ê
-. ³²Àº ±İ¾×Àº »ç¿ëÀÚ°¡ ±¸ÀÔÇÑ Á¦Ç°°ú ÇÔ²² º¸¿©ÁØ´Ù
-. "Ãß°¡ ÁÖ¹® ÇÏ°Ú½À´Ï±î?[y/n]"¶ó°í Á¦½ÃÇÑ´Ù
-. y´Â Ã³À½ ±¸ÀÔ°¡´Éº¹·ÏÃ¢À» º¸¿©ÁØ´Ù
-. nÀ» ¼±ÅÃ½Ã °Å½º¸§µ· ÁöºÒ ÈÄ ÀÛ¾÷À» Á¾·áÇÑ´Ù
+ìíŒê¸°
+. ìíŒê¸°ì˜ ì¢…ë¥˜ë¥¼ ëª…ì‹œ
+.ìíŒê¸°ì—ì„œ êµ¬ì…ê°€ëŠ¥í•œ ì œí’ˆë²ˆí˜¸, ì œí’ˆì˜ ì´ë¦„, ë‚¨ì€ ê°œìˆ˜, ê°€ê²© ì œì‹œ
+.ì‚¬ìš©ìëŠ” ì œí’ˆë²ˆí˜¸ë¥¼ ì„ íƒ
+.ì‚¬ìš©ìê°€ íˆ¬ì…í•  ê¸ˆì•¡ ì œì‹œ
+.ì‚¬ìš©ìëŠ” ê¸ˆì•¡ íˆ¬ì…
+.íˆ¬ì… ë°›ì€ ëˆì—ì„œ êµ¬ì…í•œ ì œí’ˆë“¤ì˜ ê°€ê²©ì˜ í•©ë§Œí¼ ë¹¼ê³  ë‚¨ì€ ê¸ˆì•¡ ê³„ì‚°
+. ë‚¨ì€ ê¸ˆì•¡ì€ ì‚¬ìš©ìê°€ êµ¬ì…í•œ ì œí’ˆê³¼ í•¨ê»˜ ë³´ì—¬ì¤€ë‹¤
+. "ì¶”ê°€ ì£¼ë¬¸ í•˜ê² ìŠµë‹ˆê¹Œ?[y/n]"ë¼ê³  ì œì‹œí•œë‹¤
+. yëŠ” ì²˜ìŒ êµ¬ì…ê°€ëŠ¥ë³µë¡ì°½ì„ ë³´ì—¬ì¤€ë‹¤
+. nì„ ì„ íƒì‹œ ê±°ìŠ¤ë¦„ëˆ ì§€ë¶ˆ í›„ ì‘ì—…ì„ ì¢…ë£Œí•œë‹¤
 .
 */
 
@@ -914,12 +914,12 @@
 //};
 ////struct SNACKS {
 ////	PRODUCT Snacks[2] = {
-////		{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+////		{1500,3,"ë ˆëª¬ì¹©"}, {1000,2,"ë‹¬ê³ ë‚˜"}
 ////	};
 ////}
 ////struct DRINKS {
 ////	PRODUCT Drinks[2] = {
-////		{1000,4,"»çÀÌ´Ù"}, {1000,5,"Äİ¶ó"}
+////		{1000,4,"ì‚¬ì´ë‹¤"}, {1000,5,"ì½œë¼"}
 ////	};
 ////}
 //
@@ -930,10 +930,10 @@
 //	const int N = 2;
 //
 //	PRODUCT snacks[N] = {
-//		{1500,3,"·¹¸óÄ¨"}, {1000,2,"´Ş°í³ª"}
+//		{1500,3,"ë ˆëª¬ì¹©"}, {1000,2,"ë‹¬ê³ ë‚˜"}
 //	};
 //	PRODUCT drinks[N] = {
-//		{1000,4,"»çÀÌ´Ù"}, {1000,5,"Äİ¶ó"}
+//		{1000,4,"ì‚¬ì´ë‹¤"}, {1000,5,"ì½œë¼"}
 //	};
 //	int end;
 //	int stay;
@@ -941,8 +941,8 @@
 //	int sumDrinks = 0;
 //	do {
 //		int whatype;
-//		printf("¾î¶² Á¾·ù¸¦ ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î?\n");
-//		printf("1.°úÀÚ 2.À½·á\n");
+//		printf("ì–´ë–¤ ì¢…ë¥˜ë¥¼ ì„ íƒí•˜ì‹œê² ìŠµë‹ˆê¹Œ?\n");
+//		printf("1.ê³¼ì 2.ìŒë£Œ\n");
 //		scanf("%d", &whatype);
 //		int choice;
 //		int money;
@@ -951,18 +951,18 @@
 //			if (whatype == 1)
 //			{
 //				for (;;) {
-//					printf("**°úÀÚ ÀÚÆÇ±â**\n");
+//					printf("**ê³¼ì ìíŒê¸°**\n");
 //					for (int i = 0; i < N; i++)
 //					{
-//						printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+//						printf("%d.[%6s] %4dì›(%dê°œ ë‚¨ìŒ)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
 //					}
 //					scanf("%d", &choice);
 //					if (choice > N || choice < 1) {
-//						printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\n");
+//						printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\n");
 //						continue;
 //					}
 //					else if (snacks[choice - 1].stock == 0) {
-//						printf("»óÇ°ÀÇ Àç°í°¡ ¾ø¾î ±¸¸ÅÇÏ½Ç¼ö ¾ø½À´Ï´Ù.\n");
+//						printf("ìƒí’ˆì˜ ì¬ê³ ê°€ ì—†ì–´ êµ¬ë§¤í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 //						continue;
 //					}
 //					else {
@@ -973,15 +973,15 @@
 //					if (snacks[choice - 1].price < sumSnacks) {
 //						break;
 //					}
-//					printf("µ·À» ³Ö¾îÁÖ¼¼¿ä\n");
+//					printf("ëˆì„ ë„£ì–´ì£¼ì„¸ìš”\n");
 //					printf("=> ");
 //					scanf("%d", &money);
 //					sumSnacks += money;
 //					if (snacks[choice - 1].price > sumSnacks) {
-//						printf("%4d¿øÀÌ ºÎÁ·ÇÕ´Ï´Ù.\n", snacks[choice - 1].price - sumSnacks);
+//						printf("%4dì›ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.\n", snacks[choice - 1].price - sumSnacks);
 //					}
 //				} while (snacks[choice - 1].price > sumSnacks);
-//				printf("%sÀÌ/°¡ ³ª¿Ô½À´Ï´Ù. %4d¿ø ³²¾Ò½À´Ï´Ù\n", snacks[choice - 1].name, Change(snacks[choice - 1].price, sumSnacks));
+//				printf("%sì´/ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤. %4dì› ë‚¨ì•˜ìŠµë‹ˆë‹¤\n", snacks[choice - 1].name, Change(snacks[choice - 1].price, sumSnacks));
 //				sumSnacks = Change(snacks[choice - 1].price, sumSnacks);
 //				snacks[choice - 1].stock--;
 //			}
@@ -989,19 +989,19 @@
 //			if (whatype == 2)
 //			{
 //				for (;;) {
-//					printf("**À½·á ÀÚÆÇ±â**\n");
+//					printf("**ìŒë£Œ ìíŒê¸°**\n");
 //					for (int i = 0; i < N; i++)
 //					{
 //
-//						printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), drinks[i].name, drinks[i].price, drinks[i].stock);
+//						printf("%d.[%6s] %4dì›(%dê°œ ë‚¨ìŒ)\n", (i + 1), drinks[i].name, drinks[i].price, drinks[i].stock);
 //					}
 //					scanf("%d", &choice);
 //					if (choice > N || choice < 1) {
-//						printf("Àß¸ø ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\n");
+//						printf("ì˜ëª» ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\n");
 //						continue;
 //					}
 //					else if (drinks[choice - 1].stock == 0) {
-//						printf("»óÇ°ÀÇ Àç°í°¡ ¾ø¾î ±¸¸ÅÇÏ½Ç¼ö ¾ø½À´Ï´Ù.\n");
+//						printf("ìƒí’ˆì˜ ì¬ê³ ê°€ ì—†ì–´ êµ¬ë§¤í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 //						continue;
 //					}
 //					else {
@@ -1012,43 +1012,43 @@
 //					if (drinks[choice - 1].price < sumDrinks) {
 //						break;
 //					}
-//					printf("µ·À» ³Ö¾îÁÖ¼¼¿ä\n");
+//					printf("ëˆì„ ë„£ì–´ì£¼ì„¸ìš”\n");
 //					printf("=> ");
 //					scanf("%d", &money);
 //					sumDrinks += money;
 //					if (drinks[choice - 1].price > sumDrinks) {
-//						printf("%4d¿øÀÌ ºÎÁ·ÇÕ´Ï´Ù.\n", drinks[choice - 1].price - sumDrinks);
+//						printf("%4dì›ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.\n", drinks[choice - 1].price - sumDrinks);
 //					}
 //				} while (drinks[choice - 1].price > sumDrinks);
 //
-//				printf("%sÀÌ/°¡ ³ª¿Ô½À´Ï´Ù.%4d¿ø ³²¾Ò½À´Ï´Ù\n", drinks[choice - 1].name, Change(drinks[choice - 1].price, sumDrinks));
+//				printf("%sì´/ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.%4dì› ë‚¨ì•˜ìŠµë‹ˆë‹¤\n", drinks[choice - 1].name, Change(drinks[choice - 1].price, sumDrinks));
 //				sumDrinks = Change(drinks[choice - 1].price, sumDrinks);
 //				drinks[choice - 1].stock--;
 //			}
 //
 //			if (whatype != 1 && whatype != 2) {
-//				printf("¾ø´Â ÀÚÆÇ±âÀÔ´Ï´Ù\n");
+//				printf("ì—†ëŠ” ìíŒê¸°ì…ë‹ˆë‹¤\n");
 //				continue;
 //			}
 //
-//			printf("Ãß°¡ ±¸¸Å¸¦ ¿øÇÏ½Ã¿ä? 1.Ãß°¡±¸¸Å 0.¸ØÃá´Ù\n");
+//			printf("ì¶”ê°€ êµ¬ë§¤ë¥¼ ì›í•˜ì‹œìš”? 1.ì¶”ê°€êµ¬ë§¤ 0.ë©ˆì¶˜ë‹¤\n");
 //			scanf("%d", &end);
 //		} while (end == CONTINUE);
-//		printf("°Å½º¸§µ·À¸·Î %4d¿ø ³ª¿Ô½À´Ï´Ù.\n", sumDrinks + sumSnacks);
+//		printf("ê±°ìŠ¤ë¦„ëˆìœ¼ë¡œ %4dì› ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", sumDrinks + sumSnacks);
 //		sumDrinks = 0;
 //		sumSnacks = 0;
-//		printf("°è¼Ó ÀÌ¿ëÇÏ½Ã°Ú½À´Ï±î? 1.¿¹ 0.¾Æ´Ï¿ä\n");
+//		printf("ê³„ì† ì´ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ? 1.ì˜ˆ 0.ì•„ë‹ˆìš”\n");
 //		scanf("%d", &stay);
 //	} while (stay == CONTINUE);
 //	
-//	printf("ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.");
+//	printf("ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.");
 //	//for (int i = 0; i < N; i++)
 //	//{
-//	//	printf("%d.[%6s] %4d¿ø(%d°³ ³²À½)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
+//	//	printf("%d.[%6s] %4dì›(%dê°œ ë‚¨ìŒ)\n", (i + 1), snacks[i].name, snacks[i].price, snacks[i].stock);
 //	//}
 //	//int choice;
 //	//scanf("%d", &choice);
-//	//printf("%s°¡ ³ª¿Ô½À´Ï´Ù.\n", snacks[choice - 1].name);
+//	//printf("%sê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", snacks[choice - 1].name);
 //}
 
 //#include<stdio.h>
@@ -1083,13 +1083,13 @@
 //	scanf("%d", &data.N);
 //	data.pNum = (int*)malloc(sizeof(int) * data.N);
 //	srand((unsigned int)time(NULL));
-//	printf("<·£´ıÀ¸·Î ÀÔ·Â¹ÚÀº ¼ö Ãâ·Â>\n");
+//	printf("<ëœë¤ìœ¼ë¡œ ì…ë ¥ë°•ì€ ìˆ˜ ì¶œë ¥>\n");
 //	for (int i = 0; i < data.N; i++) {
 //		*(data.pNum + i) = (rand() % data.N) + i;
 //		printf("%2d", data.pNum[i]);
 //	}
 //	func_sort(&data);
-//	printf("\n¿À¸§Â÷¼ø Á¤·ÄµÈ ¼ö Ãâ·Â>\n");
+//	printf("\nì˜¤ë¦„ì°¨ìˆœ ì •ë ¬ëœ ìˆ˜ ì¶œë ¥>\n");
 //	for (int i = 0; i < data.N; i++) {
 //		printf("%2d", data.pNum[i]);
 //		if (i % 10 == 9)printf("\n");
@@ -1102,7 +1102,7 @@
 //{
 //	FILE* pFile;
 //	pFile = fopen("myfile.txt", "w");
-//	printf("¾È³çÇÏ¼¼¿ä");
+//	printf("ì•ˆë…•í•˜ì„¸ìš”");
 //	fclose(pFile);
 //
 //}
@@ -1112,7 +1112,7 @@
 //{
 //	FILE* pFile;
 //	pFile = fopen("myfile.txt", "w");
-//	fprintf( pFile,"¾È³çÇÏ¼¼¿ä");
+//	fprintf( pFile,"ì•ˆë…•í•˜ì„¸ìš”");
 //	fclose(pFile);
 //
 //}
@@ -1138,9 +1138,9 @@
 //	char name[100];
 //	pFile = fopen("myfile.txt", "w");
 //	for (int n = 0; n < 5; ++n) {
-//		printf("ÆÄÀÏ¿¡ ¾²°í½ÍÀº ¸»À» ÀÔ·ÂÇÏ¼¼¿ä: ");
+//		printf("íŒŒì¼ì— ì“°ê³ ì‹¶ì€ ë§ì„ ì…ë ¥í•˜ì„¸ìš”: ");
 //		scanf("%s", name);
-//		fprintf(pFile, "%d¹øÂ° ³»¿ë)%-10s]\n", n, name);
+//		fprintf(pFile, "%dë²ˆì§¸ ë‚´ìš©)%-10s]\n", n, name);
 //
 //	}
 //	fclose(pFile);
@@ -1157,7 +1157,7 @@
 //	fout << "cherry 30" << endl;
 //	fout.close();
 //
-//	cout << "ÀúÀå¿Ï·á" << endl;
+//	cout << "ì €ì¥ì™„ë£Œ" << endl;
 //}
 
 //#include<iostream>
@@ -1191,7 +1191,7 @@
 //	}
 //	fout.close();
 //
-//	cout << "ÀúÀå¿Ï·á" << endl;
+//	cout << "ì €ì¥ì™„ë£Œ" << endl;
 //}
 //#include<iostream>
 //#include<fstream>
@@ -1227,7 +1227,7 @@
 //void main()
 //{
 //	string content;
-//	cout << "ÀÏ±â ³»¿ë; ";
+//	cout << "ì¼ê¸° ë‚´ìš©; ";
 //	getline(cin, content);
 //	ofstream out("diary.txt", ios::app);
 //	out << getToday() << " " << content << endl;
@@ -1235,7 +1235,7 @@
 //
 //	ifstream in("diary.txt");
 //	string line;
-//	cout << "\n===³» ÀÏ±â ===" << endl;
+//	cout << "\n===ë‚´ ì¼ê¸° ===" << endl;
 //	while (getline(in, line))
 //		cout << line << endl;
 //	in.close();
@@ -1251,17 +1251,17 @@
 //	int readLen = 0;
 //	FILE* src, * dst;
 //	char name1[100], name2[100], enter;
-//	printf("ÀÔ·Â¹ŞÀ» ÆÄÀÏÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä:");
+//	printf("ì…ë ¥ë°›ì„ íŒŒì¼ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”:");
 //	scanf("%s%c", name1, &enter);
 //
-//	printf("Ãâ·Â¹ŞÀ» ÆÄÀÏÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä :");
+//	printf("ì¶œë ¥ë°›ì„ íŒŒì¼ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš” :");
 //	gets_s(name2);
 //
 //	src = fopen(name1, "rb");
 //	dst = fopen(name2, "wb");
 //
 //	if (src == NULL || dst == NULL) {
-//		puts("ÆÄÀÏÀ» ¸ø Ã£À½");
+//		puts("íŒŒì¼ì„ ëª» ì°¾ìŒ");
 //		return -1;
 //	}
 //	while (true) {
@@ -1269,18 +1269,18 @@
 //		if (readLen < BUFF_SIZE) {
 //			if (feof(src) != 0) {
 //				fwrite(buff, 1, readLen, dst);
-//				puts("ÆÄÀÏ º¹»ç ¿Ï·á");
+//				puts("íŒŒì¼ ë³µì‚¬ ì™„ë£Œ");
 //				break;
 //			}
 //			else {
-//				printf("ÆÄÀÏ º¹»ç ½ÇÆĞ");
+//				printf("íŒŒì¼ ë³µì‚¬ ì‹¤íŒ¨");
 //				return -1;
 //			}
 //		}
 //		fwrite(buff, 1, BUFF_SIZE, dst);
 //	}
 //	if (fclose(src) != 0 || fclose(dst) != 0) {
-//		puts("ÆÄÀÏÀ» ´İÁö ¸øÇß½À´Ï´Ù.");
+//		puts("íŒŒì¼ì„ ë‹«ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 //		return -1;
 //	}
 //	return 0;
@@ -1295,20 +1295,20 @@
 //	int j = -123;
 //	double f = 3.141592;
 //	
-//	fprintf(fp, "Æø¸ÂÃß±â\n");
+//	fprintf(fp, "í­ë§ì¶”ê¸°\n");
 //	fprintf(fp, "i: %6d \n", i);
 //	fprintf(fp, "i: %7d \n", i);
 //	fprintf(fp, "i: %2d\n", i);
 //
-//	fprintf(fp, "¿À¸¥ÂÊÁ¤·Ä\n");
+//	fprintf(fp, "ì˜¤ë¥¸ìª½ì •ë ¬\n");
 //	fprintf(fp, "i: %5d \n", i);
-//	fprintf(fp, "¿ŞÂÊÁ¤·Ä\n");
-//	fprintf(fp, "i: %-5³¡\n\n", i);
+//	fprintf(fp, "ì™¼ìª½ì •ë ¬\n");
+//	fprintf(fp, "i: %-5ë\n\n", i);
 //
-//	fprintf(fp, "#¹®ÀÚÀÇ »ç¿ë\n");
+//	fprintf(fp, "#ë¬¸ìì˜ ì‚¬ìš©\n");
 //	fprintf(fp, "i: %#x \n", i);
 //	fprintf(fp, "j: %#x\n\n", j);
-//	fprintf(fp, "ºÎÈ£ºÙÀÌ±â\n");
+//	fprintf(fp, "ë¶€í˜¸ë¶™ì´ê¸°\n");
 //	fprintf(fp, "i: %+d, j: %+d \n", i, j);
 //
 //	fclose(fp);
@@ -1324,15 +1324,15 @@
 //	int count;
 //	char name[100];
 //	int  grade=0;
-//	printf("ÀÎ¿øÀ» Á¤ÇÏ¼¼¿ä:");
+//	printf("ì¸ì›ì„ ì •í•˜ì„¸ìš”:");
 //	scanf("%d", &count);
 //	fprintf(info, "%d\n", count);
 //	int num = count;
 //	for (int i = 0; i < num; i++)
 //	{
-//		printf("ÀÌ¸§: ");
+//		printf("ì´ë¦„: ");
 //		scanf("%s", name);
-//		printf("Á¡¼ö: ");
+//		printf("ì ìˆ˜: ");
 //		scanf("%d", &grade);
 //		fprintf(info, "%10s %3d\n", name, grade);
 //	}
@@ -1391,7 +1391,7 @@
 
 
 
-//#include<iostream>                                          //¹®Á¦ 6
+//#include<iostream>                                          //ë¬¸ì œ 6
 //#include<fstream>
 //#include<string>
 //using namespace std;
@@ -1407,18 +1407,18 @@
 //	string pass;
 //	string id;
 //	
-//	cout << "¾ÆÀÌµğ ÀÔ·Â: ";
+//	cout << "ì•„ì´ë”” ì…ë ¥: ";
 //	cin >> id;
-//	cout << "ºñ¹Ğ¹øÈ£ ÀÔ·Â: ";
+//	cout << "ë¹„ë°€ë²ˆí˜¸ ì…ë ¥: ";
 //	cin >> pass;
 //
 //	ifstream fin("users.txt");
 //	while (getline(fin, user)) {
 //		if (user == id + spc + pass) {
-//			cout << "¼º°ø" << endl;
+//			cout << "ì„±ê³µ" << endl;
 //		}
 //		else {
-//			cout << "½ÇÆĞ" << endl;
+//			cout << "ì‹¤íŒ¨" << endl;
 //		}
 //	}
 //	//ofstream fout("users.txt");
@@ -1426,7 +1426,7 @@
 //	//fout.close();
 //}
 
-//#include<iostream>                                       //¹®Á¦ 7
+//#include<iostream>                                       //ë¬¸ì œ 7
 //#include<fstream>
 //#include<string>
 //#include<stdlib.h>
@@ -1436,9 +1436,9 @@
 //int main()
 //{
 //	int range, count;
-//	cout << "¹üÀ§¸¦ ÁöÁ¤ÇÏ¼¼¿ä\n=>";
+//	cout << "ë²”ìœ„ë¥¼ ì§€ì •í•˜ì„¸ìš”\n=>";
 //	cin >> range;
-//	cout << "°¹¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À\n=>";
+//	cout << "ê°¯ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤\n=>";
 //	cin >> count;
 //	int xRange = range;
 //	int* randNum = new int[xRange];
@@ -1481,41 +1481,60 @@
 //	oddFout.close();
 //}
 
-#include<iostream>
-#include<fstream>
-#include<string>
-
-using namespace std;
-int main(){
-	string word;
-	string count;
-	string senten;
-	int i = 1;
-	int sum = 0;
-	ifstream fin("sentences.txt");
-	cout << "°Ë»öÇÏ°í ½ÍÀº ´Ü¾î¸¦ ÀûÀ¸½Ã¿À" << endl;
-	cout << "ex) is, in, never, all " << endl;
-	cout << ">>";
-	//getline(cin, word);
-	cin >> word;
-	while (getline(fin, count)) {
-		int num = 0;
-		size_t pos = count.find(word, num);
-		cout << count << endl;
-		if (num == 0) {
-			cout << "¾øÀ½" << endl;
-
-		}
-		else {
-			
-			//cout << i << ". " << word << " " << num << "" << endl; i++;
-		}
-		sum += num;
-	}
-	cout << word << "ÀÇ °³¼ö´Â ÃÑ" << sum << "°³ ÀÔ´Ï´Ù." << endl;
-	fin.close();
-	return 0;
-}
+//#include<iostream>
+//#include<fstream>
+//#include<string>
+//
+//using namespace std;
+//int main(){
+//	string word;
+//	string one_line;
+//	string senten;
+//	int i = 1;
+//	int sum = 0;
+//	//int indx = 0;
+//	ifstream fin("sentences.txt");
+//	cout << "ê²€ìƒ‰í•˜ê³  ì‹¶ì€ ë‹¨ì–´ë¥¼ ì ìœ¼ì‹œì˜¤" << endl;
+//	cout << "ex) is, in, never, all " << endl;
+//	cout << ">>";
+//	//getline(cin, word);
+//	cin >> word;
+//	while (getline(fin, one_line)) {
+//		int num = 0;
+//		int indx = 0;
+//		cout << one_line << endl;
+//		for (;;) {
+//			//size_t len = count.length();
+//			size_t pos = one_line.find(word, indx);//pos 0, indx 0
+//			//cout << count << endl;
+//			if (pos == string::npos) {
+//				//cout << "ì—†ìŒ" << endl;
+//				break;
+//			}
+//			//else if (pos >= len) {
+//			//	break;
+//			//}
+//			else {
+//				num++;
+//				indx = pos + 1;
+//			}
+//			sum += num;
+//		}
+//		if (indx == 0) {
+//			cout << "ì—†ìŒ" << endl;
+//		}
+//		else {
+//			cout << word << " => " << num << "ê°œ" << endl;
+//		}
+//
+//		//size_t pos = count.find(word);
+//		//cout << count << endl;
+//		//sum += num;
+//	}
+//	cout << word << "ì˜ ê°œìˆ˜ëŠ” ì´" << sum << "ê°œ ì…ë‹ˆë‹¤." << endl;
+//	fin.close();
+//	return 0;
+//}
 
 
 
@@ -1527,14 +1546,292 @@ int main(){
 //Life is either a daring adventure or nothing at all
 //This too shall pass
 
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//#include<time.h>
+//
+//#define MAXENERGY 6
+//
+//void printenergy(int my)
+//{
+//	printf("ë‚´ ëª©ìˆ¨ : ");
+//	for (int i = 0; i < my; i++)
+//		printf("â– ");
+//	for (int i = my; i < MAXENERGY; i++)
+//		printf("â–¡");
+//	printf("\n");
+//}
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	char num[4] = "___", tmp[4];
+//	int answer = rand() % 1000;
+//	sprintf(tmp, "%03d", answer);
+//	int energy = MAXENERGY;
+//	char input;
+//	while (1) {
+//		printenergy(energy);
+//		if (!energy) {
+//			printf("ê²Œì„ ì˜¤ë²„...\n");
+//			printf("ì •ë‹µ :%s", tmp);
+//			break;
+//		}
+//		printf("ì •ë‹µ : %s\n\n", num);
+//		if (atoi(num) == answer) {
+//			printf("ê²Œì„ ìŠ¹ë¦¬!\n");
+//			break;
+//		}
+//		printf("ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ");
+//		scanf(" %c", &input);
+//
+//		bool check = true;
+//		for (int i = 0; i < 3; i++) {
+//			if (tmp[i] == input) {
+//				num[i] = input;
+//				check = false;
+//			}
+//		}
+//		if (check)energy--;
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//#include<time.h>
+
+//#include<iostream>
+//#include<cstdlib>
+//#include<string>
+//#include<ctime>
+//
+//#define MAXENERGY 6
+//using namespace std;
+//
+//void printenergy(int my)
+//{
+//	//printf("ë‚´ ëª©ìˆ¨ : ");
+//	cout << "ë‚´ëª©ìˆ¨: " << endl;
+//	for (int i = 0; i < my; i++)
+//		//printf("â– "); 
+//	    cout << "â– ";
+//	
+//	for (int i = my; i < MAXENERGY; i++)
+//		//printf("â–¡");
+//		cout << "â–¡";
+//	//printf("\n");
+//	cout << endl;
+//}
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	//char num[4] = "___", tmp[4];
+//	string num = "___";
+//	int answer = rand() % 1000;
+//	string strAns = to_string(answer);
+//	size_t len = strAns.length();
+//	//sprintf(tmp, "%03d", answer);
+//	string tmp(3-len,' ');
+//	tmp.append(strAns);
+//	int energy = MAXENERGY;
+//	char input;
+//	while (1) {
+//		printenergy(energy);
+//		if (!energy) {
+//			//printf("ê²Œì„ ì˜¤ë²„...\n");
+//			cout << "ê²Œì„ ì˜¤ë²„..." << endl;
+//			//printf("ì •ë‹µ :%s", tmp);
+//			cout << "ì •ë‹µ :" << tmp << endl;
+//			break;
+//		}
+//		//printf("ì •ë‹µ : %s\n\n", num);
+//		cout << "ì •ë‹µ :" << num << endl << endl;
+//		if (stoi(num) == answer) {
+//			//printf("ê²Œì„ ìŠ¹ë¦¬!\n");
+//			cout << "ê²Œì„ ìŠ¹ë¦¬!" << endl;
+//			break;
+//		}
+//		//printf("ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ");
+//		cout << "ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ";
+//		//scanf(" %c", &input);
+//		cin >> input;
+//
+//		bool check = true;
+//		for (int i = 0; i < 3; i++) {
+//			if (tmp[i] == input) {
+//				num[i] = input;
+//				check = false;
+//			}
+//		}
+//		if (check)energy--;
+//	}
+//	return 0;
+//}
+//
+//#include<iostream>
+//#include<cstdlib>
+//#include<string>
+//#include<ctime>
+//
+//#define MAXENERGY 6
+//using namespace std;
+//
+//void printenergy(int my)
+//{
+//	//printf("ë‚´ ëª©ìˆ¨ : ");
+//	cout << "ë‚´ëª©ìˆ¨: " << endl;
+//	for (int i = 0; i < my; i++)
+//		//printf("â– "); 
+//		cout << "â– ";
+//
+//	for (int i = my; i < MAXENERGY; i++)
+//		//printf("â–¡");
+//		cout << "â–¡";
+//	//printf("\n");
+//	cout << endl;
+//}
+//int main()
+//{
+//	srand((unsigned int)time(NULL));
+//	//char num[4] = "___", tmp[4];
+//	string num = "___",tmp;
+//	int answer = rand() % 1000;
+//	string strAns = to_string(answer);
+//	size_t len = strAns.length();
+//	//sprintf(tmp, "%03d", answer);
+//    tmp = string(3 - len, '0');
+//	tmp.append(strAns);
+//	int energy = MAXENERGY;
+//	char input;
+//	while (1) {
+//		printenergy(energy);
+//		if (!energy) {
+//			//printf("ê²Œì„ ì˜¤ë²„...\n");
+//			cout << "ê²Œì„ ì˜¤ë²„..." << endl;
+//			//printf("ì •ë‹µ :%s", tmp);
+//			cout << "ì •ë‹µ :" << tmp << endl;
+//			break;
+//		}
+//		//printf("ì •ë‹µ : %s\n\n", num);
+//		cout << "ì •ë‹µ :" << num << endl << endl;
+//		if (num == tmp) {
+//			//printf("ê²Œì„ ìŠ¹ë¦¬!\n");
+//			cout << "ê²Œì„ ìŠ¹ë¦¬!" << endl;
+//			break;
+//		}
+//		//printf("ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ");
+//		cout << "ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ";
+//		//scanf(" %c", &input);
+//		cin >> input;
+//
+//		bool check = true;
+//		for (int i = 0; i < 3; i++) {
+//			if (tmp[i] == input) {
+//				num[i] = input;
+//				check = false;
+//			}
+//		}
+//		if (check)energy--;
+//	}
+//	return 0;
+//}
 
 
+#include<iostream>
+#include<cstdlib>
+#include<string>
+#include<ctime>
+#include<fstream>
 
+#define MAXENERGY 6
+using namespace std;
 
+void printenergy(int my)
+{
+	//printf("ë‚´ ëª©ìˆ¨ : ");
+	cout << "ë‚´ëª©ìˆ¨: " << endl;
+	for (int i = 0; i < my; i++)
+		//printf("â– "); 
+		cout << "â– ";
 
+	for (int i = my; i < MAXENERGY; i++)
+		//printf("â–¡");
+		cout << "â–¡";
+	//printf("\n");
+	cout << endl;
+}
+string getAnswer() {
+	ifstream fin("word.txt");
+	srand((unsigned int)time(NULL));
+	int count;
+	string word;
+	fin >> count;
+	cout << count << endl;
+	int randNum = rand()%count+1;
+	cout <<"ëœë¤ ìˆ˜: " << randNum << endl;
+	for (int i = 0; i < randNum; i++) {
+		fin >> word;
+	}
+	cout << word << endl;
+	//cout << word << endl;
+	fin.close();
+	return word;
+}
 
+int main()
+{
+	
+	string ans = getAnswer();
+	size_t len = ans.length();
+	//srand((unsigned int)time(NULL));
+	//char num[4] = "___", tmp[4];
+	char *qust = new char [len];
+	for(int i=0;i<len)
+	
+	string tmp = string(len - len, '0');
+	//int answer = rand() % 1000;
+	//string strAns = to_string(answer);
+	//size_t len = word.length();
+	//sprintf(tmp, "%03d", answer);
+	//tmp = new string(3 - len, '0');
+	tmp.append(ans);
+	int energy = MAXENERGY;
+	char input;
+	while (1) {
+		printenergy(energy);
+		if (!energy) {
+			//printf("ê²Œì„ ì˜¤ë²„...\n");
+			cout << "ê²Œì„ ì˜¤ë²„..." << endl;
+			//printf("ì •ë‹µ :%s", tmp);
+			cout << "ì •ë‹µ :" << tmp << endl;
+			break;
+		}
+		//printf("ì •ë‹µ : %s\n\n", num);
+		cout << "ì •ë‹µ :" << qust << endl << endl;
+		if (qust == tmp) {
+			//printf("ê²Œì„ ìŠ¹ë¦¬!\n");
+			cout << "ê²Œì„ ìŠ¹ë¦¬!" << endl;
+			break;
+		}
+		//printf("ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ");
+		cout << "ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš” : ";
+		//scanf(" %c", &input);
+		cin >> input;
 
-
+		bool check = true;
+		for (int i = 0; i < 3; i++) {
+			if (tmp[i] == input) {
+				qust[i] = input;
+				check = false;
+			}
+		}
+		if (check)energy--;
+	}
+	delete []qust;
+	return 0;
+}
 
 
 
@@ -1556,8 +1853,8 @@ int main(){
 //	char str1[200], str2[200];
 //	int size, i;
 //
-//	rfp = fopen("c:\\student\\ÀÓ°æ¹Î\\Project1\\in.txt", "r");
-//	wfp = fopen("c:\\student\\ÀÓ°æ¹Î\\Project1\\out.txt", "w");
+//	rfp = fopen("c:\\student\\ì„ê²½ë¯¼\\Project1\\in.txt", "r");
+//	wfp = fopen("c:\\student\\ì„ê²½ë¯¼\\Project1\\out.txt", "w");
 //
 //	while (1)
 //	{
@@ -1594,21 +1891,21 @@ int main(){
 //
 //	p = &s;
 //
-//	printf("ÀÌ¸§ ÀÔ·Â: ");
+//	printf("ì´ë¦„ ì…ë ¥: ");
 //	scanf("%s", &p->name);
 //
-//	printf("±¹¾î Á¡¼ö: ");
+//	printf("êµ­ì–´ ì ìˆ˜: ");
 //	scanf("%d", &p->kor);
 //
-//	printf("¿µ¾î Á¡¼ö: ");
+//	printf("ì˜ì–´ ì ìˆ˜: ");
 //	scanf("%d", &p->eng);
 //
 //	p->avg = (p->kor + p->eng) / 2.0f;
 //
-//	printf("\n-- ±¸Á¶Ã¼ Æ÷ÀÎÅÍ È°¿ë --\n");
-//	printf("ÇĞ»ı ÀÌ¸§ ==> %s\n", p->name);
-//	printf("±¹¾î Á¡¼ö ==> %d\n", p->kor);
-//	printf("¿µ¾î Á¡¼ö ==> %d\n", p->eng);
-//	printf("Æò±Õ Á¡¼ö ==> %5.1f\n", p->avg);
+//	printf("\n-- êµ¬ì¡°ì²´ í¬ì¸í„° í™œìš© --\n");
+//	printf("í•™ìƒ ì´ë¦„ ==> %s\n", p->name);
+//	printf("êµ­ì–´ ì ìˆ˜ ==> %d\n", p->kor);
+//	printf("ì˜ì–´ ì ìˆ˜ ==> %d\n", p->eng);
+//	printf("í‰ê·  ì ìˆ˜ ==> %5.1f\n", p->avg);
 //}
 
