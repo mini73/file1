@@ -1784,6 +1784,7 @@ int main()
 {
 	
 	string ans = getAnswer();
+	string wrong;
 	size_t len = ans.length();
 	//srand((unsigned int)time(NULL));
 	//char num[4] = "___", tmp[4];
@@ -1791,7 +1792,13 @@ int main()
 	//for(int i=0;i<len)
 	
 	string tmp = string(len, '_');
-	tmp.append(ans);
+	/*
+	char* qust = new char[len+1];
+	for (int i = 0; i < len; i++)
+		qust[i] = '_';
+	qust[len] = '\0';
+	*/
+	
 	//int answer = rand() % 1000;
 	//string strAns = to_string(answer);
 	//size_t len = word.length();
@@ -1804,13 +1811,14 @@ int main()
 	//tmp[0] = 'A';
 	int energy = MAXENERGY;
 	char input;
+	int xcount = 0;
 	while (1) {
 		printenergy(energy);
 		if (!energy) {
 			//printf("게임 오버...\n");
 			cout << "게임 오버..." << endl;
 			//printf("정답 :%s", tmp);
-			cout << "정답 :" << tmp << endl;
+			cout << "정답 :" << ans << endl;
 			break;
 		}
 		//printf("정답 : %s\n\n", num);
@@ -1824,17 +1832,31 @@ int main()
 		cout << "단어를 맞춰보세요 : ";
 		//scanf(" %c", &input);
 		cin >> input;
-
+		
+		
 		bool check = true;
-		for (int i = 0; i < 3; i++) {
-			if (tmp[i] == input) {
-				ans[i] = input;
+		for (int i = 0; i < len; i++) {
+			if (ans[i] == input) {
+				tmp[i] = input;
 				check = false;
 			}
 		}
-		if (check)energy--;
+		if (check) {
+			cout << "틀린 알파벳:";
+			
+			wrong += input;
+			wrong += " ";
+
+			cout << wrong;
+			
+            cout << endl;
+			
+			xcount++;
+			energy--;
+		}
+		
 	}
-	//delete []qust;
+	//delete qust;
 	return 0;
 }
 
@@ -1913,4 +1935,60 @@ int main()
 //	printf("영어 점수 ==> %d\n", p->eng);
 //	printf("평균 점수 ==> %5.1f\n", p->avg);
 //}
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int compare_victory(int com, int me)
+{
+	if (com == 0)
+	{
+		printf("컴퓨터 : 가위\n\n");
+		if (me == 0)return 2;
+		else if (me == 1) return 1;
+		else if (me == 2) return 0;
+	}
+	else if (com == 1)
+	{
+		printf("컴퓨터 : 바위\n\n");
+		if (me == 0) return 0;
+		else if (me == 1) return 2;
+		else if (me == 2) return 1;
+	}
+	else if (com == 2)
+	{
+		printf("컴퓨터 : 보\n\n");
+		if (me == 0) return 1;
+		else if (me == 1) return 0;
+		else if (me == 2) return 2;
+	}
+}
+
+void main()
+{
+		int com = 0;
+		int me = 0;
+		char ask_finish = 0;
+		int human = 0, computer = 0; draw = 0;
+		int tmp = 0;
+
+		srand(time(NULL));
+
+		while (true) {
+			com = rand() % 3;
+			printf("0: 가위, 1:바위, 2:보\n 당신이 낼 것은?:");
+			scanf("%d", &me);
+			if (me == 0) printf("당신: 가위\n");
+			else if (me == 1) printf("당신: 바위\n");
+			else if (me == 2) printf("당신: 보\n");
+			else {
+				printf("\n반칙 ! 다시 내 주세요.\n\n");
+				continue;
+			}
+			tmp = compare_victory(com, me);
+			//if (tmp == 0) {
+
+			//}
+		}
+}
 
