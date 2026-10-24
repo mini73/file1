@@ -1787,16 +1787,21 @@ int main()
 	size_t len = ans.length();
 	//srand((unsigned int)time(NULL));
 	//char num[4] = "___", tmp[4];
-	char *qust = new char [len];
-	for(int i=0;i<len)
+	//char *qust = new char [len];
+	//for(int i=0;i<len)
 	
-	string tmp = string(len - len, '0');
+	string tmp = string(len, '_');
+	tmp.append(ans);
 	//int answer = rand() % 1000;
 	//string strAns = to_string(answer);
 	//size_t len = word.length();
 	//sprintf(tmp, "%03d", answer);
 	//tmp = new string(3 - len, '0');
-	tmp.append(ans);
+	//tmp.append(ans);  //___dog
+	//for (int i = 0; i < len; i++) {
+	//	tmp[i] = ans[i];
+	//}
+	//tmp[0] = 'A';
 	int energy = MAXENERGY;
 	char input;
 	while (1) {
@@ -1809,27 +1814,27 @@ int main()
 			break;
 		}
 		//printf("정답 : %s\n\n", num);
-		cout << "정답 :" << qust << endl << endl;
-		if (qust == tmp) {
+		cout << "정답 :" << tmp << endl << endl;
+		if (ans == tmp) {
 			//printf("게임 승리!\n");
 			cout << "게임 승리!" << endl;
 			break;
 		}
 		//printf("숫자를 맞춰보세요 : ");
-		cout << "숫자를 맞춰보세요 : ";
+		cout << "단어를 맞춰보세요 : ";
 		//scanf(" %c", &input);
 		cin >> input;
 
 		bool check = true;
 		for (int i = 0; i < 3; i++) {
 			if (tmp[i] == input) {
-				qust[i] = input;
+				ans[i] = input;
 				check = false;
 			}
 		}
 		if (check)energy--;
 	}
-	delete []qust;
+	//delete []qust;
 	return 0;
 }
 
