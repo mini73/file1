@@ -1739,126 +1739,126 @@
 //}
 
 
-#include<iostream>
-#include<cstdlib>
-#include<string>
-#include<ctime>
-#include<fstream>
-
-#define MAXENERGY 6
-using namespace std;
-
-void printenergy(int my)
-{
-	//printf("내 목숨 : ");
-	cout << "내목숨: " << endl;
-	for (int i = 0; i < my; i++)
-		//printf("■"); 
-		cout << "■";
-
-	for (int i = my; i < MAXENERGY; i++)
-		//printf("□");
-		cout << "□";
-	//printf("\n");
-	cout << endl;
-}
-string getAnswer() {
-	ifstream fin("word.txt");
-	srand((unsigned int)time(NULL));
-	int count;
-	string word;
-	fin >> count;
-	cout << count << endl;
-	int randNum = rand()%count+1;
-	cout <<"랜덤 수: " << randNum << endl;
-	for (int i = 0; i < randNum; i++) {
-		fin >> word;
-	}
-	cout << word << endl;
-	//cout << word << endl;
-	fin.close();
-	return word;
-}
-
-int main()
-{
-	
-	string ans = getAnswer();
-	string wrong;
-	size_t len = ans.length();
-	//srand((unsigned int)time(NULL));
-	//char num[4] = "___", tmp[4];
-	//char *qust = new char [len];
-	//for(int i=0;i<len)
-	
-	string tmp = string(len, '_');
-	/*
-	char* qust = new char[len+1];
-	for (int i = 0; i < len; i++)
-		qust[i] = '_';
-	qust[len] = '\0';
-	*/
-	
-	//int answer = rand() % 1000;
-	//string strAns = to_string(answer);
-	//size_t len = word.length();
-	//sprintf(tmp, "%03d", answer);
-	//tmp = new string(3 - len, '0');
-	//tmp.append(ans);  //___dog
-	//for (int i = 0; i < len; i++) {
-	//	tmp[i] = ans[i];
-	//}
-	//tmp[0] = 'A';
-	int energy = MAXENERGY;
-	char input;
-	int xcount = 0;
-	while (1) {
-		printenergy(energy);
-		if (!energy) {
-			//printf("게임 오버...\n");
-			cout << "게임 오버..." << endl;
-			//printf("정답 :%s", tmp);
-			cout << "정답 :" << ans << endl;
-			break;
-		}
-		//printf("정답 : %s\n\n", num);
-		cout << "정답 :" << tmp << endl << endl;
-		if (ans == tmp) {
-			//printf("게임 승리!\n");
-			cout << "게임 승리!" << endl;
-			break;
-		}
-		//printf("숫자를 맞춰보세요 : ");
-		cout << "단어를 맞춰보세요 : ";
-		//scanf(" %c", &input);
-		cin >> input;
-		
-		
-		bool check = true;
-		for (int i = 0; i < len; i++) {
-			if (ans[i] == input) {
-				tmp[i] = input;
-				check = false;
-			}
-		}
-		if (check) {
-			cout << "틀린 알파벳:";
-			
-			wrong += input;
-			wrong += " ";
-
-			cout << wrong;
-			
-            cout << endl;
-			
-			xcount++;
-			energy--;
-		}
-		
-	}
-	//delete qust;
-	return 0;
-}
+//#include<iostream>
+//#include<cstdlib>
+//#include<string>
+//#include<ctime>
+//#include<fstream>
+//
+//#define MAXENERGY 6
+//using namespace std;
+//
+//void printenergy(int my)
+//{
+//	//printf("내 목숨 : ");
+//	cout << "내목숨: " << endl;
+//	for (int i = 0; i < my; i++)
+//		//printf("■"); 
+//		cout << "■";
+//
+//	for (int i = my; i < MAXENERGY; i++)
+//		//printf("□");
+//		cout << "□";
+//	//printf("\n");
+//	cout << endl;
+//}
+//string getAnswer() {
+//	ifstream fin("word.txt");
+//	srand((unsigned int)time(NULL));
+//	int count;
+//	string word;
+//	fin >> count;
+//	cout << count << endl;
+//	int randNum = rand()%count+1;
+//	cout <<"랜덤 수: " << randNum << endl;
+//	for (int i = 0; i < randNum; i++) {
+//		fin >> word;
+//	}
+//	cout << word << endl;
+//	//cout << word << endl;
+//	fin.close();
+//	return word;
+//}
+//
+//int main()
+//{
+//	
+//	string ans = getAnswer();
+//	string wrong;
+//	size_t len = ans.length();
+//	//srand((unsigned int)time(NULL));
+//	//char num[4] = "___", tmp[4];
+//	//char *qust = new char [len];
+//	//for(int i=0;i<len)
+//	
+//	string tmp = string(len, '_');
+//	/*
+//	char* qust = new char[len+1];
+//	for (int i = 0; i < len; i++)
+//		qust[i] = '_';
+//	qust[len] = '\0';
+//	*/
+//	
+//	//int answer = rand() % 1000;
+//	//string strAns = to_string(answer);
+//	//size_t len = word.length();
+//	//sprintf(tmp, "%03d", answer);
+//	//tmp = new string(3 - len, '0');
+//	//tmp.append(ans);  //___dog
+//	//for (int i = 0; i < len; i++) {
+//	//	tmp[i] = ans[i];
+//	//}
+//	//tmp[0] = 'A';
+//	int energy = MAXENERGY;
+//	char input;
+//	int xcount = 0;
+//	while (1) {
+//		printenergy(energy);
+//		if (!energy) {
+//			//printf("게임 오버...\n");
+//			cout << "게임 오버..." << endl;
+//			//printf("정답 :%s", tmp);
+//			cout << "정답 :" << ans << endl;
+//			break;
+//		}
+//		//printf("정답 : %s\n\n", num);
+//		cout << "정답 :" << tmp << endl << endl;
+//		if (ans == tmp) {
+//			//printf("게임 승리!\n");
+//			cout << "게임 승리!" << endl;
+//			break;
+//		}
+//		//printf("숫자를 맞춰보세요 : ");
+//		cout << "단어를 맞춰보세요 : ";
+//		//scanf(" %c", &input);
+//		cin >> input;
+//		
+//		
+//		bool check = true;
+//		for (int i = 0; i < len; i++) {
+//			if (ans[i] == input) {
+//				tmp[i] = input;
+//				check = false;
+//			}
+//		}
+//		if (check) {
+//			cout << "틀린 알파벳:";
+//			
+//			wrong += input;
+//			wrong += " ";
+//
+//			cout << wrong;
+//			
+//            cout << endl;
+//			
+//			xcount++;
+//			energy--;
+//		}
+//		
+//	}
+//	//delete qust;
+//	return 0;
+//}
 
 
 
@@ -1966,18 +1966,23 @@ int compare_victory(int com, int me)
 
 void main()
 {
+	FILE* result;
+	result = fopen("result.txt", "r");
+	result = fopen("result.txt", "w");
 		int com = 0;
 		int me = 0;
 		char ask_finish = 0;
-		int human = 0, computer = 0; draw = 0;
+		int human = 0, computer = 0, draw = 0;
 		int tmp = 0;
 
 		srand(time(NULL));
 
 		while (true) {
 			com = rand() % 3;
+
 			printf("0: 가위, 1:바위, 2:보\n 당신이 낼 것은?:");
 			scanf("%d", &me);
+
 			if (me == 0) printf("당신: 가위\n");
 			else if (me == 1) printf("당신: 바위\n");
 			else if (me == 2) printf("당신: 보\n");
@@ -1986,9 +1991,29 @@ void main()
 				continue;
 			}
 			tmp = compare_victory(com, me);
-			//if (tmp == 0) {
-
-			//}
+			if (tmp == 0) {
+				printf("컴퓨터가 이겼습니다.\n");
+				computer++;
+			}
+			else if (tmp == 1) {
+				printf("사람이 이겼습니다.\n");
+				human++;
+			}
+			else if (tmp == 2) {
+				printf("비겼습니다.\n");
+				draw++;
+			}
+			fprintf("\n사람이 이긴횟수 = %d, ", human);
+			fprintf("컴퓨터가 이긴횟수 = %d, 동접 = %d\n\n", computer, draw);
+			fprintf("다시 게임을 하시겠습니까?(y/n) :");
+			do{//엔터문자 제외
+				ask_finish = (char)getchar();
+			} while (ask_finish == '\n');
+			if(ask_finish =='n')
+				break;
+			printf("\n");
+			
 		}
+		fclose(result);
 }
 
